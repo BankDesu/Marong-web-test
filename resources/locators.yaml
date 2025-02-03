@@ -1,0 +1,5 @@
+locators:
+  username_field: ""
+  password_field: ""
+  login_button: ""
+  logout_button: ""
