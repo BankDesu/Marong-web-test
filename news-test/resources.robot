@@ -38,16 +38,8 @@ Login
     Input Text    ${LOGIN_PASSWORD}    ${password}
     Click Button    ${LOGIN_BUTTON}
 
-Input Gmail
-    [Arguments]    ${gmail}
-    Input Text    ${LOGIN_GMAIL}    ${gmail}
-
-Input Password
-    [Arguments]    ${password}
-    Input Text    ${LOGIN_PASSWORD}    ${password}
+Submit Credentials
+    Click Button    ${LOGIN_BUTTON}
 
 Overview Page Should Be Open
     Location Should Be    ${OVERVIEW_URL} 
-
-Can't Login
-    Location Should Be    ${LOGIN_ERROR_URL}
