@@ -6,4 +6,5 @@
 /news-test/results
 /login-test/results
 *.html
+*.png
 /login-test/results
