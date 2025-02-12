@@ -12,5 +12,19 @@ Verify Admin Cards Exist
     Page Should Contain Element    id=admincard-id-1
     Page Should Contain Element    id=admincard-id-3
     Page Should Contain Element    id=admincard-id-15
-    Page Should Contain Element    id=admincard-id-21
+    Page Should Contain Element    id=admincard-id-21    
+
+    # ตรวจสอบว่ามีข้อมูลในแต่ละการ์ด
+    Element Should Contain    id=admincard-id-1    John Doe
+    Element Should Contain    id=admincard-id-1    Admin
+    
+    Element Should Contain    id=admincard-id-3    Master Admin
+    Element Should Contain    id=admincard-id-3    master Admin
+    
+    Element Should Contain    id=admincard-id-15    Test1 Admin1
+    Element Should Contain    id=admincard-id-15    master Admin
+    
+    Element Should Contain    id=admincard-id-21    Test Admin
+    Element Should Contain    id=admincard-id-21    Admin
+    
     Close Browser
