@@ -37,9 +37,11 @@ edit Admin Successfully
     Choose File    name=picture    C:\\Users\\DarkK\\Downloads\\admin.png
     Select From List By Label    id=editRoleDropdown    ${ROLE2}
 
-
     # กดปุ่มบันทึกแก้ไขข้อมูลแอดมิน
     Click Element    id=saveEditButton
+    sleep   1s
+    Page Should Contain    Profile updated successfully.
+    Click Element   ${OK_BUTTON}
     sleep   1s
 
     Location Should Be    ${ADMIN_PROFILE_URL}${ADMIN_ID}
@@ -66,6 +68,9 @@ edit First name
     # กดปุ่มบันทึกแก้ไขข้อมูลแอดมิน
     Click Element    id=saveEditButton
     sleep   1s
+    Page Should Contain    Profile updated successfully.
+    Click Element   ${OK_BUTTON}
+    sleep   1s
 
     Location Should Be    ${ADMIN_PROFILE_URL}${ADMIN_ID}
     sleep   1s
@@ -90,6 +95,9 @@ edit Last name
 
     # กดปุ่มบันทึกแก้ไขข้อมูลแอดมิน
     Click Element    id=saveEditButton
+    sleep   1s
+    Page Should Contain    Profile updated successfully.
+    Click Element   ${OK_BUTTON}
     sleep   1s
 
     Location Should Be    ${ADMIN_PROFILE_URL}${ADMIN_ID}
@@ -117,6 +125,9 @@ edit First name & Last name
     # กดปุ่มบันทึกแก้ไขข้อมูลแอดมิน
     Click Element    id=saveEditButton
     sleep   1s
+    Page Should Contain    Profile updated successfully.
+    Click Element   ${OK_BUTTON}
+    sleep   1s
 
     Location Should Be    ${ADMIN_PROFILE_URL}${ADMIN_ID}
     sleep   1s
@@ -143,6 +154,9 @@ Edit picture profile
     # กดปุ่มบันทึกแก้ไขข้อมูลแอดมิน
     Click Element    id=saveEditButton
     sleep   1s
+    Page Should Contain    Profile updated successfully.
+    Click Element   ${OK_BUTTON}
+    sleep   1s
 
     Location Should Be    ${ADMIN_PROFILE_URL}${ADMIN_ID}
     sleep   1s
@@ -167,6 +181,9 @@ Edit Passwords
 
     Click Element    id=saveEditButton
     sleep   1s
+    Page Should Contain    Profile updated successfully.
+    Click Element   ${OK_BUTTON}
+    sleep   1s
 
     Location Should Be    ${ADMIN_PROFILE_URL}${ADMIN_ID}
     Close Browser
@@ -190,6 +207,9 @@ edit role Admin Successfully
 
     # กดปุ่มบันทึกแก้ไขข้อมูลแอดมิน
     Click Element    id=saveEditButton
+    sleep   1s
+    Page Should Contain    Profile updated successfully.
+    Click Element   ${OK_BUTTON}
     sleep   1s
 
     Location Should Be    ${ADMIN_PROFILE_URL}${ADMIN_ID}
@@ -216,7 +236,7 @@ Edit Passwords Do Not Match
     # กดปุ่มบันทึกแก้ไขข้อมูลแอดมิน
     Click Element    id=saveEditButton
     sleep   1s
-
-    # ตรวจสอบว่ามีการแจ้งเตือนรหัสผ่านไม่ตรงกัน
-    Page Should Contain    Password and Confirm Password do not match.
+    Page Should Contain   Password and Confirm Password do not match.
+    Click Element   ${OK_BUTTON}
+    sleep   1s
     Close Browser
