@@ -7,9 +7,6 @@ ${BROWSER}        chrome
 ${DELAY}          0
 ${LOGIN_URL}             http://${SERVER}/
 ${OVERVIEW_URL}          http://${SERVER}/overview
-${LOGIN_ERROR_URL}       http://${SERVER}/
-${CASE_URL}              http://${SERVER}/case
-${NEWS_URL}              http://${SERVER}/news
 ${NEWS_ADD_URL}          http://${SERVER}/news/addnews
 ${ALL_ADDMIN_URL}        http://${SERVER}/admin
 ${ADMIN_PROFILE_URL}     http://${SERVER}/admin/adminprofile/
@@ -20,6 +17,13 @@ ${ADMIN_ADD_URL}         http://${SERVER}/admin/add
 ${LOGIN_GMAIL}       id=login_gmailBox
 ${LOGIN_PASSWORD}    id=login_passwordBox
 ${LOGIN_BUTTON}      id=loginButton
+
+# Admin Locators
+${ADMIN_PAGE_BUTTON}    id=goto_adminpageButton
+${ADD_ADMIN_BUTTON}     id=add_adminButton
+${OK_BUTTON}     id=okButton
+${CONFIRM_DELETE_BUTTON}     id=confirmDeleteButton
+${CANNCEL_DELETE_BUTTON}     id=cancelDeleteButton
 
 
 *** Keywords ***
@@ -32,10 +36,14 @@ Open Browser To Login Page
 Login Page Should Be Open
     Location Should Be    ${LOGIN_URL}
 
-Login
-    [Arguments]    ${gmail}    ${password}
-    Input Text    ${LOGIN_GMAIL}    ${gmail}
-    Input Text    ${LOGIN_PASSWORD}    ${password}
+Login as masteradmin
+    Input Text    ${LOGIN_GMAIL}    msaidmin@gmail.com
+    Input Text    ${LOGIN_PASSWORD}    hashed_password_2
+    Click Button    ${LOGIN_BUTTON}
+
+Login as admin
+    Input Text    ${LOGIN_GMAIL}    admin@example.com
+    Input Text    ${LOGIN_PASSWORD}    hashed_password_2
     Click Button    ${LOGIN_BUTTON}
 
 Overview Page Should Be Open
