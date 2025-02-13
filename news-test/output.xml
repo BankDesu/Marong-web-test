@@ -1,0 +1,837 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.12.0 on win32)" generated="2025-02-13T13:09:36.991695" rpa="false" schemaversion="5">
+<suite id="s1" name="Editnews" source="C:\Users\acer\Dropbox\My PC (LAPTOP-V2ODEVNU)\Documents\GitHub\Marong-web-test\news-test\editnews.robot">
+<test id="s1-t1" name="Test Edit News Successfully" line="12">
+<kw name="Login And Navigate To News Page" type="SETUP">
+<kw name="Open Browser To Login Page" owner="resources">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-13T13:09:37.528151" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/'.</msg>
+<arg>${LOGIN_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-13T13:09:37.527149" elapsed="3.498388"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-02-13T13:09:41.027550" elapsed="0.104519"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2025-02-13T13:09:41.133078" elapsed="0.000990"/>
+</kw>
+<kw name="Login Page Should Be Open" owner="resources">
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2025-02-13T13:09:41.176862" level="INFO">Current location is 'http://localhost:3000/'.</msg>
+<arg>${LOGIN_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2025-02-13T13:09:41.135066" elapsed="0.041796"/>
+</kw>
+<status status="PASS" start="2025-02-13T13:09:41.134068" elapsed="0.043798"/>
+</kw>
+<status status="PASS" start="2025-02-13T13:09:37.526149" elapsed="3.651717"/>
+</kw>
+<kw name="Login" owner="resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-13T13:09:41.178864" level="INFO">Typing text 'msaidmin@gmail.com' into text field 'id=gmail'.</msg>
+<arg>${LOGIN_GMAIL}</arg>
+<arg>${gmail}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-13T13:09:41.178864" elapsed="0.557438"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-13T13:09:41.737299" level="INFO">Typing text 'hashed_password_2' into text field 'id=password'.</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-13T13:09:41.736302" elapsed="0.303423"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-02-13T13:09:42.040722" level="INFO">Clicking button 'id=login_button'.</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-13T13:09:42.039725" elapsed="0.155973"/>
+</kw>
+<arg>msaidmin@gmail.com</arg>
+<arg>hashed_password_2</arg>
+<status status="PASS" start="2025-02-13T13:09:41.177866" elapsed="1.017832"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${OVERVIEW_URL}</arg>
+<arg>10s</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-02-13T13:09:42.195698" elapsed="2.639121"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-02-13T13:09:44.835824" level="INFO">Opening url 'http://localhost:3000/news'</msg>
+<arg>${NEWS_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-02-13T13:09:44.835824" elapsed="1.470880"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${NEWS_URL}</arg>
+<arg>10s</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-02-13T13:09:46.307701" elapsed="0.055133"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=news_search</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-13T13:09:46.362834" elapsed="0.061354"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-02-13T13:09:46.424188" elapsed="0.012539"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2025-02-13T13:09:46.436727" elapsed="0.001000"/>
+</kw>
+<status status="PASS" start="2025-02-13T13:09:37.525151" elapsed="8.913537"/>
+</kw>
+<kw name="Click Edit News Button">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=editnews_button</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-13T13:09:46.439758" elapsed="0.316929"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-13T13:09:46.757681" level="INFO">Clicking element 'id=editnews_button'.</msg>
+<arg>id=editnews_button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-13T13:09:46.756687" elapsed="0.155618"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=edittitle_input</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-13T13:09:46.912305" elapsed="2.183931"/>
+</kw>
+<doc>Clicks the edit button to open the edit news form.</doc>
+<status status="PASS" start="2025-02-13T13:09:46.439206" elapsed="2.657030"/>
+</kw>
+<kw name="Upload Image">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=edituploadnews_button</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-13T13:09:49.097974" elapsed="0.119172"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>id=edituploadnews_button</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-02-13T13:09:49.217146" elapsed="0.097608"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-13T13:09:49.315110" level="INFO">Clicking element 'id=edituploadnews_button'.</msg>
+<arg>id=edituploadnews_button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-13T13:09:49.315110" elapsed="0.954441"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=choosefile_button</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-13T13:09:50.269551" elapsed="0.029758"/>
+</kw>
+<kw name="Choose File" owner="SeleniumLibrary">
+<msg time="2025-02-13T13:09:50.299309" level="INFO">Sending C:\Users\acer\Downloads\aqua cry.png to browser.</msg>
+<arg>id=choosefile_button</arg>
+<arg>C:\\Users\\acer\\Downloads\\aqua cry.png</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<status status="PASS" start="2025-02-13T13:09:50.299309" elapsed="0.048058"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-13T13:09:50.347367" level="INFO">Clicking element 'id=closeeditfile_button'.</msg>
+<arg>id=closeeditfile_button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-13T13:09:50.347367" elapsed="0.101511"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>id=closeeditfile_button</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-02-13T13:09:50.450551" elapsed="0.011451"/>
+</kw>
+<doc>This keyword clicks the upload button, uploads a PNG image, and then closes the upload modal.</doc>
+<status status="PASS" start="2025-02-13T13:09:49.097974" elapsed="1.364028"/>
+</kw>
+<kw name="Fill Edit Form">
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2025-02-13T13:09:50.486946" level="INFO">${current_title} = edited titleeditededitededitededited</msg>
+<var>${current_title}</var>
+<arg>id=edittitle_input</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-13T13:09:50.462002" elapsed="0.025495"/>
+</kw>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2025-02-13T13:09:50.540908" level="INFO">${current_content} = edited contenteditededitededitededited</msg>
+<var>${current_content}</var>
+<arg>id=editcontent_input</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-13T13:09:50.488020" elapsed="0.052888"/>
+</kw>
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2025-02-13T13:09:50.540908" level="INFO">${new_title} = edited titleeditededitededitededitededited</msg>
+<var>${new_title}</var>
+<arg>SEPARATOR=</arg>
+<arg>${current_title}</arg>
+<arg>${EDIT_SUFFIX}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2025-02-13T13:09:50.540908" elapsed="0.000000"/>
+</kw>
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2025-02-13T13:09:50.540908" level="INFO">${new_content} = edited contenteditededitededitededitededited</msg>
+<var>${new_content}</var>
+<arg>SEPARATOR=</arg>
+<arg>${current_content}</arg>
+<arg>${EDIT_SUFFIX}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2025-02-13T13:09:50.540908" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-13T13:09:50.542572" level="INFO">Typing text 'edited titleeditededitededitededitededited' into text field 'id=edittitle_input'.</msg>
+<arg>id=edittitle_input</arg>
+<arg>${new_title}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-13T13:09:50.540908" elapsed="0.340090"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-13T13:09:50.881998" level="INFO">Typing text 'edited contenteditededitededitededitededited' into text field 'id=editcontent_input'.</msg>
+<arg>id=editcontent_input</arg>
+<arg>${new_content}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-13T13:09:50.880998" elapsed="0.344837"/>
+</kw>
+<doc>Appends "edited" to the existing title and content without changing the location.</doc>
+<status status="PASS" start="2025-02-13T13:09:50.462002" elapsed="0.763833"/>
+</kw>
+<kw name="Save News">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-02-13T13:09:51.227489" level="INFO">Clicking button 'id=saveeditnews_button'.</msg>
+<arg>id=saveeditnews_button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-13T13:09:51.227489" elapsed="0.136001"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-13T13:09:52.363852" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-13T13:09:51.363490" elapsed="1.000362"/>
+</kw>
+<doc>This keyword clicks the save button.</doc>
+<status status="PASS" start="2025-02-13T13:09:51.227489" elapsed="1.136872"/>
+</kw>
+<kw name="Verify Success Modal">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-02-13T13:09:52.398589" level="INFO">Element 'id=modal_successedit_message' is displayed.</msg>
+<arg>id=modal_successedit_message</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-13T13:09:52.366051" elapsed="0.032538"/>
+</kw>
+<msg time="2025-02-13T13:09:52.398589" level="INFO">${is_visible} = True</msg>
+<var>${is_visible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>id=modal_successedit_message</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-02-13T13:09:52.366051" elapsed="0.032538"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${is_visible}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2025-02-13T13:09:52.398589" elapsed="0.000000"/>
+</kw>
+<doc>This keyword checks if the modal status is present on the page.</doc>
+<status status="PASS" start="2025-02-13T13:09:52.364361" elapsed="0.034228"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-02-13T13:09:52.400232" elapsed="2.555236"/>
+</kw>
+<doc>edits an existing news item, verifies success.</doc>
+<status status="PASS" start="2025-02-13T13:09:37.524150" elapsed="17.431318"/>
+</test>
+<test id="s1-t2" name="Test Edit News With Empty Title" line="22">
+<kw name="Login And Navigate To News Page" type="SETUP">
+<kw name="Open Browser To Login Page" owner="resources">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-13T13:09:54.958790" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/'.</msg>
+<arg>${LOGIN_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-13T13:09:54.958790" elapsed="2.898977"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-02-13T13:09:57.858343" elapsed="0.075992"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2025-02-13T13:09:57.934335" elapsed="0.001031"/>
+</kw>
+<kw name="Login Page Should Be Open" owner="resources">
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2025-02-13T13:09:57.965944" level="INFO">Current location is 'http://localhost:3000/'.</msg>
+<arg>${LOGIN_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2025-02-13T13:09:57.936354" elapsed="0.029590"/>
+</kw>
+<status status="PASS" start="2025-02-13T13:09:57.936354" elapsed="0.030188"/>
+</kw>
+<status status="PASS" start="2025-02-13T13:09:54.958790" elapsed="3.007752"/>
+</kw>
+<kw name="Login" owner="resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-13T13:09:57.967558" level="INFO">Typing text 'msaidmin@gmail.com' into text field 'id=gmail'.</msg>
+<arg>${LOGIN_GMAIL}</arg>
+<arg>${gmail}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-13T13:09:57.967558" elapsed="0.418228"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-13T13:09:58.385786" level="INFO">Typing text 'hashed_password_2' into text field 'id=password'.</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-13T13:09:58.385786" elapsed="0.275961"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-02-13T13:09:58.663392" level="INFO">Clicking button 'id=login_button'.</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-13T13:09:58.661747" elapsed="0.134978"/>
+</kw>
+<arg>msaidmin@gmail.com</arg>
+<arg>hashed_password_2</arg>
+<status status="PASS" start="2025-02-13T13:09:57.966542" elapsed="0.830183"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${OVERVIEW_URL}</arg>
+<arg>10s</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-02-13T13:09:58.797266" elapsed="1.603335"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-02-13T13:10:00.402619" level="INFO">Opening url 'http://localhost:3000/news'</msg>
+<arg>${NEWS_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-02-13T13:10:00.401623" elapsed="1.076427"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${NEWS_URL}</arg>
+<arg>10s</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-02-13T13:10:01.479885" elapsed="0.035186"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=news_search</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-13T13:10:01.515640" elapsed="0.210531"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-02-13T13:10:01.726171" elapsed="0.002657"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2025-02-13T13:10:01.730419" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-02-13T13:09:54.957079" elapsed="6.773340"/>
+</kw>
+<kw name="Click Edit News Button">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=editnews_button</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-13T13:10:01.730419" elapsed="0.039200"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-13T13:10:01.771279" level="INFO">Clicking element 'id=editnews_button'.</msg>
+<arg>id=editnews_button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-13T13:10:01.769619" elapsed="0.103979"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=edittitle_input</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-13T13:10:01.873598" elapsed="1.922217"/>
+</kw>
+<doc>Clicks the edit button to open the edit news form.</doc>
+<status status="PASS" start="2025-02-13T13:10:01.730419" elapsed="2.065396"/>
+</kw>
+<kw name="Clear Edit Title Field">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=edittitle_input</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-13T13:10:03.798488" elapsed="0.223395"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>id=edittitle_input</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-13T13:10:04.023032" elapsed="0.184713"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-13T13:10:04.207745" level="INFO">Typing text '‎' into text field 'id=edittitle_input'.</msg>
+<arg>id=edittitle_input</arg>
+<arg>${SPECIAL_CHAR}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-13T13:10:04.207745" elapsed="0.974402"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-02-13T13:10:05.188134" level="INFO">Sending key(s) ('\t',) to id=edittitle_input element.</msg>
+<msg time="2025-02-13T13:10:05.478983" level="INFO">Sending key 	</msg>
+<arg>id=edittitle_input</arg>
+<arg>\t</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-02-13T13:10:05.183137" elapsed="0.313851"/>
+</kw>
+<doc>Ensures the title field is cleared properly by inserting a special invisible character.</doc>
+<status status="PASS" start="2025-02-13T13:10:03.796820" elapsed="1.700168"/>
+</kw>
+<kw name="Save News">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-02-13T13:10:05.497984" level="INFO">Clicking button 'id=saveeditnews_button'.</msg>
+<arg>id=saveeditnews_button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-13T13:10:05.497984" elapsed="0.122237"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-13T13:10:06.621755" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-13T13:10:05.621221" elapsed="1.000534"/>
+</kw>
+<doc>This keyword clicks the save button.</doc>
+<status status="PASS" start="2025-02-13T13:10:05.497984" elapsed="1.123771"/>
+</kw>
+<kw name="Verify Error Modal">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-02-13T13:10:06.649998" level="INFO">Element 'id=modal_erroredit_message' is displayed.</msg>
+<arg>id=modal_erroredit_message</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-13T13:10:06.622787" elapsed="0.027211"/>
+</kw>
+<msg time="2025-02-13T13:10:06.649998" level="INFO">${is_visible} = True</msg>
+<var>${is_visible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>id=modal_erroredit_message</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-02-13T13:10:06.622787" elapsed="0.027211"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${is_visible}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2025-02-13T13:10:06.649998" elapsed="0.000997"/>
+</kw>
+<doc>Checks if the error modal is visible after attempting to save.</doc>
+<status status="PASS" start="2025-02-13T13:10:06.621755" elapsed="0.029240"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-02-13T13:10:06.650995" elapsed="2.381017"/>
+</kw>
+<doc>Attempts to edit a news item with an empty title field and verifies an error.</doc>
+<status status="PASS" start="2025-02-13T13:09:54.957079" elapsed="14.075493"/>
+</test>
+<test id="s1-t3" name="Test Edit News With Empty Location" line="30">
+<kw name="Login And Navigate To News Page" type="SETUP">
+<kw name="Open Browser To Login Page" owner="resources">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-13T13:10:09.034594" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/'.</msg>
+<arg>${LOGIN_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-13T13:10:09.034594" elapsed="2.956983"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-02-13T13:10:11.992580" elapsed="0.097196"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2025-02-13T13:10:12.090779" elapsed="0.000000"/>
+</kw>
+<kw name="Login Page Should Be Open" owner="resources">
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2025-02-13T13:10:12.119759" level="INFO">Current location is 'http://localhost:3000/'.</msg>
+<arg>${LOGIN_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2025-02-13T13:10:12.092764" elapsed="0.028008"/>
+</kw>
+<status status="PASS" start="2025-02-13T13:10:12.091767" elapsed="0.029005"/>
+</kw>
+<status status="PASS" start="2025-02-13T13:10:09.034594" elapsed="3.086178"/>
+</kw>
+<kw name="Login" owner="resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-13T13:10:12.122763" level="INFO">Typing text 'msaidmin@gmail.com' into text field 'id=gmail'.</msg>
+<arg>${LOGIN_GMAIL}</arg>
+<arg>${gmail}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-13T13:10:12.121767" elapsed="0.389819"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-13T13:10:12.511586" level="INFO">Typing text 'hashed_password_2' into text field 'id=password'.</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-13T13:10:12.511586" elapsed="0.259018"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-02-13T13:10:12.771597" level="INFO">Clicking button 'id=login_button'.</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-13T13:10:12.770604" elapsed="0.166780"/>
+</kw>
+<arg>msaidmin@gmail.com</arg>
+<arg>hashed_password_2</arg>
+<status status="PASS" start="2025-02-13T13:10:12.120772" elapsed="0.817148"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${OVERVIEW_URL}</arg>
+<arg>10s</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-02-13T13:10:12.937920" elapsed="1.556667"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-02-13T13:10:14.496016" level="INFO">Opening url 'http://localhost:3000/news'</msg>
+<arg>${NEWS_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-02-13T13:10:14.495281" elapsed="0.847979"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${NEWS_URL}</arg>
+<arg>10s</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-02-13T13:10:15.343260" elapsed="0.062827"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=news_search</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-13T13:10:15.406087" elapsed="0.153955"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-02-13T13:10:15.560042" elapsed="0.010655"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2025-02-13T13:10:15.570697" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-02-13T13:10:09.034594" elapsed="6.536103"/>
+</kw>
+<kw name="Click Edit News Button">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=editnews_button</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-13T13:10:15.573668" elapsed="0.056006"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-13T13:10:15.629674" level="INFO">Clicking element 'id=editnews_button'.</msg>
+<arg>id=editnews_button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-13T13:10:15.629674" elapsed="0.196538"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=edittitle_input</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-13T13:10:15.826212" elapsed="1.991786"/>
+</kw>
+<doc>Clicks the edit button to open the edit news form.</doc>
+<status status="PASS" start="2025-02-13T13:10:15.571678" elapsed="2.247187"/>
+</kw>
+<kw name="Clear Edit Location Field">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=editlocation_input</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-13T13:10:17.821237" elapsed="0.182567"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>id=editlocation_input</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-13T13:10:18.003804" elapsed="0.561437"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-13T13:10:18.567241" level="INFO">Typing text '‎' into text field 'id=editlocation_input'.</msg>
+<arg>id=editlocation_input</arg>
+<arg>${SPECIAL_CHAR}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-13T13:10:18.566243" elapsed="0.694967"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-02-13T13:10:19.263204" level="INFO">Sending key(s) ('\t',) to id=editlocation_input element.</msg>
+<msg time="2025-02-13T13:10:19.574407" level="INFO">Sending key 	</msg>
+<arg>id=editlocation_input</arg>
+<arg>\t</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-02-13T13:10:19.261210" elapsed="0.332196"/>
+</kw>
+<doc>Clears the location field before editing.</doc>
+<status status="PASS" start="2025-02-13T13:10:17.820222" elapsed="1.773184"/>
+</kw>
+<kw name="Save News">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-02-13T13:10:19.595402" level="INFO">Clicking button 'id=saveeditnews_button'.</msg>
+<arg>id=saveeditnews_button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-13T13:10:19.594407" elapsed="0.175377"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-13T13:10:20.769863" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-13T13:10:19.769784" elapsed="1.000079"/>
+</kw>
+<doc>This keyword clicks the save button.</doc>
+<status status="PASS" start="2025-02-13T13:10:19.594407" elapsed="1.175456"/>
+</kw>
+<kw name="Verify Error Modal">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-02-13T13:10:20.798890" level="INFO">Element 'id=modal_erroredit_message' is displayed.</msg>
+<arg>id=modal_erroredit_message</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-13T13:10:20.770872" elapsed="0.028018"/>
+</kw>
+<msg time="2025-02-13T13:10:20.798890" level="INFO">${is_visible} = True</msg>
+<var>${is_visible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>id=modal_erroredit_message</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-02-13T13:10:20.770872" elapsed="0.028018"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${is_visible}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2025-02-13T13:10:20.798890" elapsed="0.001011"/>
+</kw>
+<doc>Checks if the error modal is visible after attempting to save.</doc>
+<status status="PASS" start="2025-02-13T13:10:20.769863" elapsed="0.030038"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-02-13T13:10:20.799901" elapsed="2.962263"/>
+</kw>
+<doc>Attempts to edit a news item with an empty location field and verifies an error.</doc>
+<status status="PASS" start="2025-02-13T13:10:09.033587" elapsed="14.728577"/>
+</test>
+<test id="s1-t4" name="Test Edit News With Empty Content" line="38">
+<kw name="Login And Navigate To News Page" type="SETUP">
+<kw name="Open Browser To Login Page" owner="resources">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-13T13:10:23.764165" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/'.</msg>
+<arg>${LOGIN_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-13T13:10:23.764165" elapsed="4.857420"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-02-13T13:10:28.622583" elapsed="0.123583"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2025-02-13T13:10:28.747055" elapsed="0.000972"/>
+</kw>
+<kw name="Login Page Should Be Open" owner="resources">
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2025-02-13T13:10:28.782876" level="INFO">Current location is 'http://localhost:3000/'.</msg>
+<arg>${LOGIN_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2025-02-13T13:10:28.751464" elapsed="0.032212"/>
+</kw>
+<status status="PASS" start="2025-02-13T13:10:28.750328" elapsed="0.033348"/>
+</kw>
+<status status="PASS" start="2025-02-13T13:10:23.764165" elapsed="5.019511"/>
+</kw>
+<kw name="Login" owner="resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-13T13:10:28.785691" level="INFO">Typing text 'msaidmin@gmail.com' into text field 'id=gmail'.</msg>
+<arg>${LOGIN_GMAIL}</arg>
+<arg>${gmail}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-13T13:10:28.784689" elapsed="0.582876"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-13T13:10:29.367565" level="INFO">Typing text 'hashed_password_2' into text field 'id=password'.</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-13T13:10:29.367565" elapsed="0.360265"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-02-13T13:10:29.729830" level="INFO">Clicking button 'id=login_button'.</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-13T13:10:29.728829" elapsed="0.140991"/>
+</kw>
+<arg>msaidmin@gmail.com</arg>
+<arg>hashed_password_2</arg>
+<status status="PASS" start="2025-02-13T13:10:28.784689" elapsed="1.085131"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${OVERVIEW_URL}</arg>
+<arg>10s</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-02-13T13:10:29.869820" elapsed="2.165035"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-02-13T13:10:32.034855" level="INFO">Opening url 'http://localhost:3000/news'</msg>
+<arg>${NEWS_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-02-13T13:10:32.034855" elapsed="1.212191"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${NEWS_URL}</arg>
+<arg>10s</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-02-13T13:10:33.248050" elapsed="0.075145"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=news_search</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-13T13:10:33.323195" elapsed="0.065153"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-02-13T13:10:33.388893" elapsed="0.009366"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2025-02-13T13:10:33.399258" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-02-13T13:10:23.764165" elapsed="9.636095"/>
+</kw>
+<kw name="Click Edit News Button">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=editnews_button</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-13T13:10:33.404244" elapsed="0.251432"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-13T13:10:33.656674" level="INFO">Clicking element 'id=editnews_button'.</msg>
+<arg>id=editnews_button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-13T13:10:33.655676" elapsed="0.147887"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=edittitle_input</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-13T13:10:33.804561" elapsed="2.167217"/>
+</kw>
+<doc>Clicks the edit button to open the edit news form.</doc>
+<status status="PASS" start="2025-02-13T13:10:33.403692" elapsed="2.568086"/>
+</kw>
+<kw name="Clear Edit Content Field">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=editcontent_input</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-13T13:10:35.973777" elapsed="0.174267"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>id=editcontent_input</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-13T13:10:36.149041" elapsed="0.448969"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-13T13:10:36.600046" level="INFO">Typing text '‎' into text field 'id=editcontent_input'.</msg>
+<arg>id=editcontent_input</arg>
+<arg>${SPECIAL_CHAR}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-13T13:10:36.599012" elapsed="0.626706"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-02-13T13:10:37.240717" level="INFO">Sending key(s) ('\t',) to id=editcontent_input element.</msg>
+<msg time="2025-02-13T13:10:37.667112" level="INFO">Sending key 	</msg>
+<arg>id=editcontent_input</arg>
+<arg>\t</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-02-13T13:10:37.225718" elapsed="0.458597"/>
+</kw>
+<doc>Clears the content field before editing.</doc>
+<status status="PASS" start="2025-02-13T13:10:35.972780" elapsed="1.712535"/>
+</kw>
+<kw name="Save News">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-02-13T13:10:37.686612" level="INFO">Clicking button 'id=saveeditnews_button'.</msg>
+<arg>id=saveeditnews_button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-13T13:10:37.686612" elapsed="0.146634"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-13T13:10:38.834584" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-13T13:10:37.833797" elapsed="1.000787"/>
+</kw>
+<doc>This keyword clicks the save button.</doc>
+<status status="PASS" start="2025-02-13T13:10:37.686051" elapsed="1.148533"/>
+</kw>
+<kw name="Verify Error Modal">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-02-13T13:10:38.880546" level="INFO">Element 'id=modal_erroredit_message' is displayed.</msg>
+<arg>id=modal_erroredit_message</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-13T13:10:38.836741" elapsed="0.043805"/>
+</kw>
+<msg time="2025-02-13T13:10:38.881118" level="INFO">${is_visible} = True</msg>
+<var>${is_visible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>id=modal_erroredit_message</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-02-13T13:10:38.836203" elapsed="0.044915"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${is_visible}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2025-02-13T13:10:38.881683" elapsed="0.000551"/>
+</kw>
+<doc>Checks if the error modal is visible after attempting to save.</doc>
+<status status="PASS" start="2025-02-13T13:10:38.835653" elapsed="0.048183"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-02-13T13:10:38.884371" elapsed="8.924138"/>
+</kw>
+<doc>Attempts to edit a news item with an empty content field and verifies an error.</doc>
+<status status="PASS" start="2025-02-13T13:10:23.763163" elapsed="24.046344"/>
+</test>
+<status status="PASS" start="2025-02-13T13:09:36.994742" elapsed="70.820765"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Editnews" id="s1" pass="4" fail="0" skip="0">Editnews</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
