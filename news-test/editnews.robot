@@ -77,8 +77,8 @@ Fill Edit Form
 
 Upload Image
     [Documentation]  This keyword clicks the upload button, uploads a PNG image, and then closes the upload modal.
-    Wait Until Element Is Visible    id=edituploadnews_button    10s  # Ensure the button is visible
-    Wait Until Element Is Enabled    id=edituploadnews_button    10s  # Ensure the button is clickable
+    Wait Until Element Is Visible    id=edituploadnews_button    10s  
+    Wait Until Element Is Enabled    id=edituploadnews_button    10s  
     Click Element    id=edituploadnews_button
     Wait Until Element Is Visible    id=choosefile_button    10s
 
@@ -108,21 +108,21 @@ Clear Edit Title Field
     Wait Until Element Is Visible    id=edittitle_input    5s
     Clear Element Text    id=edittitle_input
     Input Text    id=edittitle_input    ${SPECIAL_CHAR}  
-    Press Keys    id=edittitle_input    \t  # Move focus away
+    Press Keys    id=edittitle_input    \t  
 
 Clear Edit Location Field
     [Documentation]  Clears the location field before editing.
     Wait Until Element Is Visible    id=editlocation_input    5s
     Clear Element Text    id=editlocation_input
     Input Text    id=editlocation_input    ${SPECIAL_CHAR}  
-    Press Keys    id=editlocation_input    \t  # Move focus away
+    Press Keys    id=editlocation_input    \t  
 
 Clear Edit Content Field
     [Documentation]  Clears the content field before editing.
     Wait Until Element Is Visible    id=editcontent_input    5s
     Clear Element Text    id=editcontent_input
     Input Text    id=editcontent_input    ${SPECIAL_CHAR}  
-    Press Keys    id=editcontent_input    \t  # Move focus away
+    Press Keys    id=editcontent_input    \t  
 
 Verify Error Modal
     [Documentation]  Checks if the error modal is visible after attempting to save.

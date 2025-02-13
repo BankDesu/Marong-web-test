@@ -19,7 +19,7 @@ Verify News Items and Search Functionality
     ${news_ids}=    Query    SELECT id FROM news
 
 
-    # Verify News Items Exist (run only once)
+    # verify News Items Exist (run only once)
     FOR    ${id}    IN    @{news_ids}
         ${id}=    Get From List    ${id}    0  # Extract the ID from the tuple
         Log    Checking for news_${id} visibility.
@@ -27,37 +27,37 @@ Verify News Items and Search Functionality
         Page Should Contain Element    id=news_${id}
     END
 
-    # Iterate over news IDs to perform search functionality checks
+    # iterate over news IDs to perform search functionality checks
     FOR    ${row}    IN    @{news_ids}
-        ${id}=    Set Variable    ${row[0]}  # Extract the first element from the tuple
-        ${id_str}=    Set Variable    ${id}  # Copy ID into a new variable for string conversion
-        ${id_str}=    Convert To String    ${id_str}  # Ensure ID is treated as a string
-        # Get the expected count based on the substring in the ID
+        ${id}=    Set Variable    ${row[0]}  
+        ${id_str}=    Set Variable    ${id}  
+        ${id_str}=    Convert To String    ${id_str}  
+        # count all row based on the substring in the id
         ${expected_count}=    Query    SELECT COUNT(*) FROM news WHERE id LIKE '%${id_str}%'        
-        ${expected_count}=    Get From List    ${expected_count}    0    # Extract count from the tuple
-        ${expected_count}=    Get From List    ${expected_count}    0    # Extract the count (first item in the result)
+        ${expected_count}=    Get From List    ${expected_count}    0    
+        ${expected_count}=    Get From List    ${expected_count}    0    
 
-        # Verify Search Functionality by ID
+        # verify Search Functionality by ID
         Input Text    id=news_search    ${id_str}
         Press Keys    id=news_search    ENTER
         Sleep    2s  # Wait for the search results to update
 
-        # Check if results contain an element with the correct ID
+        # check if results contain an element with the correct id
         ${found_element}=    Get Text    xpath=//tr[contains(@id, 'news_') and not(contains(@style, 'display: none'))]
         Should Contain    ${found_element}    ${id_str}
 
-        # Ensure the search results match the expected count (based on the database)
+        # search results match the expected count from database
         ${news_count}=    Get Element Count    xpath=//tr[contains(@id, 'news_') and not(contains(@style, 'display: none')) and contains(@id, '${id_str}')]
         Should Be Equal As Integers    ${news_count}    ${expected_count}    Search is not filtering properly
     END
         Disconnect From Database
 
-    # Search for title containing "sidewalk"
-    Input Text    id=news_search    sidewalk
+    # Search for title containing "Park"
+    Input Text    id=news_search    Park
     Press Keys    id=news_search    ENTER
     Sleep    2s
-    ${news_count}=    Get Element Count    xpath=//td[starts-with(@id, 'title_') and contains(text(), 'Road')]
-    Should Be True    ${news_count} > 0    No title contains 'Road'
+    ${news_count}=    Get Element Count    xpath=//td[starts-with(@id, 'title_') and contains(text(), 'Park')]
+    Should Be True    ${news_count} > 0    No title contains 'Park'
 
     # Search with string "hello" and check for search_error
     Input Text    id=news_search    hello

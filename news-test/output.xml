@@ -1,837 +1,1026 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.12.0 on win32)" generated="2025-02-13T13:09:36.991695" rpa="false" schemaversion="5">
-<suite id="s1" name="Editnews" source="C:\Users\acer\Dropbox\My PC (LAPTOP-V2ODEVNU)\Documents\GitHub\Marong-web-test\news-test\editnews.robot">
-<test id="s1-t1" name="Test Edit News Successfully" line="12">
+<robot generator="Robot 7.2.2 (Python 3.12.0 on win32)" generated="2025-02-13T21:39:25.495370" rpa="false" schemaversion="5">
+<suite id="s1" name="News" source="C:\Users\acer\Dropbox\My PC (LAPTOP-V2ODEVNU)\Documents\GitHub\Marong-web-test\news-test\news.robot">
+<test id="s1-t1" name="Verify News Items and Search Functionality" line="15">
 <kw name="Login And Navigate To News Page" type="SETUP">
 <kw name="Open Browser To Login Page" owner="resources">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-02-13T13:09:37.528151" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/'.</msg>
+<msg time="2025-02-13T21:39:26.248836" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/'.</msg>
 <arg>${LOGIN_URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-02-13T13:09:37.527149" elapsed="3.498388"/>
+<status status="PASS" start="2025-02-13T21:39:26.247832" elapsed="3.796746"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-02-13T13:09:41.027550" elapsed="0.104519"/>
+<status status="PASS" start="2025-02-13T21:39:30.045658" elapsed="0.153348"/>
 </kw>
 <kw name="Set Selenium Speed" owner="SeleniumLibrary">
 <arg>${DELAY}</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" start="2025-02-13T13:09:41.133078" elapsed="0.000990"/>
+<status status="PASS" start="2025-02-13T21:39:30.201013" elapsed="0.002031"/>
 </kw>
 <kw name="Login Page Should Be Open" owner="resources">
 <kw name="Location Should Be" owner="SeleniumLibrary">
-<msg time="2025-02-13T13:09:41.176862" level="INFO">Current location is 'http://localhost:3000/'.</msg>
+<msg time="2025-02-13T21:39:30.308535" level="INFO">Current location is 'http://localhost:3000/'.</msg>
 <arg>${LOGIN_URL}</arg>
 <doc>Verifies that the current URL is exactly ``url``.</doc>
-<status status="PASS" start="2025-02-13T13:09:41.135066" elapsed="0.041796"/>
+<status status="PASS" start="2025-02-13T21:39:30.205065" elapsed="0.104115"/>
 </kw>
-<status status="PASS" start="2025-02-13T13:09:41.134068" elapsed="0.043798"/>
+<status status="PASS" start="2025-02-13T21:39:30.204040" elapsed="0.105140"/>
 </kw>
-<status status="PASS" start="2025-02-13T13:09:37.526149" elapsed="3.651717"/>
+<status status="PASS" start="2025-02-13T21:39:26.246841" elapsed="4.062339"/>
 </kw>
 <kw name="Login" owner="resources">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-02-13T13:09:41.178864" level="INFO">Typing text 'msaidmin@gmail.com' into text field 'id=gmail'.</msg>
+<msg time="2025-02-13T21:39:30.312551" level="INFO">Typing text 'msaidmin@gmail.com' into text field 'id=gmail'.</msg>
 <arg>${LOGIN_GMAIL}</arg>
 <arg>${gmail}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-13T13:09:41.178864" elapsed="0.557438"/>
+<status status="PASS" start="2025-02-13T21:39:30.310706" elapsed="0.824880"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-02-13T13:09:41.737299" level="INFO">Typing text 'hashed_password_2' into text field 'id=password'.</msg>
+<msg time="2025-02-13T21:39:31.135586" level="INFO">Typing text 'hashed_password_2' into text field 'id=password'.</msg>
 <arg>${LOGIN_PASSWORD}</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-13T13:09:41.736302" elapsed="0.303423"/>
+<status status="PASS" start="2025-02-13T21:39:31.135586" elapsed="0.434075"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-02-13T13:09:42.040722" level="INFO">Clicking button 'id=login_button'.</msg>
+<msg time="2025-02-13T21:39:31.571178" level="INFO">Clicking button 'id=login_button'.</msg>
 <arg>${LOGIN_BUTTON}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-13T13:09:42.039725" elapsed="0.155973"/>
+<status status="PASS" start="2025-02-13T21:39:31.569661" elapsed="0.213852"/>
 </kw>
 <arg>msaidmin@gmail.com</arg>
 <arg>hashed_password_2</arg>
-<status status="PASS" start="2025-02-13T13:09:41.177866" elapsed="1.017832"/>
+<status status="PASS" start="2025-02-13T21:39:30.309180" elapsed="1.474333"/>
 </kw>
 <kw name="Wait Until Location Is" owner="SeleniumLibrary">
 <arg>${OVERVIEW_URL}</arg>
 <arg>10s</arg>
 <doc>Waits until the current URL is ``expected``.</doc>
-<status status="PASS" start="2025-02-13T13:09:42.195698" elapsed="2.639121"/>
+<status status="PASS" start="2025-02-13T21:39:31.784081" elapsed="3.024958"/>
 </kw>
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2025-02-13T13:09:44.835824" level="INFO">Opening url 'http://localhost:3000/news'</msg>
+<msg time="2025-02-13T21:39:34.810038" level="INFO">Opening url 'http://localhost:3000/news'</msg>
 <arg>${NEWS_URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2025-02-13T13:09:44.835824" elapsed="1.470880"/>
+<status status="PASS" start="2025-02-13T21:39:34.810038" elapsed="1.816847"/>
 </kw>
 <kw name="Wait Until Location Is" owner="SeleniumLibrary">
 <arg>${NEWS_URL}</arg>
 <arg>10s</arg>
 <doc>Waits until the current URL is ``expected``.</doc>
-<status status="PASS" start="2025-02-13T13:09:46.307701" elapsed="0.055133"/>
+<status status="PASS" start="2025-02-13T21:39:36.626885" elapsed="0.080171"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>id=news_search</arg>
 <arg>10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-13T13:09:46.362834" elapsed="0.061354"/>
+<status status="PASS" start="2025-02-13T21:39:36.708053" elapsed="0.091308"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-02-13T13:09:46.424188" elapsed="0.012539"/>
+<status status="PASS" start="2025-02-13T21:39:36.800878" elapsed="0.010101"/>
 </kw>
 <kw name="Set Selenium Speed" owner="SeleniumLibrary">
 <arg>${DELAY}</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" start="2025-02-13T13:09:46.436727" elapsed="0.001000"/>
+<status status="PASS" start="2025-02-13T21:39:36.810979" elapsed="0.001514"/>
 </kw>
-<status status="PASS" start="2025-02-13T13:09:37.525151" elapsed="8.913537"/>
+<status status="PASS" start="2025-02-13T21:39:26.246841" elapsed="10.565652"/>
 </kw>
-<kw name="Click Edit News Button">
+<kw name="Connect To Database" owner="DatabaseLibrary">
+<msg time="2025-02-13T21:39:36.817598" level="INFO">Looking for configuration file: 'resources\db.cfg'</msg>
+<msg time="2025-02-13T21:39:36.818603" level="INFO">Configuration file doesn't exist</msg>
+<msg time="2025-02-13T21:39:36.964839" level="INFO">Connect to DB using : pymysql.connect(db='marong_db', user='root', passwd=***, host='localhost', port=3306, charset='utf8mb4')</msg>
+<arg>pymysql</arg>
+<arg>${DB_NAME}</arg>
+<arg>${DB_USER}</arg>
+<arg>${DB_PASSWORD}</arg>
+<arg>${DB_HOST}</arg>
+<arg>${DB_PORT}</arg>
+<doc>Creates a database connection using the DB API 2.0 ``db_module`` and the parameters provided.
+Along with listed commonly used arguments (`db_name`, `db_host` etc.)
+you can set any other DB module specific parameters as key/value pairs.</doc>
+<status status="PASS" start="2025-02-13T21:39:36.815065" elapsed="0.314879"/>
+</kw>
+<kw name="Query" owner="DatabaseLibrary">
+<msg time="2025-02-13T21:39:37.130942" level="INFO" html="true">Executing sql:&lt;br&gt;&lt;code style="font-weight: bold;"&gt;SELECT id FROM news&lt;/code&gt;</msg>
+<msg time="2025-02-13T21:39:37.170921" level="INFO" html="true">&lt;div style="max-width: 100%; overflow-x: auto;"&gt;&lt;table style="width: auto; border-collapse: collapse; border: 2px solid rgb(140 140 140)"&gt;&lt;caption style="text-align: left; font-weight: bold; padding: 5px;"&gt;Query returned 6 rows&lt;/caption&gt;&lt;tr&gt;&lt;th scope="col" style="background-color: #d6ecd4; border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Row&lt;/th&gt;&lt;th scope="col" style="background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;id&lt;/th&gt;&lt;/tr&gt;&lt;tr style="background-color: #eee;"&gt;&lt;th scope="row" style="background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;0&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;3&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th scope="row" style="background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;1&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;1&lt;/td&gt;&lt;/tr&gt;&lt;tr style="background-color: #eee;"&gt;&lt;th scope="row" style="background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;2&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;41&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th scope="row" style="background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;3&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;2&lt;/td&gt;&lt;/tr&gt;&lt;tr style="background-color: #eee;"&gt;&lt;th scope="row" style="background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;4&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;39&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th scope="row" style="background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;5&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;4&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;</msg>
+<msg time="2025-02-13T21:39:37.172947" level="INFO">${news_ids} = ((3,), (1,), (41,), (2,), (39,), (4,))</msg>
+<var>${news_ids}</var>
+<arg>SELECT id FROM news</arg>
+<doc>Runs a query with the ``select_statement`` and returns the result as list of rows.
+The type of row values depends on the database module -
+usually they are tuples or tuple-like objects.</doc>
+<status status="PASS" start="2025-02-13T21:39:37.130942" elapsed="0.043015"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-02-13T21:39:37.179013" level="INFO">${id} = 3</msg>
+<var>${id}</var>
+<arg>${id}</arg>
+<arg>0</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-02-13T21:39:37.177005" elapsed="0.002008"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-13T21:39:37.201052" level="INFO">Checking for news_3 visibility.</msg>
+<arg>Checking for news_${id} visibility.</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-13T21:39:37.187414" elapsed="0.013638"/>
+</kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>id=editnews_button</arg>
+<arg>id=news_${id}</arg>
 <arg>10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-13T13:09:46.439758" elapsed="0.316929"/>
+<status status="PASS" start="2025-02-13T21:39:37.202092" elapsed="0.159044"/>
 </kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-02-13T13:09:46.757681" level="INFO">Clicking element 'id=editnews_button'.</msg>
-<arg>id=editnews_button</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-13T13:09:46.756687" elapsed="0.155618"/>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-02-13T21:39:37.387861" level="INFO">Current page contains element 'id=news_3'.</msg>
+<arg>id=news_${id}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-02-13T21:39:37.361136" elapsed="0.026725"/>
+</kw>
+<var name="${id}">(3,)</var>
+<status status="PASS" start="2025-02-13T21:39:37.176010" elapsed="0.211851"/>
+</iter>
+<iter>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-02-13T21:39:37.389858" level="INFO">${id} = 1</msg>
+<var>${id}</var>
+<arg>${id}</arg>
+<arg>0</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-02-13T21:39:37.389858" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-13T21:39:37.392397" level="INFO">Checking for news_1 visibility.</msg>
+<arg>Checking for news_${id} visibility.</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-13T21:39:37.391379" elapsed="0.001018"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>id=edittitle_input</arg>
+<arg>id=news_${id}</arg>
 <arg>10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-13T13:09:46.912305" elapsed="2.183931"/>
+<status status="PASS" start="2025-02-13T21:39:37.393399" elapsed="0.072125"/>
 </kw>
-<doc>Clicks the edit button to open the edit news form.</doc>
-<status status="PASS" start="2025-02-13T13:09:46.439206" elapsed="2.657030"/>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-02-13T21:39:37.485555" level="INFO">Current page contains element 'id=news_1'.</msg>
+<arg>id=news_${id}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-02-13T21:39:37.466541" elapsed="0.019014"/>
 </kw>
-<kw name="Upload Image">
+<var name="${id}">(1,)</var>
+<status status="PASS" start="2025-02-13T21:39:37.388856" elapsed="0.096699"/>
+</iter>
+<iter>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-02-13T21:39:37.486972" level="INFO">${id} = 41</msg>
+<var>${id}</var>
+<arg>${id}</arg>
+<arg>0</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-02-13T21:39:37.486972" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-13T21:39:37.486972" level="INFO">Checking for news_41 visibility.</msg>
+<arg>Checking for news_${id} visibility.</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-13T21:39:37.486972" elapsed="0.001010"/>
+</kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>id=edituploadnews_button</arg>
+<arg>id=news_${id}</arg>
 <arg>10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-13T13:09:49.097974" elapsed="0.119172"/>
+<status status="PASS" start="2025-02-13T21:39:37.487982" elapsed="0.039311"/>
 </kw>
-<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
-<arg>id=edituploadnews_button</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2025-02-13T13:09:49.217146" elapsed="0.097608"/>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-02-13T21:39:37.538817" level="INFO">Current page contains element 'id=news_41'.</msg>
+<arg>id=news_${id}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-02-13T21:39:37.527293" elapsed="0.011524"/>
 </kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-02-13T13:09:49.315110" level="INFO">Clicking element 'id=edituploadnews_button'.</msg>
-<arg>id=edituploadnews_button</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-13T13:09:49.315110" elapsed="0.954441"/>
+<var name="${id}">(41,)</var>
+<status status="PASS" start="2025-02-13T21:39:37.485555" elapsed="0.054260"/>
+</iter>
+<iter>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-02-13T21:39:37.539815" level="INFO">${id} = 2</msg>
+<var>${id}</var>
+<arg>${id}</arg>
+<arg>0</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-02-13T21:39:37.539815" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-13T21:39:37.539815" level="INFO">Checking for news_2 visibility.</msg>
+<arg>Checking for news_${id} visibility.</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-13T21:39:37.539815" elapsed="0.000000"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>id=choosefile_button</arg>
+<arg>id=news_${id}</arg>
 <arg>10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-13T13:09:50.269551" elapsed="0.029758"/>
+<status status="PASS" start="2025-02-13T21:39:37.539815" elapsed="0.057000"/>
 </kw>
-<kw name="Choose File" owner="SeleniumLibrary">
-<msg time="2025-02-13T13:09:50.299309" level="INFO">Sending C:\Users\acer\Downloads\aqua cry.png to browser.</msg>
-<arg>id=choosefile_button</arg>
-<arg>C:\\Users\\acer\\Downloads\\aqua cry.png</arg>
-<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
-<status status="PASS" start="2025-02-13T13:09:50.299309" elapsed="0.048058"/>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-02-13T21:39:37.614055" level="INFO">Current page contains element 'id=news_2'.</msg>
+<arg>id=news_${id}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-02-13T21:39:37.596815" elapsed="0.017240"/>
 </kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-02-13T13:09:50.347367" level="INFO">Clicking element 'id=closeeditfile_button'.</msg>
-<arg>id=closeeditfile_button</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-13T13:09:50.347367" elapsed="0.101511"/>
+<var name="${id}">(2,)</var>
+<status status="PASS" start="2025-02-13T21:39:37.539815" elapsed="0.074240"/>
+</iter>
+<iter>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-02-13T21:39:37.616604" level="INFO">${id} = 39</msg>
+<var>${id}</var>
+<arg>${id}</arg>
+<arg>0</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-02-13T21:39:37.616604" elapsed="0.000996"/>
 </kw>
-<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
-<arg>id=closeeditfile_button</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" start="2025-02-13T13:09:50.450551" elapsed="0.011451"/>
-</kw>
-<doc>This keyword clicks the upload button, uploads a PNG image, and then closes the upload modal.</doc>
-<status status="PASS" start="2025-02-13T13:09:49.097974" elapsed="1.364028"/>
-</kw>
-<kw name="Fill Edit Form">
-<kw name="Get Value" owner="SeleniumLibrary">
-<msg time="2025-02-13T13:09:50.486946" level="INFO">${current_title} = edited titleeditededitededitededited</msg>
-<var>${current_title}</var>
-<arg>id=edittitle_input</arg>
-<doc>Returns the value attribute of the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-13T13:09:50.462002" elapsed="0.025495"/>
-</kw>
-<kw name="Get Value" owner="SeleniumLibrary">
-<msg time="2025-02-13T13:09:50.540908" level="INFO">${current_content} = edited contenteditededitededitededited</msg>
-<var>${current_content}</var>
-<arg>id=editcontent_input</arg>
-<doc>Returns the value attribute of the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-13T13:09:50.488020" elapsed="0.052888"/>
-</kw>
-<kw name="Catenate" owner="BuiltIn">
-<msg time="2025-02-13T13:09:50.540908" level="INFO">${new_title} = edited titleeditededitededitededitededited</msg>
-<var>${new_title}</var>
-<arg>SEPARATOR=</arg>
-<arg>${current_title}</arg>
-<arg>${EDIT_SUFFIX}</arg>
-<doc>Catenates the given items together and returns the resulted string.</doc>
-<status status="PASS" start="2025-02-13T13:09:50.540908" elapsed="0.000000"/>
-</kw>
-<kw name="Catenate" owner="BuiltIn">
-<msg time="2025-02-13T13:09:50.540908" level="INFO">${new_content} = edited contenteditededitededitededitededited</msg>
-<var>${new_content}</var>
-<arg>SEPARATOR=</arg>
-<arg>${current_content}</arg>
-<arg>${EDIT_SUFFIX}</arg>
-<doc>Catenates the given items together and returns the resulted string.</doc>
-<status status="PASS" start="2025-02-13T13:09:50.540908" elapsed="0.000000"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-02-13T13:09:50.542572" level="INFO">Typing text 'edited titleeditededitededitededitededited' into text field 'id=edittitle_input'.</msg>
-<arg>id=edittitle_input</arg>
-<arg>${new_title}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-13T13:09:50.540908" elapsed="0.340090"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-02-13T13:09:50.881998" level="INFO">Typing text 'edited contenteditededitededitededitededited' into text field 'id=editcontent_input'.</msg>
-<arg>id=editcontent_input</arg>
-<arg>${new_content}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-13T13:09:50.880998" elapsed="0.344837"/>
-</kw>
-<doc>Appends "edited" to the existing title and content without changing the location.</doc>
-<status status="PASS" start="2025-02-13T13:09:50.462002" elapsed="0.763833"/>
-</kw>
-<kw name="Save News">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-02-13T13:09:51.227489" level="INFO">Clicking button 'id=saveeditnews_button'.</msg>
-<arg>id=saveeditnews_button</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-13T13:09:51.227489" elapsed="0.136001"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-02-13T13:09:52.363852" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-02-13T13:09:51.363490" elapsed="1.000362"/>
-</kw>
-<doc>This keyword clicks the save button.</doc>
-<status status="PASS" start="2025-02-13T13:09:51.227489" elapsed="1.136872"/>
-</kw>
-<kw name="Verify Success Modal">
-<kw name="Run Keyword And Return Status" owner="BuiltIn">
-<kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2025-02-13T13:09:52.398589" level="INFO">Element 'id=modal_successedit_message' is displayed.</msg>
-<arg>id=modal_successedit_message</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-13T13:09:52.366051" elapsed="0.032538"/>
-</kw>
-<msg time="2025-02-13T13:09:52.398589" level="INFO">${is_visible} = True</msg>
-<var>${is_visible}</var>
-<arg>Element Should Be Visible</arg>
-<arg>id=modal_successedit_message</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2025-02-13T13:09:52.366051" elapsed="0.032538"/>
-</kw>
-<kw name="Should Be True" owner="BuiltIn">
-<arg>${is_visible}</arg>
-<doc>Fails if the given condition is not true.</doc>
-<status status="PASS" start="2025-02-13T13:09:52.398589" elapsed="0.000000"/>
-</kw>
-<doc>This keyword checks if the modal status is present on the page.</doc>
-<status status="PASS" start="2025-02-13T13:09:52.364361" elapsed="0.034228"/>
-</kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-02-13T13:09:52.400232" elapsed="2.555236"/>
-</kw>
-<doc>edits an existing news item, verifies success.</doc>
-<status status="PASS" start="2025-02-13T13:09:37.524150" elapsed="17.431318"/>
-</test>
-<test id="s1-t2" name="Test Edit News With Empty Title" line="22">
-<kw name="Login And Navigate To News Page" type="SETUP">
-<kw name="Open Browser To Login Page" owner="resources">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-02-13T13:09:54.958790" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/'.</msg>
-<arg>${LOGIN_URL}</arg>
-<arg>${BROWSER}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-02-13T13:09:54.958790" elapsed="2.898977"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-02-13T13:09:57.858343" elapsed="0.075992"/>
-</kw>
-<kw name="Set Selenium Speed" owner="SeleniumLibrary">
-<arg>${DELAY}</arg>
-<doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" start="2025-02-13T13:09:57.934335" elapsed="0.001031"/>
-</kw>
-<kw name="Login Page Should Be Open" owner="resources">
-<kw name="Location Should Be" owner="SeleniumLibrary">
-<msg time="2025-02-13T13:09:57.965944" level="INFO">Current location is 'http://localhost:3000/'.</msg>
-<arg>${LOGIN_URL}</arg>
-<doc>Verifies that the current URL is exactly ``url``.</doc>
-<status status="PASS" start="2025-02-13T13:09:57.936354" elapsed="0.029590"/>
-</kw>
-<status status="PASS" start="2025-02-13T13:09:57.936354" elapsed="0.030188"/>
-</kw>
-<status status="PASS" start="2025-02-13T13:09:54.958790" elapsed="3.007752"/>
-</kw>
-<kw name="Login" owner="resources">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-02-13T13:09:57.967558" level="INFO">Typing text 'msaidmin@gmail.com' into text field 'id=gmail'.</msg>
-<arg>${LOGIN_GMAIL}</arg>
-<arg>${gmail}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-13T13:09:57.967558" elapsed="0.418228"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-02-13T13:09:58.385786" level="INFO">Typing text 'hashed_password_2' into text field 'id=password'.</msg>
-<arg>${LOGIN_PASSWORD}</arg>
-<arg>${password}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-13T13:09:58.385786" elapsed="0.275961"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-02-13T13:09:58.663392" level="INFO">Clicking button 'id=login_button'.</msg>
-<arg>${LOGIN_BUTTON}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-13T13:09:58.661747" elapsed="0.134978"/>
-</kw>
-<arg>msaidmin@gmail.com</arg>
-<arg>hashed_password_2</arg>
-<status status="PASS" start="2025-02-13T13:09:57.966542" elapsed="0.830183"/>
-</kw>
-<kw name="Wait Until Location Is" owner="SeleniumLibrary">
-<arg>${OVERVIEW_URL}</arg>
-<arg>10s</arg>
-<doc>Waits until the current URL is ``expected``.</doc>
-<status status="PASS" start="2025-02-13T13:09:58.797266" elapsed="1.603335"/>
-</kw>
-<kw name="Go To" owner="SeleniumLibrary">
-<msg time="2025-02-13T13:10:00.402619" level="INFO">Opening url 'http://localhost:3000/news'</msg>
-<arg>${NEWS_URL}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2025-02-13T13:10:00.401623" elapsed="1.076427"/>
-</kw>
-<kw name="Wait Until Location Is" owner="SeleniumLibrary">
-<arg>${NEWS_URL}</arg>
-<arg>10s</arg>
-<doc>Waits until the current URL is ``expected``.</doc>
-<status status="PASS" start="2025-02-13T13:10:01.479885" elapsed="0.035186"/>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-13T21:39:37.617600" level="INFO">Checking for news_39 visibility.</msg>
+<arg>Checking for news_${id} visibility.</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-13T21:39:37.617600" elapsed="0.000000"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=news_${id}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-13T21:39:37.618599" elapsed="0.030894"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-02-13T21:39:37.661288" level="INFO">Current page contains element 'id=news_39'.</msg>
+<arg>id=news_${id}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-02-13T21:39:37.649493" elapsed="0.011795"/>
+</kw>
+<var name="${id}">(39,)</var>
+<status status="PASS" start="2025-02-13T21:39:37.616604" elapsed="0.044684"/>
+</iter>
+<iter>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-02-13T21:39:37.662301" level="INFO">${id} = 4</msg>
+<var>${id}</var>
+<arg>${id}</arg>
+<arg>0</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-02-13T21:39:37.661288" elapsed="0.001013"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-13T21:39:37.662301" level="INFO">Checking for news_4 visibility.</msg>
+<arg>Checking for news_${id} visibility.</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-13T21:39:37.662301" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=news_${id}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-13T21:39:37.662301" elapsed="0.026518"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-02-13T21:39:37.697866" level="INFO">Current page contains element 'id=news_4'.</msg>
+<arg>id=news_${id}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-02-13T21:39:37.688819" elapsed="0.009047"/>
+</kw>
+<var name="${id}">(4,)</var>
+<status status="PASS" start="2025-02-13T21:39:37.661288" elapsed="0.036578"/>
+</iter>
+<var>${id}</var>
+<value>@{news_ids}</value>
+<status status="PASS" start="2025-02-13T21:39:37.174476" elapsed="0.523390"/>
+</for>
+<for flavor="IN">
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-02-13T21:39:37.699867" level="INFO">${id} = 3</msg>
+<var>${id}</var>
+<arg>${row[0]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-02-13T21:39:37.698869" elapsed="0.000998"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-02-13T21:39:37.699867" level="INFO">${id_str} = 3</msg>
+<var>${id_str}</var>
+<arg>${id}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-02-13T21:39:37.699867" elapsed="0.000000"/>
+</kw>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2025-02-13T21:39:37.699867" level="INFO">${id_str} = 3</msg>
+<var>${id_str}</var>
+<arg>${id_str}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2025-02-13T21:39:37.699867" elapsed="0.000000"/>
+</kw>
+<kw name="Query" owner="DatabaseLibrary">
+<msg time="2025-02-13T21:39:37.699867" level="INFO" html="true">Executing sql:&lt;br&gt;&lt;code style="font-weight: bold;"&gt;SELECT COUNT(*) FROM news WHERE id LIKE '%3%'&lt;/code&gt;</msg>
+<msg time="2025-02-13T21:39:37.709912" level="INFO" html="true">&lt;div style="max-width: 100%; overflow-x: auto;"&gt;&lt;table style="width: auto; border-collapse: collapse; border: 2px solid rgb(140 140 140)"&gt;&lt;caption style="text-align: left; font-weight: bold; padding: 5px;"&gt;Query returned 1 rows&lt;/caption&gt;&lt;tr&gt;&lt;th scope="col" style="background-color: #d6ecd4; border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Row&lt;/th&gt;&lt;th scope="col" style="background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;COUNT(*)&lt;/th&gt;&lt;/tr&gt;&lt;tr style="background-color: #eee;"&gt;&lt;th scope="row" style="background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;0&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;2&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;</msg>
+<msg time="2025-02-13T21:39:37.709912" level="INFO">${expected_count} = ((2,),)</msg>
+<var>${expected_count}</var>
+<arg>SELECT COUNT(*) FROM news WHERE id LIKE '%${id_str}%'</arg>
+<doc>Runs a query with the ``select_statement`` and returns the result as list of rows.
+The type of row values depends on the database module -
+usually they are tuples or tuple-like objects.</doc>
+<status status="PASS" start="2025-02-13T21:39:37.699867" elapsed="0.010045"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-02-13T21:39:37.709912" level="INFO">${expected_count} = (2,)</msg>
+<var>${expected_count}</var>
+<arg>${expected_count}</arg>
+<arg>0</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-02-13T21:39:37.709912" elapsed="0.000000"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-02-13T21:39:37.710904" level="INFO">${expected_count} = 2</msg>
+<var>${expected_count}</var>
+<arg>${expected_count}</arg>
+<arg>0</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-02-13T21:39:37.710904" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-13T21:39:37.710904" level="INFO">Typing text '3' into text field 'id=news_search'.</msg>
 <arg>id=news_search</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-13T13:10:01.515640" elapsed="0.210531"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-02-13T13:10:01.726171" elapsed="0.002657"/>
-</kw>
-<kw name="Set Selenium Speed" owner="SeleniumLibrary">
-<arg>${DELAY}</arg>
-<doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" start="2025-02-13T13:10:01.730419" elapsed="0.000000"/>
-</kw>
-<status status="PASS" start="2025-02-13T13:09:54.957079" elapsed="6.773340"/>
-</kw>
-<kw name="Click Edit News Button">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>id=editnews_button</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-13T13:10:01.730419" elapsed="0.039200"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-02-13T13:10:01.771279" level="INFO">Clicking element 'id=editnews_button'.</msg>
-<arg>id=editnews_button</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-13T13:10:01.769619" elapsed="0.103979"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>id=edittitle_input</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-13T13:10:01.873598" elapsed="1.922217"/>
-</kw>
-<doc>Clicks the edit button to open the edit news form.</doc>
-<status status="PASS" start="2025-02-13T13:10:01.730419" elapsed="2.065396"/>
-</kw>
-<kw name="Clear Edit Title Field">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>id=edittitle_input</arg>
-<arg>5s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-13T13:10:03.798488" elapsed="0.223395"/>
-</kw>
-<kw name="Clear Element Text" owner="SeleniumLibrary">
-<arg>id=edittitle_input</arg>
-<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-13T13:10:04.023032" elapsed="0.184713"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-02-13T13:10:04.207745" level="INFO">Typing text '‎' into text field 'id=edittitle_input'.</msg>
-<arg>id=edittitle_input</arg>
-<arg>${SPECIAL_CHAR}</arg>
+<arg>${id_str}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-13T13:10:04.207745" elapsed="0.974402"/>
+<status status="PASS" start="2025-02-13T21:39:37.710904" elapsed="0.140261"/>
 </kw>
 <kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2025-02-13T13:10:05.188134" level="INFO">Sending key(s) ('\t',) to id=edittitle_input element.</msg>
-<msg time="2025-02-13T13:10:05.478983" level="INFO">Sending key 	</msg>
-<arg>id=edittitle_input</arg>
-<arg>\t</arg>
+<msg time="2025-02-13T21:39:37.852197" level="INFO">Sending key(s) ('ENTER',) to id=news_search element.</msg>
+<msg time="2025-02-13T21:39:38.173454" level="INFO">Pressing special key ENTER to element.</msg>
+<msg time="2025-02-13T21:39:38.173454" level="INFO">Releasing special key ENTER.</msg>
+<arg>id=news_search</arg>
+<arg>ENTER</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2025-02-13T13:10:05.183137" elapsed="0.313851"/>
-</kw>
-<doc>Ensures the title field is cleared properly by inserting a special invisible character.</doc>
-<status status="PASS" start="2025-02-13T13:10:03.796820" elapsed="1.700168"/>
-</kw>
-<kw name="Save News">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-02-13T13:10:05.497984" level="INFO">Clicking button 'id=saveeditnews_button'.</msg>
-<arg>id=saveeditnews_button</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-13T13:10:05.497984" elapsed="0.122237"/>
+<status status="PASS" start="2025-02-13T21:39:37.851165" elapsed="0.331126"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-02-13T13:10:06.621755" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
+<msg time="2025-02-13T21:39:40.182554" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-02-13T13:10:05.621221" elapsed="1.000534"/>
+<status status="PASS" start="2025-02-13T21:39:38.182291" elapsed="2.000263"/>
 </kw>
-<doc>This keyword clicks the save button.</doc>
-<status status="PASS" start="2025-02-13T13:10:05.497984" elapsed="1.123771"/>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-02-13T21:39:40.221297" level="INFO">${found_element} = 3 bro 2025-02-12 Delete</msg>
+<var>${found_element}</var>
+<arg>xpath=//tr[contains(@id, 'news_') and not(contains(@style, 'display: none'))]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-13T21:39:40.182554" elapsed="0.038743"/>
 </kw>
-<kw name="Verify Error Modal">
-<kw name="Run Keyword And Return Status" owner="BuiltIn">
-<kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2025-02-13T13:10:06.649998" level="INFO">Element 'id=modal_erroredit_message' is displayed.</msg>
-<arg>id=modal_erroredit_message</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-13T13:10:06.622787" elapsed="0.027211"/>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${found_element}</arg>
+<arg>${id_str}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-02-13T21:39:40.221297" elapsed="0.001019"/>
 </kw>
-<msg time="2025-02-13T13:10:06.649998" level="INFO">${is_visible} = True</msg>
-<var>${is_visible}</var>
-<arg>Element Should Be Visible</arg>
-<arg>id=modal_erroredit_message</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2025-02-13T13:10:06.622787" elapsed="0.027211"/>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2025-02-13T21:39:40.222316" level="WARN">Keyword 'Get Element Count' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Get Element Count' or 'XML.Get Element Count'.</msg>
+<msg time="2025-02-13T21:39:40.243132" level="INFO">${news_count} = 2</msg>
+<var>${news_count}</var>
+<arg>xpath=//tr[contains(@id, 'news_') and not(contains(@style, 'display: none')) and contains(@id, '${id_str}')]</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2025-02-13T21:39:40.222316" elapsed="0.020816"/>
 </kw>
-<kw name="Should Be True" owner="BuiltIn">
-<arg>${is_visible}</arg>
-<doc>Fails if the given condition is not true.</doc>
-<status status="PASS" start="2025-02-13T13:10:06.649998" elapsed="0.000997"/>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<arg>${news_count}</arg>
+<arg>${expected_count}</arg>
+<arg>Search is not filtering properly</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2025-02-13T21:39:40.244124" elapsed="0.000508"/>
 </kw>
-<doc>Checks if the error modal is visible after attempting to save.</doc>
-<status status="PASS" start="2025-02-13T13:10:06.621755" elapsed="0.029240"/>
+<var name="${row}">(3,)</var>
+<status status="PASS" start="2025-02-13T21:39:37.698869" elapsed="2.545763"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-02-13T21:39:40.246160" level="INFO">${id} = 1</msg>
+<var>${id}</var>
+<arg>${row[0]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-02-13T21:39:40.244632" elapsed="0.001528"/>
 </kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-02-13T13:10:06.650995" elapsed="2.381017"/>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-02-13T21:39:40.247180" level="INFO">${id_str} = 1</msg>
+<var>${id_str}</var>
+<arg>${id}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-02-13T21:39:40.246160" elapsed="0.001020"/>
 </kw>
-<doc>Attempts to edit a news item with an empty title field and verifies an error.</doc>
-<status status="PASS" start="2025-02-13T13:09:54.957079" elapsed="14.075493"/>
-</test>
-<test id="s1-t3" name="Test Edit News With Empty Location" line="30">
-<kw name="Login And Navigate To News Page" type="SETUP">
-<kw name="Open Browser To Login Page" owner="resources">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-02-13T13:10:09.034594" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/'.</msg>
-<arg>${LOGIN_URL}</arg>
-<arg>${BROWSER}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-02-13T13:10:09.034594" elapsed="2.956983"/>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2025-02-13T21:39:40.248176" level="INFO">${id_str} = 1</msg>
+<var>${id_str}</var>
+<arg>${id_str}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2025-02-13T21:39:40.247180" elapsed="0.000996"/>
 </kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-02-13T13:10:11.992580" elapsed="0.097196"/>
+<kw name="Query" owner="DatabaseLibrary">
+<msg time="2025-02-13T21:39:40.248176" level="INFO" html="true">Executing sql:&lt;br&gt;&lt;code style="font-weight: bold;"&gt;SELECT COUNT(*) FROM news WHERE id LIKE '%1%'&lt;/code&gt;</msg>
+<msg time="2025-02-13T21:39:40.253990" level="INFO" html="true">&lt;div style="max-width: 100%; overflow-x: auto;"&gt;&lt;table style="width: auto; border-collapse: collapse; border: 2px solid rgb(140 140 140)"&gt;&lt;caption style="text-align: left; font-weight: bold; padding: 5px;"&gt;Query returned 1 rows&lt;/caption&gt;&lt;tr&gt;&lt;th scope="col" style="background-color: #d6ecd4; border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Row&lt;/th&gt;&lt;th scope="col" style="background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;COUNT(*)&lt;/th&gt;&lt;/tr&gt;&lt;tr style="background-color: #eee;"&gt;&lt;th scope="row" style="background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;0&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;2&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;</msg>
+<msg time="2025-02-13T21:39:40.255004" level="INFO">${expected_count} = ((2,),)</msg>
+<var>${expected_count}</var>
+<arg>SELECT COUNT(*) FROM news WHERE id LIKE '%${id_str}%'</arg>
+<doc>Runs a query with the ``select_statement`` and returns the result as list of rows.
+The type of row values depends on the database module -
+usually they are tuples or tuple-like objects.</doc>
+<status status="PASS" start="2025-02-13T21:39:40.248176" elapsed="0.006828"/>
 </kw>
-<kw name="Set Selenium Speed" owner="SeleniumLibrary">
-<arg>${DELAY}</arg>
-<doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" start="2025-02-13T13:10:12.090779" elapsed="0.000000"/>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-02-13T21:39:40.255514" level="INFO">${expected_count} = (2,)</msg>
+<var>${expected_count}</var>
+<arg>${expected_count}</arg>
+<arg>0</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-02-13T21:39:40.255004" elapsed="0.000510"/>
 </kw>
-<kw name="Login Page Should Be Open" owner="resources">
-<kw name="Location Should Be" owner="SeleniumLibrary">
-<msg time="2025-02-13T13:10:12.119759" level="INFO">Current location is 'http://localhost:3000/'.</msg>
-<arg>${LOGIN_URL}</arg>
-<doc>Verifies that the current URL is exactly ``url``.</doc>
-<status status="PASS" start="2025-02-13T13:10:12.092764" elapsed="0.028008"/>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-02-13T21:39:40.256059" level="INFO">${expected_count} = 2</msg>
+<var>${expected_count}</var>
+<arg>${expected_count}</arg>
+<arg>0</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-02-13T21:39:40.255514" elapsed="0.000545"/>
 </kw>
-<status status="PASS" start="2025-02-13T13:10:12.091767" elapsed="0.029005"/>
-</kw>
-<status status="PASS" start="2025-02-13T13:10:09.034594" elapsed="3.086178"/>
-</kw>
-<kw name="Login" owner="resources">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-02-13T13:10:12.122763" level="INFO">Typing text 'msaidmin@gmail.com' into text field 'id=gmail'.</msg>
-<arg>${LOGIN_GMAIL}</arg>
-<arg>${gmail}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-13T13:10:12.121767" elapsed="0.389819"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-02-13T13:10:12.511586" level="INFO">Typing text 'hashed_password_2' into text field 'id=password'.</msg>
-<arg>${LOGIN_PASSWORD}</arg>
-<arg>${password}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-13T13:10:12.511586" elapsed="0.259018"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-02-13T13:10:12.771597" level="INFO">Clicking button 'id=login_button'.</msg>
-<arg>${LOGIN_BUTTON}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-13T13:10:12.770604" elapsed="0.166780"/>
-</kw>
-<arg>msaidmin@gmail.com</arg>
-<arg>hashed_password_2</arg>
-<status status="PASS" start="2025-02-13T13:10:12.120772" elapsed="0.817148"/>
-</kw>
-<kw name="Wait Until Location Is" owner="SeleniumLibrary">
-<arg>${OVERVIEW_URL}</arg>
-<arg>10s</arg>
-<doc>Waits until the current URL is ``expected``.</doc>
-<status status="PASS" start="2025-02-13T13:10:12.937920" elapsed="1.556667"/>
-</kw>
-<kw name="Go To" owner="SeleniumLibrary">
-<msg time="2025-02-13T13:10:14.496016" level="INFO">Opening url 'http://localhost:3000/news'</msg>
-<arg>${NEWS_URL}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2025-02-13T13:10:14.495281" elapsed="0.847979"/>
-</kw>
-<kw name="Wait Until Location Is" owner="SeleniumLibrary">
-<arg>${NEWS_URL}</arg>
-<arg>10s</arg>
-<doc>Waits until the current URL is ``expected``.</doc>
-<status status="PASS" start="2025-02-13T13:10:15.343260" elapsed="0.062827"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2025-02-13T21:39:40.256059" level="INFO">Typing text '1' into text field 'id=news_search'.</msg>
 <arg>id=news_search</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-13T13:10:15.406087" elapsed="0.153955"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-02-13T13:10:15.560042" elapsed="0.010655"/>
-</kw>
-<kw name="Set Selenium Speed" owner="SeleniumLibrary">
-<arg>${DELAY}</arg>
-<doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" start="2025-02-13T13:10:15.570697" elapsed="0.000000"/>
-</kw>
-<status status="PASS" start="2025-02-13T13:10:09.034594" elapsed="6.536103"/>
-</kw>
-<kw name="Click Edit News Button">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>id=editnews_button</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-13T13:10:15.573668" elapsed="0.056006"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-02-13T13:10:15.629674" level="INFO">Clicking element 'id=editnews_button'.</msg>
-<arg>id=editnews_button</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-13T13:10:15.629674" elapsed="0.196538"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>id=edittitle_input</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-13T13:10:15.826212" elapsed="1.991786"/>
-</kw>
-<doc>Clicks the edit button to open the edit news form.</doc>
-<status status="PASS" start="2025-02-13T13:10:15.571678" elapsed="2.247187"/>
-</kw>
-<kw name="Clear Edit Location Field">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>id=editlocation_input</arg>
-<arg>5s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-13T13:10:17.821237" elapsed="0.182567"/>
-</kw>
-<kw name="Clear Element Text" owner="SeleniumLibrary">
-<arg>id=editlocation_input</arg>
-<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-13T13:10:18.003804" elapsed="0.561437"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-02-13T13:10:18.567241" level="INFO">Typing text '‎' into text field 'id=editlocation_input'.</msg>
-<arg>id=editlocation_input</arg>
-<arg>${SPECIAL_CHAR}</arg>
+<arg>${id_str}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-13T13:10:18.566243" elapsed="0.694967"/>
+<status status="PASS" start="2025-02-13T21:39:40.256059" elapsed="0.206794"/>
 </kw>
 <kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2025-02-13T13:10:19.263204" level="INFO">Sending key(s) ('\t',) to id=editlocation_input element.</msg>
-<msg time="2025-02-13T13:10:19.574407" level="INFO">Sending key 	</msg>
-<arg>id=editlocation_input</arg>
-<arg>\t</arg>
+<msg time="2025-02-13T21:39:40.463636" level="INFO">Sending key(s) ('ENTER',) to id=news_search element.</msg>
+<msg time="2025-02-13T21:39:40.757074" level="INFO">Pressing special key ENTER to element.</msg>
+<msg time="2025-02-13T21:39:40.757074" level="INFO">Releasing special key ENTER.</msg>
+<arg>id=news_search</arg>
+<arg>ENTER</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2025-02-13T13:10:19.261210" elapsed="0.332196"/>
-</kw>
-<doc>Clears the location field before editing.</doc>
-<status status="PASS" start="2025-02-13T13:10:17.820222" elapsed="1.773184"/>
-</kw>
-<kw name="Save News">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-02-13T13:10:19.595402" level="INFO">Clicking button 'id=saveeditnews_button'.</msg>
-<arg>id=saveeditnews_button</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-13T13:10:19.594407" elapsed="0.175377"/>
+<status status="PASS" start="2025-02-13T21:39:40.462853" elapsed="0.302843"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-02-13T13:10:20.769863" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
+<msg time="2025-02-13T21:39:42.766004" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-02-13T13:10:19.769784" elapsed="1.000079"/>
+<status status="PASS" start="2025-02-13T21:39:40.765696" elapsed="2.000308"/>
 </kw>
-<doc>This keyword clicks the save button.</doc>
-<status status="PASS" start="2025-02-13T13:10:19.594407" elapsed="1.175456"/>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-02-13T21:39:42.812301" level="INFO">${found_element} = 1 edited titleedited 2025-02-11 Delete</msg>
+<var>${found_element}</var>
+<arg>xpath=//tr[contains(@id, 'news_') and not(contains(@style, 'display: none'))]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-13T21:39:42.766535" elapsed="0.045766"/>
 </kw>
-<kw name="Verify Error Modal">
-<kw name="Run Keyword And Return Status" owner="BuiltIn">
-<kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2025-02-13T13:10:20.798890" level="INFO">Element 'id=modal_erroredit_message' is displayed.</msg>
-<arg>id=modal_erroredit_message</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-13T13:10:20.770872" elapsed="0.028018"/>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${found_element}</arg>
+<arg>${id_str}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-02-13T21:39:42.813329" elapsed="0.000000"/>
 </kw>
-<msg time="2025-02-13T13:10:20.798890" level="INFO">${is_visible} = True</msg>
-<var>${is_visible}</var>
-<arg>Element Should Be Visible</arg>
-<arg>id=modal_erroredit_message</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2025-02-13T13:10:20.770872" elapsed="0.028018"/>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2025-02-13T21:39:42.814320" level="WARN">Keyword 'Get Element Count' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Get Element Count' or 'XML.Get Element Count'.</msg>
+<msg time="2025-02-13T21:39:42.852518" level="INFO">${news_count} = 2</msg>
+<var>${news_count}</var>
+<arg>xpath=//tr[contains(@id, 'news_') and not(contains(@style, 'display: none')) and contains(@id, '${id_str}')]</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2025-02-13T21:39:42.814320" elapsed="0.038198"/>
 </kw>
-<kw name="Should Be True" owner="BuiltIn">
-<arg>${is_visible}</arg>
-<doc>Fails if the given condition is not true.</doc>
-<status status="PASS" start="2025-02-13T13:10:20.798890" elapsed="0.001011"/>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<arg>${news_count}</arg>
+<arg>${expected_count}</arg>
+<arg>Search is not filtering properly</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2025-02-13T21:39:42.852518" elapsed="0.000000"/>
 </kw>
-<doc>Checks if the error modal is visible after attempting to save.</doc>
-<status status="PASS" start="2025-02-13T13:10:20.769863" elapsed="0.030038"/>
+<var name="${row}">(1,)</var>
+<status status="PASS" start="2025-02-13T21:39:40.244632" elapsed="2.609413"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-02-13T21:39:42.859256" level="INFO">${id} = 41</msg>
+<var>${id}</var>
+<arg>${row[0]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-02-13T21:39:42.856594" elapsed="0.002662"/>
 </kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-02-13T13:10:20.799901" elapsed="2.962263"/>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-02-13T21:39:42.861259" level="INFO">${id_str} = 41</msg>
+<var>${id_str}</var>
+<arg>${id}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-02-13T21:39:42.860264" elapsed="0.000995"/>
 </kw>
-<doc>Attempts to edit a news item with an empty location field and verifies an error.</doc>
-<status status="PASS" start="2025-02-13T13:10:09.033587" elapsed="14.728577"/>
-</test>
-<test id="s1-t4" name="Test Edit News With Empty Content" line="38">
-<kw name="Login And Navigate To News Page" type="SETUP">
-<kw name="Open Browser To Login Page" owner="resources">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-02-13T13:10:23.764165" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/'.</msg>
-<arg>${LOGIN_URL}</arg>
-<arg>${BROWSER}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-02-13T13:10:23.764165" elapsed="4.857420"/>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2025-02-13T21:39:42.863258" level="INFO">${id_str} = 41</msg>
+<var>${id_str}</var>
+<arg>${id_str}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2025-02-13T21:39:42.862289" elapsed="0.000969"/>
 </kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-02-13T13:10:28.622583" elapsed="0.123583"/>
+<kw name="Query" owner="DatabaseLibrary">
+<msg time="2025-02-13T21:39:42.864256" level="INFO" html="true">Executing sql:&lt;br&gt;&lt;code style="font-weight: bold;"&gt;SELECT COUNT(*) FROM news WHERE id LIKE '%41%'&lt;/code&gt;</msg>
+<msg time="2025-02-13T21:39:42.869325" level="INFO" html="true">&lt;div style="max-width: 100%; overflow-x: auto;"&gt;&lt;table style="width: auto; border-collapse: collapse; border: 2px solid rgb(140 140 140)"&gt;&lt;caption style="text-align: left; font-weight: bold; padding: 5px;"&gt;Query returned 1 rows&lt;/caption&gt;&lt;tr&gt;&lt;th scope="col" style="background-color: #d6ecd4; border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Row&lt;/th&gt;&lt;th scope="col" style="background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;COUNT(*)&lt;/th&gt;&lt;/tr&gt;&lt;tr style="background-color: #eee;"&gt;&lt;th scope="row" style="background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;0&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;1&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;</msg>
+<msg time="2025-02-13T21:39:42.869325" level="INFO">${expected_count} = ((1,),)</msg>
+<var>${expected_count}</var>
+<arg>SELECT COUNT(*) FROM news WHERE id LIKE '%${id_str}%'</arg>
+<doc>Runs a query with the ``select_statement`` and returns the result as list of rows.
+The type of row values depends on the database module -
+usually they are tuples or tuple-like objects.</doc>
+<status status="PASS" start="2025-02-13T21:39:42.863258" elapsed="0.006067"/>
 </kw>
-<kw name="Set Selenium Speed" owner="SeleniumLibrary">
-<arg>${DELAY}</arg>
-<doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" start="2025-02-13T13:10:28.747055" elapsed="0.000972"/>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-02-13T21:39:42.870321" level="INFO">${expected_count} = (1,)</msg>
+<var>${expected_count}</var>
+<arg>${expected_count}</arg>
+<arg>0</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-02-13T21:39:42.870321" elapsed="0.000000"/>
 </kw>
-<kw name="Login Page Should Be Open" owner="resources">
-<kw name="Location Should Be" owner="SeleniumLibrary">
-<msg time="2025-02-13T13:10:28.782876" level="INFO">Current location is 'http://localhost:3000/'.</msg>
-<arg>${LOGIN_URL}</arg>
-<doc>Verifies that the current URL is exactly ``url``.</doc>
-<status status="PASS" start="2025-02-13T13:10:28.751464" elapsed="0.032212"/>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-02-13T21:39:42.871323" level="INFO">${expected_count} = 1</msg>
+<var>${expected_count}</var>
+<arg>${expected_count}</arg>
+<arg>0</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-02-13T21:39:42.871323" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2025-02-13T13:10:28.750328" elapsed="0.033348"/>
-</kw>
-<status status="PASS" start="2025-02-13T13:10:23.764165" elapsed="5.019511"/>
-</kw>
-<kw name="Login" owner="resources">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-02-13T13:10:28.785691" level="INFO">Typing text 'msaidmin@gmail.com' into text field 'id=gmail'.</msg>
-<arg>${LOGIN_GMAIL}</arg>
-<arg>${gmail}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-13T13:10:28.784689" elapsed="0.582876"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-02-13T13:10:29.367565" level="INFO">Typing text 'hashed_password_2' into text field 'id=password'.</msg>
-<arg>${LOGIN_PASSWORD}</arg>
-<arg>${password}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-13T13:10:29.367565" elapsed="0.360265"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-02-13T13:10:29.729830" level="INFO">Clicking button 'id=login_button'.</msg>
-<arg>${LOGIN_BUTTON}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-13T13:10:29.728829" elapsed="0.140991"/>
-</kw>
-<arg>msaidmin@gmail.com</arg>
-<arg>hashed_password_2</arg>
-<status status="PASS" start="2025-02-13T13:10:28.784689" elapsed="1.085131"/>
-</kw>
-<kw name="Wait Until Location Is" owner="SeleniumLibrary">
-<arg>${OVERVIEW_URL}</arg>
-<arg>10s</arg>
-<doc>Waits until the current URL is ``expected``.</doc>
-<status status="PASS" start="2025-02-13T13:10:29.869820" elapsed="2.165035"/>
-</kw>
-<kw name="Go To" owner="SeleniumLibrary">
-<msg time="2025-02-13T13:10:32.034855" level="INFO">Opening url 'http://localhost:3000/news'</msg>
-<arg>${NEWS_URL}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2025-02-13T13:10:32.034855" elapsed="1.212191"/>
-</kw>
-<kw name="Wait Until Location Is" owner="SeleniumLibrary">
-<arg>${NEWS_URL}</arg>
-<arg>10s</arg>
-<doc>Waits until the current URL is ``expected``.</doc>
-<status status="PASS" start="2025-02-13T13:10:33.248050" elapsed="0.075145"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2025-02-13T21:39:42.871323" level="INFO">Typing text '41' into text field 'id=news_search'.</msg>
 <arg>id=news_search</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-13T13:10:33.323195" elapsed="0.065153"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-02-13T13:10:33.388893" elapsed="0.009366"/>
-</kw>
-<kw name="Set Selenium Speed" owner="SeleniumLibrary">
-<arg>${DELAY}</arg>
-<doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" start="2025-02-13T13:10:33.399258" elapsed="0.000000"/>
-</kw>
-<status status="PASS" start="2025-02-13T13:10:23.764165" elapsed="9.636095"/>
-</kw>
-<kw name="Click Edit News Button">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>id=editnews_button</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-13T13:10:33.404244" elapsed="0.251432"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-02-13T13:10:33.656674" level="INFO">Clicking element 'id=editnews_button'.</msg>
-<arg>id=editnews_button</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-13T13:10:33.655676" elapsed="0.147887"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>id=edittitle_input</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-13T13:10:33.804561" elapsed="2.167217"/>
-</kw>
-<doc>Clicks the edit button to open the edit news form.</doc>
-<status status="PASS" start="2025-02-13T13:10:33.403692" elapsed="2.568086"/>
-</kw>
-<kw name="Clear Edit Content Field">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>id=editcontent_input</arg>
-<arg>5s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-13T13:10:35.973777" elapsed="0.174267"/>
-</kw>
-<kw name="Clear Element Text" owner="SeleniumLibrary">
-<arg>id=editcontent_input</arg>
-<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-13T13:10:36.149041" elapsed="0.448969"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-02-13T13:10:36.600046" level="INFO">Typing text '‎' into text field 'id=editcontent_input'.</msg>
-<arg>id=editcontent_input</arg>
-<arg>${SPECIAL_CHAR}</arg>
+<arg>${id_str}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-13T13:10:36.599012" elapsed="0.626706"/>
+<status status="PASS" start="2025-02-13T21:39:42.871323" elapsed="0.156502"/>
 </kw>
 <kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2025-02-13T13:10:37.240717" level="INFO">Sending key(s) ('\t',) to id=editcontent_input element.</msg>
-<msg time="2025-02-13T13:10:37.667112" level="INFO">Sending key 	</msg>
-<arg>id=editcontent_input</arg>
-<arg>\t</arg>
+<msg time="2025-02-13T21:39:43.028837" level="INFO">Sending key(s) ('ENTER',) to id=news_search element.</msg>
+<msg time="2025-02-13T21:39:43.327313" level="INFO">Pressing special key ENTER to element.</msg>
+<msg time="2025-02-13T21:39:43.327313" level="INFO">Releasing special key ENTER.</msg>
+<arg>id=news_search</arg>
+<arg>ENTER</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2025-02-13T13:10:37.225718" elapsed="0.458597"/>
-</kw>
-<doc>Clears the content field before editing.</doc>
-<status status="PASS" start="2025-02-13T13:10:35.972780" elapsed="1.712535"/>
-</kw>
-<kw name="Save News">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-02-13T13:10:37.686612" level="INFO">Clicking button 'id=saveeditnews_button'.</msg>
-<arg>id=saveeditnews_button</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-13T13:10:37.686612" elapsed="0.146634"/>
+<status status="PASS" start="2025-02-13T21:39:43.027825" elapsed="0.307452"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-02-13T13:10:38.834584" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
+<msg time="2025-02-13T21:39:45.336541" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-02-13T13:10:37.833797" elapsed="1.000787"/>
+<status status="PASS" start="2025-02-13T21:39:43.336287" elapsed="2.000254"/>
 </kw>
-<doc>This keyword clicks the save button.</doc>
-<status status="PASS" start="2025-02-13T13:10:37.686051" elapsed="1.148533"/>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-02-13T21:39:45.357767" level="INFO">${found_element} = 41 ggg 2025-02-12 Delete</msg>
+<var>${found_element}</var>
+<arg>xpath=//tr[contains(@id, 'news_') and not(contains(@style, 'display: none'))]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-13T21:39:45.336541" elapsed="0.021226"/>
 </kw>
-<kw name="Verify Error Modal">
-<kw name="Run Keyword And Return Status" owner="BuiltIn">
-<kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2025-02-13T13:10:38.880546" level="INFO">Element 'id=modal_erroredit_message' is displayed.</msg>
-<arg>id=modal_erroredit_message</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-13T13:10:38.836741" elapsed="0.043805"/>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${found_element}</arg>
+<arg>${id_str}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-02-13T21:39:45.358766" elapsed="0.000000"/>
 </kw>
-<msg time="2025-02-13T13:10:38.881118" level="INFO">${is_visible} = True</msg>
-<var>${is_visible}</var>
-<arg>Element Should Be Visible</arg>
-<arg>id=modal_erroredit_message</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2025-02-13T13:10:38.836203" elapsed="0.044915"/>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2025-02-13T21:39:45.358766" level="WARN">Keyword 'Get Element Count' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Get Element Count' or 'XML.Get Element Count'.</msg>
+<msg time="2025-02-13T21:39:45.371475" level="INFO">${news_count} = 1</msg>
+<var>${news_count}</var>
+<arg>xpath=//tr[contains(@id, 'news_') and not(contains(@style, 'display: none')) and contains(@id, '${id_str}')]</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2025-02-13T21:39:45.358766" elapsed="0.012709"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<arg>${news_count}</arg>
+<arg>${expected_count}</arg>
+<arg>Search is not filtering properly</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2025-02-13T21:39:45.372471" elapsed="0.000000"/>
+</kw>
+<var name="${row}">(41,)</var>
+<status status="PASS" start="2025-02-13T21:39:42.855066" elapsed="2.517405"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-02-13T21:39:45.372471" level="INFO">${id} = 2</msg>
+<var>${id}</var>
+<arg>${row[0]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-02-13T21:39:45.372471" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-02-13T21:39:45.372471" level="INFO">${id_str} = 2</msg>
+<var>${id_str}</var>
+<arg>${id}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-02-13T21:39:45.372471" elapsed="0.000000"/>
+</kw>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2025-02-13T21:39:45.373976" level="INFO">${id_str} = 2</msg>
+<var>${id_str}</var>
+<arg>${id_str}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2025-02-13T21:39:45.373976" elapsed="0.000000"/>
+</kw>
+<kw name="Query" owner="DatabaseLibrary">
+<msg time="2025-02-13T21:39:45.373976" level="INFO" html="true">Executing sql:&lt;br&gt;&lt;code style="font-weight: bold;"&gt;SELECT COUNT(*) FROM news WHERE id LIKE '%2%'&lt;/code&gt;</msg>
+<msg time="2025-02-13T21:39:45.376309" level="INFO" html="true">&lt;div style="max-width: 100%; overflow-x: auto;"&gt;&lt;table style="width: auto; border-collapse: collapse; border: 2px solid rgb(140 140 140)"&gt;&lt;caption style="text-align: left; font-weight: bold; padding: 5px;"&gt;Query returned 1 rows&lt;/caption&gt;&lt;tr&gt;&lt;th scope="col" style="background-color: #d6ecd4; border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Row&lt;/th&gt;&lt;th scope="col" style="background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;COUNT(*)&lt;/th&gt;&lt;/tr&gt;&lt;tr style="background-color: #eee;"&gt;&lt;th scope="row" style="background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;0&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;1&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;</msg>
+<msg time="2025-02-13T21:39:45.377302" level="INFO">${expected_count} = ((1,),)</msg>
+<var>${expected_count}</var>
+<arg>SELECT COUNT(*) FROM news WHERE id LIKE '%${id_str}%'</arg>
+<doc>Runs a query with the ``select_statement`` and returns the result as list of rows.
+The type of row values depends on the database module -
+usually they are tuples or tuple-like objects.</doc>
+<status status="PASS" start="2025-02-13T21:39:45.373976" elapsed="0.003326"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-02-13T21:39:45.377302" level="INFO">${expected_count} = (1,)</msg>
+<var>${expected_count}</var>
+<arg>${expected_count}</arg>
+<arg>0</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-02-13T21:39:45.377302" elapsed="0.000000"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-02-13T21:39:45.377302" level="INFO">${expected_count} = 1</msg>
+<var>${expected_count}</var>
+<arg>${expected_count}</arg>
+<arg>0</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-02-13T21:39:45.377302" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-13T21:39:45.377302" level="INFO">Typing text '2' into text field 'id=news_search'.</msg>
+<arg>id=news_search</arg>
+<arg>${id_str}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-13T21:39:45.377302" elapsed="0.149389"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-02-13T21:39:45.527690" level="INFO">Sending key(s) ('ENTER',) to id=news_search element.</msg>
+<msg time="2025-02-13T21:39:45.825763" level="INFO">Pressing special key ENTER to element.</msg>
+<msg time="2025-02-13T21:39:45.825763" level="INFO">Releasing special key ENTER.</msg>
+<arg>id=news_search</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-02-13T21:39:45.527690" elapsed="0.308640"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-13T21:39:47.837763" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-13T21:39:45.837330" elapsed="2.000433"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-02-13T21:39:47.862999" level="INFO">${found_element} = 2 Park Sidewalk Renovation 2025-02-11 Delete</msg>
+<var>${found_element}</var>
+<arg>xpath=//tr[contains(@id, 'news_') and not(contains(@style, 'display: none'))]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-13T21:39:47.837763" elapsed="0.025236"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${found_element}</arg>
+<arg>${id_str}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-02-13T21:39:47.862999" elapsed="0.000000"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2025-02-13T21:39:47.862999" level="WARN">Keyword 'Get Element Count' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Get Element Count' or 'XML.Get Element Count'.</msg>
+<msg time="2025-02-13T21:39:47.875755" level="INFO">${news_count} = 1</msg>
+<var>${news_count}</var>
+<arg>xpath=//tr[contains(@id, 'news_') and not(contains(@style, 'display: none')) and contains(@id, '${id_str}')]</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2025-02-13T21:39:47.864001" elapsed="0.011754"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<arg>${news_count}</arg>
+<arg>${expected_count}</arg>
+<arg>Search is not filtering properly</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2025-02-13T21:39:47.875755" elapsed="0.001007"/>
+</kw>
+<var name="${row}">(2,)</var>
+<status status="PASS" start="2025-02-13T21:39:45.372471" elapsed="2.504291"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-02-13T21:39:47.877759" level="INFO">${id} = 39</msg>
+<var>${id}</var>
+<arg>${row[0]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-02-13T21:39:47.876762" elapsed="0.000997"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-02-13T21:39:47.878771" level="INFO">${id_str} = 39</msg>
+<var>${id_str}</var>
+<arg>${id}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-02-13T21:39:47.878771" elapsed="0.000000"/>
+</kw>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2025-02-13T21:39:47.880306" level="INFO">${id_str} = 39</msg>
+<var>${id_str}</var>
+<arg>${id_str}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2025-02-13T21:39:47.879311" elapsed="0.000995"/>
+</kw>
+<kw name="Query" owner="DatabaseLibrary">
+<msg time="2025-02-13T21:39:47.881308" level="INFO" html="true">Executing sql:&lt;br&gt;&lt;code style="font-weight: bold;"&gt;SELECT COUNT(*) FROM news WHERE id LIKE '%39%'&lt;/code&gt;</msg>
+<msg time="2025-02-13T21:39:47.885965" level="INFO" html="true">&lt;div style="max-width: 100%; overflow-x: auto;"&gt;&lt;table style="width: auto; border-collapse: collapse; border: 2px solid rgb(140 140 140)"&gt;&lt;caption style="text-align: left; font-weight: bold; padding: 5px;"&gt;Query returned 1 rows&lt;/caption&gt;&lt;tr&gt;&lt;th scope="col" style="background-color: #d6ecd4; border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Row&lt;/th&gt;&lt;th scope="col" style="background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;COUNT(*)&lt;/th&gt;&lt;/tr&gt;&lt;tr style="background-color: #eee;"&gt;&lt;th scope="row" style="background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;0&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;1&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;</msg>
+<msg time="2025-02-13T21:39:47.885965" level="INFO">${expected_count} = ((1,),)</msg>
+<var>${expected_count}</var>
+<arg>SELECT COUNT(*) FROM news WHERE id LIKE '%${id_str}%'</arg>
+<doc>Runs a query with the ``select_statement`` and returns the result as list of rows.
+The type of row values depends on the database module -
+usually they are tuples or tuple-like objects.</doc>
+<status status="PASS" start="2025-02-13T21:39:47.880306" elapsed="0.005659"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-02-13T21:39:47.886965" level="INFO">${expected_count} = (1,)</msg>
+<var>${expected_count}</var>
+<arg>${expected_count}</arg>
+<arg>0</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-02-13T21:39:47.885965" elapsed="0.001000"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-02-13T21:39:47.886965" level="INFO">${expected_count} = 1</msg>
+<var>${expected_count}</var>
+<arg>${expected_count}</arg>
+<arg>0</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-02-13T21:39:47.886965" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-13T21:39:47.886965" level="INFO">Typing text '39' into text field 'id=news_search'.</msg>
+<arg>id=news_search</arg>
+<arg>${id_str}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-13T21:39:47.886965" elapsed="0.203663"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-02-13T21:39:48.091638" level="INFO">Sending key(s) ('ENTER',) to id=news_search element.</msg>
+<msg time="2025-02-13T21:39:48.375811" level="INFO">Pressing special key ENTER to element.</msg>
+<msg time="2025-02-13T21:39:48.375811" level="INFO">Releasing special key ENTER.</msg>
+<arg>id=news_search</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-02-13T21:39:48.090628" elapsed="0.296754"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-13T21:39:50.388041" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-13T21:39:48.387382" elapsed="2.000659"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-02-13T21:39:50.408689" level="INFO">${found_element} = 39 testing1 2025-02-12 Delete</msg>
+<var>${found_element}</var>
+<arg>xpath=//tr[contains(@id, 'news_') and not(contains(@style, 'display: none'))]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-13T21:39:50.388041" elapsed="0.020648"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${found_element}</arg>
+<arg>${id_str}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-02-13T21:39:50.408689" elapsed="0.000999"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2025-02-13T21:39:50.409688" level="WARN">Keyword 'Get Element Count' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Get Element Count' or 'XML.Get Element Count'.</msg>
+<msg time="2025-02-13T21:39:50.425776" level="INFO">${news_count} = 1</msg>
+<var>${news_count}</var>
+<arg>xpath=//tr[contains(@id, 'news_') and not(contains(@style, 'display: none')) and contains(@id, '${id_str}')]</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2025-02-13T21:39:50.409688" elapsed="0.016088"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<arg>${news_count}</arg>
+<arg>${expected_count}</arg>
+<arg>Search is not filtering properly</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2025-02-13T21:39:50.425776" elapsed="0.000000"/>
+</kw>
+<var name="${row}">(39,)</var>
+<status status="PASS" start="2025-02-13T21:39:47.876762" elapsed="2.549014"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-02-13T21:39:50.426772" level="INFO">${id} = 4</msg>
+<var>${id}</var>
+<arg>${row[0]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-02-13T21:39:50.425776" elapsed="0.000996"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-02-13T21:39:50.426772" level="INFO">${id_str} = 4</msg>
+<var>${id_str}</var>
+<arg>${id}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-02-13T21:39:50.426772" elapsed="0.000000"/>
+</kw>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2025-02-13T21:39:50.427776" level="INFO">${id_str} = 4</msg>
+<var>${id_str}</var>
+<arg>${id_str}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2025-02-13T21:39:50.426772" elapsed="0.001004"/>
+</kw>
+<kw name="Query" owner="DatabaseLibrary">
+<msg time="2025-02-13T21:39:50.427776" level="INFO" html="true">Executing sql:&lt;br&gt;&lt;code style="font-weight: bold;"&gt;SELECT COUNT(*) FROM news WHERE id LIKE '%4%'&lt;/code&gt;</msg>
+<msg time="2025-02-13T21:39:50.429771" level="INFO" html="true">&lt;div style="max-width: 100%; overflow-x: auto;"&gt;&lt;table style="width: auto; border-collapse: collapse; border: 2px solid rgb(140 140 140)"&gt;&lt;caption style="text-align: left; font-weight: bold; padding: 5px;"&gt;Query returned 1 rows&lt;/caption&gt;&lt;tr&gt;&lt;th scope="col" style="background-color: #d6ecd4; border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Row&lt;/th&gt;&lt;th scope="col" style="background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;COUNT(*)&lt;/th&gt;&lt;/tr&gt;&lt;tr style="background-color: #eee;"&gt;&lt;th scope="row" style="background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;0&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;2&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;</msg>
+<msg time="2025-02-13T21:39:50.430775" level="INFO">${expected_count} = ((2,),)</msg>
+<var>${expected_count}</var>
+<arg>SELECT COUNT(*) FROM news WHERE id LIKE '%${id_str}%'</arg>
+<doc>Runs a query with the ``select_statement`` and returns the result as list of rows.
+The type of row values depends on the database module -
+usually they are tuples or tuple-like objects.</doc>
+<status status="PASS" start="2025-02-13T21:39:50.427776" elapsed="0.002999"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-02-13T21:39:50.430775" level="INFO">${expected_count} = (2,)</msg>
+<var>${expected_count}</var>
+<arg>${expected_count}</arg>
+<arg>0</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-02-13T21:39:50.430775" elapsed="0.000000"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-02-13T21:39:50.431772" level="INFO">${expected_count} = 2</msg>
+<var>${expected_count}</var>
+<arg>${expected_count}</arg>
+<arg>0</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-02-13T21:39:50.430775" elapsed="0.000997"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-13T21:39:50.431772" level="INFO">Typing text '4' into text field 'id=news_search'.</msg>
+<arg>id=news_search</arg>
+<arg>${id_str}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-13T21:39:50.431772" elapsed="0.135934"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-02-13T21:39:50.568702" level="INFO">Sending key(s) ('ENTER',) to id=news_search element.</msg>
+<msg time="2025-02-13T21:39:50.855511" level="INFO">Pressing special key ENTER to element.</msg>
+<msg time="2025-02-13T21:39:50.855511" level="INFO">Releasing special key ENTER.</msg>
+<arg>id=news_search</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-02-13T21:39:50.568702" elapsed="0.295350"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-13T21:39:52.864325" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-13T21:39:50.864052" elapsed="2.000273"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-02-13T21:39:52.886268" level="INFO">${found_element} = 4 สัวส 2025-02-12 Delete</msg>
+<var>${found_element}</var>
+<arg>xpath=//tr[contains(@id, 'news_') and not(contains(@style, 'display: none'))]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-13T21:39:52.864325" elapsed="0.022940"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${found_element}</arg>
+<arg>${id_str}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-02-13T21:39:52.887265" elapsed="0.000000"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2025-02-13T21:39:52.887265" level="WARN">Keyword 'Get Element Count' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Get Element Count' or 'XML.Get Element Count'.</msg>
+<msg time="2025-02-13T21:39:52.900873" level="INFO">${news_count} = 2</msg>
+<var>${news_count}</var>
+<arg>xpath=//tr[contains(@id, 'news_') and not(contains(@style, 'display: none')) and contains(@id, '${id_str}')]</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2025-02-13T21:39:52.887265" elapsed="0.013608"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<arg>${news_count}</arg>
+<arg>${expected_count}</arg>
+<arg>Search is not filtering properly</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2025-02-13T21:39:52.900873" elapsed="0.000000"/>
+</kw>
+<var name="${row}">(4,)</var>
+<status status="PASS" start="2025-02-13T21:39:50.425776" elapsed="2.476092"/>
+</iter>
+<var>${row}</var>
+<value>@{news_ids}</value>
+<status status="PASS" start="2025-02-13T21:39:37.698869" elapsed="15.202999"/>
+</for>
+<kw name="Disconnect From Database" owner="DatabaseLibrary">
+<doc>Disconnects from the database.</doc>
+<status status="PASS" start="2025-02-13T21:39:52.901868" elapsed="0.001008"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-13T21:39:52.904931" level="INFO">Typing text 'Park' into text field 'id=news_search'.</msg>
+<arg>id=news_search</arg>
+<arg>Park</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-13T21:39:52.904393" elapsed="0.235149"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-02-13T21:39:53.140536" level="INFO">Sending key(s) ('ENTER',) to id=news_search element.</msg>
+<msg time="2025-02-13T21:39:53.430161" level="INFO">Pressing special key ENTER to element.</msg>
+<msg time="2025-02-13T21:39:53.430161" level="INFO">Releasing special key ENTER.</msg>
+<arg>id=news_search</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-02-13T21:39:53.140536" elapsed="0.297739"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-13T21:39:55.439873" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-13T21:39:53.438275" elapsed="2.001598"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2025-02-13T21:39:55.439873" level="WARN">Keyword 'Get Element Count' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Get Element Count' or 'XML.Get Element Count'.</msg>
+<msg time="2025-02-13T21:39:55.455766" level="INFO">${news_count} = 1</msg>
+<var>${news_count}</var>
+<arg>xpath=//td[starts-with(@id, 'title_') and contains(text(), 'Park')]</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2025-02-13T21:39:55.439873" elapsed="0.016893"/>
 </kw>
 <kw name="Should Be True" owner="BuiltIn">
-<arg>${is_visible}</arg>
+<arg>${news_count} &gt; 0</arg>
+<arg>No title contains 'Park'</arg>
 <doc>Fails if the given condition is not true.</doc>
-<status status="PASS" start="2025-02-13T13:10:38.881683" elapsed="0.000551"/>
+<status status="PASS" start="2025-02-13T21:39:55.456766" elapsed="0.000000"/>
 </kw>
-<doc>Checks if the error modal is visible after attempting to save.</doc>
-<status status="PASS" start="2025-02-13T13:10:38.835653" elapsed="0.048183"/>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-13T21:39:55.457765" level="INFO">Typing text 'hello' into text field 'id=news_search'.</msg>
+<arg>id=news_search</arg>
+<arg>hello</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-13T21:39:55.457765" elapsed="0.191720"/>
 </kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-02-13T13:10:38.884371" elapsed="8.924138"/>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-02-13T21:39:55.650486" level="INFO">Sending key(s) ('ENTER',) to id=news_search element.</msg>
+<msg time="2025-02-13T21:39:55.947100" level="INFO">Pressing special key ENTER to element.</msg>
+<msg time="2025-02-13T21:39:55.947100" level="INFO">Releasing special key ENTER.</msg>
+<arg>id=news_search</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-02-13T21:39:55.649485" elapsed="0.306155"/>
 </kw>
-<doc>Attempts to edit a news item with an empty content field and verifies an error.</doc>
-<status status="PASS" start="2025-02-13T13:10:23.763163" elapsed="24.046344"/>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-13T21:39:57.956305" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-13T21:39:55.955827" elapsed="2.000478"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-02-13T21:39:57.979357" level="INFO">Element 'id=search_error' is displayed.</msg>
+<arg>id=search_error</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-13T21:39:57.956305" elapsed="0.023052"/>
+</kw>
+<arg>Element Should Be Visible</arg>
+<arg>id=search_error</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-02-13T21:39:57.956305" elapsed="0.023052"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${True}</arg>
+<arg>Search error message is not displayed.</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2025-02-13T21:39:57.980358" elapsed="0.000000"/>
+</kw>
+<doc>Verify all news items exist on the news page and test search functionality.</doc>
+<status status="PASS" start="2025-02-13T21:39:26.245683" elapsed="31.735679"/>
 </test>
-<status status="PASS" start="2025-02-13T13:09:36.994742" elapsed="70.820765"/>
+<status status="PASS" start="2025-02-13T21:39:25.497383" elapsed="32.485503"/>
 </suite>
 <statistics>
 <total>
-<stat pass="4" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Editnews" id="s1" pass="4" fail="0" skip="0">Editnews</stat>
+<stat name="News" id="s1" pass="1" fail="0" skip="0">News</stat>
 </suite>
 </statistics>
 <errors>
+<msg time="2025-02-13T21:39:40.222316" level="WARN">Keyword 'Get Element Count' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Get Element Count' or 'XML.Get Element Count'.</msg>
+<msg time="2025-02-13T21:39:42.814320" level="WARN">Keyword 'Get Element Count' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Get Element Count' or 'XML.Get Element Count'.</msg>
+<msg time="2025-02-13T21:39:45.358766" level="WARN">Keyword 'Get Element Count' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Get Element Count' or 'XML.Get Element Count'.</msg>
+<msg time="2025-02-13T21:39:47.862999" level="WARN">Keyword 'Get Element Count' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Get Element Count' or 'XML.Get Element Count'.</msg>
+<msg time="2025-02-13T21:39:50.409688" level="WARN">Keyword 'Get Element Count' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Get Element Count' or 'XML.Get Element Count'.</msg>
+<msg time="2025-02-13T21:39:52.887265" level="WARN">Keyword 'Get Element Count' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Get Element Count' or 'XML.Get Element Count'.</msg>
+<msg time="2025-02-13T21:39:55.439873" level="WARN">Keyword 'Get Element Count' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Get Element Count' or 'XML.Get Element Count'.</msg>
 </errors>
 </robot>
