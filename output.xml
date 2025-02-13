@@ -1,0 +1,664 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.12.0 on win32)" generated="2025-02-13T21:40:34.536737" rpa="false" schemaversion="5">
+<suite id="s1" name="Overview-Test" source="C:\Users\acer\Dropbox\My PC (LAPTOP-V2ODEVNU)\Documents\GitHub\Marong-web-test\overview-test">
+<suite id="s1-s1" name="Login" source="C:\Users\acer\Dropbox\My PC (LAPTOP-V2ODEVNU)\Documents\GitHub\Marong-web-test\overview-test\login.robot">
+<test id="s1-s1-t1" name="Login Successfully" line="5">
+<kw name="Open Browser To Login Page" owner="resources">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-13T21:40:35.001266" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/'.</msg>
+<arg>${LOGIN_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-13T21:40:35.001266" elapsed="2.895135"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-02-13T21:40:37.896401" elapsed="0.134886"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2025-02-13T21:40:38.032290" elapsed="0.001024"/>
+</kw>
+<kw name="Login Page Should Be Open" owner="resources">
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2025-02-13T21:40:38.096320" level="INFO">Current location is 'http://localhost:3000/'.</msg>
+<arg>${LOGIN_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2025-02-13T21:40:38.034819" elapsed="0.061501"/>
+</kw>
+<status status="PASS" start="2025-02-13T21:40:38.033314" elapsed="0.064017"/>
+</kw>
+<status status="PASS" start="2025-02-13T21:40:35.000258" elapsed="3.097073"/>
+</kw>
+<kw name="Login" owner="resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-13T21:40:38.100333" level="INFO">Typing text 'msaidmin@gmail.com' into text field 'id=gmail'.</msg>
+<arg>${LOGIN_GMAIL}</arg>
+<arg>${gmail}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-13T21:40:38.099341" elapsed="0.706300"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-13T21:40:38.807659" level="INFO">Typing text 'hashed_password_2' into text field 'id=password'.</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-13T21:40:38.806663" elapsed="0.665009"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-02-13T21:40:39.473731" level="INFO">Clicking button 'id=login_button'.</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-13T21:40:39.473210" elapsed="0.239993"/>
+</kw>
+<arg>msaidmin@gmail.com</arg>
+<arg>hashed_password_2</arg>
+<status status="PASS" start="2025-02-13T21:40:38.098333" elapsed="1.614870"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${OVERVIEW_URL}</arg>
+<arg>5s</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-02-13T21:40:39.718818" elapsed="1.864503"/>
+</kw>
+<kw name="Overview Page Should Be Open" owner="resources">
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2025-02-13T21:40:41.845910" level="INFO">Current location is 'http://localhost:3000/overview'.</msg>
+<arg>${OVERVIEW_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2025-02-13T21:40:41.584857" elapsed="0.262072"/>
+</kw>
+<status status="PASS" start="2025-02-13T21:40:41.584342" elapsed="0.262587"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-13T21:40:43.854743" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-13T21:40:41.853065" elapsed="2.001678"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-02-13T21:40:43.855248" elapsed="2.420148"/>
+</kw>
+<doc>ทดสอบการ Login ด้วยข้อมูลที่ถูกต้อง</doc>
+<status status="PASS" start="2025-02-13T21:40:34.999261" elapsed="11.276135"/>
+</test>
+<test id="s1-s1-t2" name="Unauthorized Access To Overview Page" line="15">
+<kw name="Open Browser To Overview Page Without Login" owner="resources">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-13T21:40:46.278787" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/overview'.</msg>
+<arg>${OVERVIEW_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-13T21:40:46.278787" elapsed="4.536601"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-02-13T21:40:50.816406" elapsed="1.675654"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2025-02-13T21:40:52.492060" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-02-13T21:40:46.278787" elapsed="6.213273"/>
+</kw>
+<kw name="Login Page Should Be Open" owner="resources">
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2025-02-13T21:40:52.518703" level="INFO">Current location is 'http://localhost:3000/'.</msg>
+<arg>${LOGIN_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2025-02-13T21:40:52.494637" elapsed="0.024066"/>
+</kw>
+<status status="PASS" start="2025-02-13T21:40:52.494092" elapsed="0.025602"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-02-13T21:40:52.520701" elapsed="2.468998"/>
+</kw>
+<doc>ทดสอบการเข้าถึงหน้า Overview โดยไม่ได้ล็อกอิน</doc>
+<status status="PASS" start="2025-02-13T21:40:46.277402" elapsed="8.713281"/>
+</test>
+<status status="PASS" start="2025-02-13T21:40:34.565053" elapsed="20.427702"/>
+</suite>
+<suite id="s1-s2" name="Overview" source="C:\Users\acer\Dropbox\My PC (LAPTOP-V2ODEVNU)\Documents\GitHub\Marong-web-test\overview-test\overview.robot">
+<test id="s1-s2-t1" name="Verify All Case Markers Exist" line="16">
+<kw name="Login And Navigate To Overview Page" owner="resources" type="SETUP">
+<kw name="Open Browser To Login Page" owner="resources">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-13T21:40:55.039563" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/'.</msg>
+<arg>${LOGIN_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-13T21:40:55.039563" elapsed="2.682071"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-02-13T21:40:57.722637" elapsed="0.069456"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2025-02-13T21:40:57.792093" elapsed="0.000000"/>
+</kw>
+<kw name="Login Page Should Be Open" owner="resources">
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2025-02-13T21:40:57.830713" level="INFO">Current location is 'http://localhost:3000/'.</msg>
+<arg>${LOGIN_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2025-02-13T21:40:57.794660" elapsed="0.036053"/>
+</kw>
+<status status="PASS" start="2025-02-13T21:40:57.793606" elapsed="0.037107"/>
+</kw>
+<status status="PASS" start="2025-02-13T21:40:55.038565" elapsed="2.792148"/>
+</kw>
+<kw name="Login" owner="resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-13T21:40:57.832702" level="INFO">Typing text 'msaidmin@gmail.com' into text field 'id=gmail'.</msg>
+<arg>${LOGIN_GMAIL}</arg>
+<arg>${gmail}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-13T21:40:57.832702" elapsed="0.634103"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-13T21:40:58.467802" level="INFO">Typing text 'hashed_password_2' into text field 'id=password'.</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-13T21:40:58.466805" elapsed="0.334548"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-02-13T21:40:58.802356" level="INFO">Clicking button 'id=login_button'.</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-13T21:40:58.801353" elapsed="0.313287"/>
+</kw>
+<arg>msaidmin@gmail.com</arg>
+<arg>hashed_password_2</arg>
+<status status="PASS" start="2025-02-13T21:40:57.831714" elapsed="1.282926"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${OVERVIEW_URL}</arg>
+<arg>10s</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-02-13T21:40:59.115666" elapsed="2.026495"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=overview_title</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-13T21:41:01.142161" elapsed="0.583874"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-13T21:41:02.727602" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-13T21:41:01.726035" elapsed="1.001567"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-02-13T21:41:02.727602" elapsed="0.430105"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2025-02-13T21:41:03.157707" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-02-13T21:40:55.036565" elapsed="8.122143"/>
+</kw>
+<kw name="Connect To Database" owner="DatabaseLibrary">
+<msg time="2025-02-13T21:41:03.159715" level="INFO">Looking for configuration file: 'resources\db.cfg'</msg>
+<msg time="2025-02-13T21:41:03.159715" level="INFO">Configuration file doesn't exist</msg>
+<msg time="2025-02-13T21:41:03.229378" level="INFO">Connect to DB using : pymysql.connect(db='marong_db', user='root', passwd=***, host='localhost', port=3306, charset='utf8mb4')</msg>
+<arg>pymysql</arg>
+<arg>${DB_NAME}</arg>
+<arg>${DB_USER}</arg>
+<arg>${DB_PASSWORD}</arg>
+<arg>${DB_HOST}</arg>
+<arg>${DB_PORT}</arg>
+<doc>Creates a database connection using the DB API 2.0 ``db_module`` and the parameters provided.
+Along with listed commonly used arguments (`db_name`, `db_host` etc.)
+you can set any other DB module specific parameters as key/value pairs.</doc>
+<status status="PASS" start="2025-02-13T21:41:03.158708" elapsed="0.092449"/>
+</kw>
+<kw name="Query" owner="DatabaseLibrary">
+<msg time="2025-02-13T21:41:03.252155" level="INFO" html="true">Executing sql:&lt;br&gt;&lt;code style="font-weight: bold;"&gt;SELECT id FROM cases&lt;/code&gt;</msg>
+<msg time="2025-02-13T21:41:03.256686" level="INFO" html="true">&lt;div style="max-width: 100%; overflow-x: auto;"&gt;&lt;table style="width: auto; border-collapse: collapse; border: 2px solid rgb(140 140 140)"&gt;&lt;caption style="text-align: left; font-weight: bold; padding: 5px;"&gt;Query returned 4 rows&lt;/caption&gt;&lt;tr&gt;&lt;th scope="col" style="background-color: #d6ecd4; border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Row&lt;/th&gt;&lt;th scope="col" style="background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;id&lt;/th&gt;&lt;/tr&gt;&lt;tr style="background-color: #eee;"&gt;&lt;th scope="row" style="background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;0&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;1&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th scope="row" style="background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;1&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;2&lt;/td&gt;&lt;/tr&gt;&lt;tr style="background-color: #eee;"&gt;&lt;th scope="row" style="background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;2&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;3&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th scope="row" style="background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;3&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;4&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;</msg>
+<msg time="2025-02-13T21:41:03.257686" level="INFO">${case_ids} = ((1,), (2,), (3,), (4,))</msg>
+<var>${case_ids}</var>
+<arg>SELECT id FROM cases</arg>
+<doc>Runs a query with the ``select_statement`` and returns the result as list of rows.
+The type of row values depends on the database module -
+usually they are tuples or tuple-like objects.</doc>
+<status status="PASS" start="2025-02-13T21:41:03.252155" elapsed="0.005531"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-02-13T21:41:03.258685" level="INFO">${case_id} = 1</msg>
+<var>${case_id}</var>
+<arg>${row}[0]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-02-13T21:41:03.257686" elapsed="0.000999"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-13T21:41:03.258685" level="INFO">Checking for marker-1 visibility.</msg>
+<arg>Checking for marker-${case_id} visibility.</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-13T21:41:03.258685" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=marker-${case_id}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-13T21:41:03.258685" elapsed="0.032269"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-02-13T21:41:03.302278" level="INFO">Current page contains element 'id=marker-1'.</msg>
+<arg>id=marker-${case_id}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-02-13T21:41:03.291949" elapsed="0.010329"/>
+</kw>
+<var name="${row}">(1,)</var>
+<status status="PASS" start="2025-02-13T21:41:03.257686" elapsed="0.044592"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-02-13T21:41:03.303783" level="INFO">${case_id} = 2</msg>
+<var>${case_id}</var>
+<arg>${row}[0]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-02-13T21:41:03.303783" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-13T21:41:03.304286" level="INFO">Checking for marker-2 visibility.</msg>
+<arg>Checking for marker-${case_id} visibility.</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-13T21:41:03.303783" elapsed="0.000503"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=marker-${case_id}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-13T21:41:03.304286" elapsed="0.022510"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-02-13T21:41:03.333795" level="INFO">Current page contains element 'id=marker-2'.</msg>
+<arg>id=marker-${case_id}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-02-13T21:41:03.326796" elapsed="0.008228"/>
+</kw>
+<var name="${row}">(2,)</var>
+<status status="PASS" start="2025-02-13T21:41:03.303783" elapsed="0.031241"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-02-13T21:41:03.335024" level="INFO">${case_id} = 3</msg>
+<var>${case_id}</var>
+<arg>${row}[0]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-02-13T21:41:03.335024" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-13T21:41:03.335024" level="INFO">Checking for marker-3 visibility.</msg>
+<arg>Checking for marker-${case_id} visibility.</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-13T21:41:03.335024" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=marker-${case_id}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-13T21:41:03.335024" elapsed="0.020758"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-02-13T21:41:03.363817" level="INFO">Current page contains element 'id=marker-3'.</msg>
+<arg>id=marker-${case_id}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-02-13T21:41:03.355782" elapsed="0.008035"/>
+</kw>
+<var name="${row}">(3,)</var>
+<status status="PASS" start="2025-02-13T21:41:03.335024" elapsed="0.028793"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-02-13T21:41:03.364823" level="INFO">${case_id} = 4</msg>
+<var>${case_id}</var>
+<arg>${row}[0]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-02-13T21:41:03.364823" elapsed="0.000443"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-13T21:41:03.365266" level="INFO">Checking for marker-4 visibility.</msg>
+<arg>Checking for marker-${case_id} visibility.</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-13T21:41:03.365266" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=marker-${case_id}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-13T21:41:03.365266" elapsed="0.021067"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-02-13T21:41:03.396986" level="INFO">Current page contains element 'id=marker-4'.</msg>
+<arg>id=marker-${case_id}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-02-13T21:41:03.386333" elapsed="0.010653"/>
+</kw>
+<var name="${row}">(4,)</var>
+<status status="PASS" start="2025-02-13T21:41:03.364823" elapsed="0.032163"/>
+</iter>
+<var>${row}</var>
+<value>@{case_ids}</value>
+<status status="PASS" start="2025-02-13T21:41:03.257686" elapsed="0.139300"/>
+</for>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-02-13T21:41:03.397989" elapsed="2.374687"/>
+</kw>
+<doc>Verify all case markers from the database exist on the map.</doc>
+<status status="PASS" start="2025-02-13T21:40:55.034986" elapsed="10.739204"/>
+</test>
+<test id="s1-s2-t2" name="Verify Street Markers Exist" line="29">
+<kw name="Login And Navigate To Overview Page" owner="resources" type="SETUP">
+<kw name="Open Browser To Login Page" owner="resources">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-13T21:41:05.776793" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/'.</msg>
+<arg>${LOGIN_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-13T21:41:05.775703" elapsed="2.791365"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-02-13T21:41:08.567068" elapsed="0.091772"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2025-02-13T21:41:08.659838" elapsed="0.000000"/>
+</kw>
+<kw name="Login Page Should Be Open" owner="resources">
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2025-02-13T21:41:08.698779" level="INFO">Current location is 'http://localhost:3000/'.</msg>
+<arg>${LOGIN_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2025-02-13T21:41:08.661838" elapsed="0.036941"/>
+</kw>
+<status status="PASS" start="2025-02-13T21:41:08.660844" elapsed="0.037935"/>
+</kw>
+<status status="PASS" start="2025-02-13T21:41:05.775703" elapsed="2.923076"/>
+</kw>
+<kw name="Login" owner="resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-13T21:41:08.700775" level="INFO">Typing text 'msaidmin@gmail.com' into text field 'id=gmail'.</msg>
+<arg>${LOGIN_GMAIL}</arg>
+<arg>${gmail}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-13T21:41:08.700775" elapsed="0.555614"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-13T21:41:09.258400" level="INFO">Typing text 'hashed_password_2' into text field 'id=password'.</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-13T21:41:09.257402" elapsed="0.307383"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-02-13T21:41:09.566827" level="INFO">Clicking button 'id=login_button'.</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-13T21:41:09.565804" elapsed="0.272116"/>
+</kw>
+<arg>msaidmin@gmail.com</arg>
+<arg>hashed_password_2</arg>
+<status status="PASS" start="2025-02-13T21:41:08.699781" elapsed="1.138139"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${OVERVIEW_URL}</arg>
+<arg>10s</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-02-13T21:41:09.838919" elapsed="2.275365"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=overview_title</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-13T21:41:12.114896" elapsed="0.571733"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-13T21:41:13.688821" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-13T21:41:12.687639" elapsed="1.001182"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-02-13T21:41:13.689841" elapsed="0.019764"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2025-02-13T21:41:13.709605" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-02-13T21:41:05.775703" elapsed="7.933902"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-13T21:41:13.710615" level="INFO">Clicking element 'id=street_button'.</msg>
+<arg>id=street_button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-13T21:41:13.710615" elapsed="0.705853"/>
+</kw>
+<kw name="Query" owner="DatabaseLibrary">
+<msg time="2025-02-13T21:41:14.417480" level="INFO" html="true">Executing sql:&lt;br&gt;&lt;code style="font-weight: bold;"&gt;SELECT id FROM cases WHERE category = "Road Damage"&lt;/code&gt;</msg>
+<msg time="2025-02-13T21:41:14.424000" level="INFO" html="true">&lt;div style="max-width: 100%; overflow-x: auto;"&gt;&lt;table style="width: auto; border-collapse: collapse; border: 2px solid rgb(140 140 140)"&gt;&lt;caption style="text-align: left; font-weight: bold; padding: 5px;"&gt;Query returned 1 rows&lt;/caption&gt;&lt;tr&gt;&lt;th scope="col" style="background-color: #d6ecd4; border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Row&lt;/th&gt;&lt;th scope="col" style="background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;id&lt;/th&gt;&lt;/tr&gt;&lt;tr style="background-color: #eee;"&gt;&lt;th scope="row" style="background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;0&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;1&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;</msg>
+<msg time="2025-02-13T21:41:14.424000" level="INFO">${case_ids} = ((1,),)</msg>
+<var>${case_ids}</var>
+<arg>SELECT id FROM cases WHERE category = "Road Damage"</arg>
+<doc>Runs a query with the ``select_statement`` and returns the result as list of rows.
+The type of row values depends on the database module -
+usually they are tuples or tuple-like objects.</doc>
+<status status="PASS" start="2025-02-13T21:41:14.416468" elapsed="0.007532"/>
+</kw>
+<kw name="Verify Markers Exist">
+<for flavor="IN">
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-02-13T21:41:14.426078" level="INFO">${case_id} = 1</msg>
+<var>${case_id}</var>
+<arg>${row}[0]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-02-13T21:41:14.426078" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-13T21:41:14.427068" level="INFO">Checking for marker-1 visibility.</msg>
+<arg>Checking for marker-${case_id} visibility.</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-13T21:41:14.426078" elapsed="0.000990"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=marker-${case_id}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-13T21:41:14.427068" elapsed="0.052678"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-02-13T21:41:14.497754" level="INFO">Current page contains element 'id=marker-1'.</msg>
+<arg>id=marker-${case_id}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-02-13T21:41:14.480737" elapsed="0.017017"/>
+</kw>
+<var name="${row}">(1,)</var>
+<status status="PASS" start="2025-02-13T21:41:14.426078" elapsed="0.071676"/>
+</iter>
+<var>${row}</var>
+<value>@{case_ids}</value>
+<status status="PASS" start="2025-02-13T21:41:14.426078" elapsed="0.071676"/>
+</for>
+<arg>${case_ids}</arg>
+<status status="PASS" start="2025-02-13T21:41:14.425012" elapsed="0.072742"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-02-13T21:41:14.498751" elapsed="2.501337"/>
+</kw>
+<doc>Click "Street" button and verify only "Road Damage" markers are displayed.</doc>
+<status status="PASS" start="2025-02-13T21:41:05.774781" elapsed="11.226308"/>
+</test>
+<test id="s1-s2-t3" name="Verify Wire Markers Exist" line="36">
+<kw name="Login And Navigate To Overview Page" owner="resources" type="SETUP">
+<kw name="Open Browser To Login Page" owner="resources">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-13T21:41:17.003084" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/'.</msg>
+<arg>${LOGIN_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-13T21:41:17.002084" elapsed="3.010840"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-02-13T21:41:20.012924" elapsed="0.149155"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2025-02-13T21:41:20.162079" elapsed="0.001008"/>
+</kw>
+<kw name="Login Page Should Be Open" owner="resources">
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2025-02-13T21:41:20.274415" level="INFO">Current location is 'http://localhost:3000/'.</msg>
+<arg>${LOGIN_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2025-02-13T21:41:20.164594" elapsed="0.110365"/>
+</kw>
+<status status="PASS" start="2025-02-13T21:41:20.164079" elapsed="0.110880"/>
+</kw>
+<status status="PASS" start="2025-02-13T21:41:17.002084" elapsed="3.272875"/>
+</kw>
+<kw name="Login" owner="resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-13T21:41:20.276990" level="INFO">Typing text 'msaidmin@gmail.com' into text field 'id=gmail'.</msg>
+<arg>${LOGIN_GMAIL}</arg>
+<arg>${gmail}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-13T21:41:20.276990" elapsed="0.756338"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-13T21:41:21.034326" level="INFO">Typing text 'hashed_password_2' into text field 'id=password'.</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-13T21:41:21.033328" elapsed="0.356484"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-02-13T21:41:21.391815" level="INFO">Clicking button 'id=login_button'.</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-13T21:41:21.390816" elapsed="0.256810"/>
+</kw>
+<arg>msaidmin@gmail.com</arg>
+<arg>hashed_password_2</arg>
+<status status="PASS" start="2025-02-13T21:41:20.275975" elapsed="1.373155"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${OVERVIEW_URL}</arg>
+<arg>10s</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-02-13T21:41:21.649130" elapsed="1.960284"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=overview_title</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-13T21:41:23.610381" elapsed="0.349822"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-13T21:41:24.961327" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-13T21:41:23.961206" elapsed="1.000121"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-02-13T21:41:24.961882" elapsed="0.079608"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2025-02-13T21:41:25.041490" elapsed="0.001010"/>
+</kw>
+<status status="PASS" start="2025-02-13T21:41:17.002084" elapsed="8.040416"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-13T21:41:25.045047" level="INFO">Clicking element 'id=wire_button'.</msg>
+<arg>id=wire_button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-13T21:41:25.044021" elapsed="0.858005"/>
+</kw>
+<kw name="Query" owner="DatabaseLibrary">
+<msg time="2025-02-13T21:41:25.903017" level="INFO" html="true">Executing sql:&lt;br&gt;&lt;code style="font-weight: bold;"&gt;SELECT id FROM cases WHERE category = "Wire Damage"&lt;/code&gt;</msg>
+<msg time="2025-02-13T21:41:25.907079" level="INFO" html="true">&lt;div style="max-width: 100%; overflow-x: auto;"&gt;&lt;table style="width: auto; border-collapse: collapse; border: 2px solid rgb(140 140 140)"&gt;&lt;caption style="text-align: left; font-weight: bold; padding: 5px;"&gt;Query returned 1 rows&lt;/caption&gt;&lt;tr&gt;&lt;th scope="col" style="background-color: #d6ecd4; border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Row&lt;/th&gt;&lt;th scope="col" style="background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;id&lt;/th&gt;&lt;/tr&gt;&lt;tr style="background-color: #eee;"&gt;&lt;th scope="row" style="background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;0&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;4&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;</msg>
+<msg time="2025-02-13T21:41:25.907079" level="INFO">${case_ids} = ((4,),)</msg>
+<var>${case_ids}</var>
+<arg>SELECT id FROM cases WHERE category = "Wire Damage"</arg>
+<doc>Runs a query with the ``select_statement`` and returns the result as list of rows.
+The type of row values depends on the database module -
+usually they are tuples or tuple-like objects.</doc>
+<status status="PASS" start="2025-02-13T21:41:25.903017" elapsed="0.004062"/>
+</kw>
+<kw name="Verify Markers Exist">
+<for flavor="IN">
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-02-13T21:41:25.909094" level="INFO">${case_id} = 4</msg>
+<var>${case_id}</var>
+<arg>${row}[0]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-02-13T21:41:25.908083" elapsed="0.001011"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-13T21:41:25.909094" level="INFO">Checking for marker-4 visibility.</msg>
+<arg>Checking for marker-${case_id} visibility.</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-13T21:41:25.909094" elapsed="0.001002"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=marker-${case_id}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-13T21:41:25.910096" elapsed="0.040931"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-02-13T21:41:25.980001" level="INFO">Current page contains element 'id=marker-4'.</msg>
+<arg>id=marker-${case_id}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-02-13T21:41:25.952029" elapsed="0.027972"/>
+</kw>
+<var name="${row}">(4,)</var>
+<status status="PASS" start="2025-02-13T21:41:25.908083" elapsed="0.071918"/>
+</iter>
+<var>${row}</var>
+<value>@{case_ids}</value>
+<status status="PASS" start="2025-02-13T21:41:25.908083" elapsed="0.071918"/>
+</for>
+<arg>${case_ids}</arg>
+<status status="PASS" start="2025-02-13T21:41:25.908083" elapsed="0.072917"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-02-13T21:41:25.981000" elapsed="2.438167"/>
+</kw>
+<doc>Click "Wire" button and verify only "Wire Damage" markers are displayed.</doc>
+<status status="PASS" start="2025-02-13T21:41:17.001089" elapsed="11.418078"/>
+</test>
+<test id="s1-s2-t4" name="Verify Pavement Markers Exist" line="43">
+<kw name="Login And Navigate To Overview Page" owner="resources" type="SETUP">
+<kw name="Open Browser To Login Page" owner="resources">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-13T21:41:28.422178" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/'.</msg>
+<errors>
+<msg time="2025-02-13T21:41:32.492418" level="ERROR">Execution stopped by user.</msg>
+</errors>
+</robot>
