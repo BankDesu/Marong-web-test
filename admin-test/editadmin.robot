@@ -10,7 +10,7 @@ ${ROLE}            Master Admin
 ${ROLE2}            Admin
 ${GENDER}          Male
 
-${ADMIN_ID}     15
+${ADMIN_ID}     4
 ${ADMIN_ID_3}     3
 
 *** Test Cases ***
@@ -101,6 +101,7 @@ edit Last name
     sleep   1s
 
     Location Should Be    ${ADMIN_PROFILE_URL}${ADMIN_ID}
+    Page Should Contain    Admin2
     sleep   1s
     Close Browser
 
@@ -131,6 +132,8 @@ edit First name & Last name
 
     Location Should Be    ${ADMIN_PROFILE_URL}${ADMIN_ID}
     sleep   1s
+    Page Should Contain    Test3
+    Page Should Contain    Admin3
     Close Browser
 
 Edit picture profile
@@ -213,6 +216,8 @@ edit role Admin Successfully
     sleep   1s
 
     Location Should Be    ${ADMIN_PROFILE_URL}${ADMIN_ID}
+    sleep   1s
+
     Close Browser
 
 Edit Passwords Do Not Match

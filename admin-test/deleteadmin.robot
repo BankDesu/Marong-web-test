@@ -2,7 +2,7 @@
 Resource    resources.robot
 
 *** Variables ***
-${ADMIN_ID}     12
+${ADMIN_ID}     4
 ${ADMIN_ID_3}     3
 
 
@@ -20,6 +20,9 @@ delete other admin
     Page Should Contain    Account has been successfully deleted.
     sleep   1s
     Click Element   ${OK_BUTTON}
+    Page Should Not Contain Element    xpath=//div[@id="admincard-id-${ADMIN_ID}"]
+    sleep   1s
+
     Close Browser
 
 delete Admin currently active
@@ -34,6 +37,8 @@ delete Admin currently active
     Page Should Contain    You cannot delete currently active Account.
     sleep   1s
     Click Element   ${OK_BUTTON}
+    sleep   1s
+    Page Should Contain Element    id=admincard-id-3
     Close Browser
 
     

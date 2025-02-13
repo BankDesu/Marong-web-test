@@ -4,8 +4,6 @@ Resource    resources.robot
 *** Variables ***
 ${ADMIN_ID_1}     1
 ${ADMIN_ID_3}     3
-${ADMIN_ID_15}     15
-${ADMIN_ID_21}     21
 
 *** Test Cases ***
 Add Admin Successfully

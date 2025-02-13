@@ -48,6 +48,22 @@ Add Admin Successfully
 
     # กลับไปหน้าแอดมินและตรวจสอบว่าเพิ่มข้อมูลสำเร็จ
     Location Should Be    ${ALL_ADDMIN_URL}
+    Page Should Contain Element    id=admincard-id-4    
+    Element Should Contain    id=admincard-id-4    ${FIRST_NAME} ${LAST_NAME}
+    Element Should Contain    id=admincard-id-4    ${ROLE}
+    sleep   1s
+    Click Element    id=admincard-id-4
+    sleep   1s
+    Location Should Be    ${ADMIN_PROFILE_URL}4
+    Page Should Contain     ${FIRST_NAME}
+    Page Should Contain     ${LAST_NAME}
+    Page Should Contain     01/01/1995
+    Page Should Contain     ${GENDER}
+    Page Should Contain     ${GMAIL}
+    Page Should Contain     081-2345678
+    Page Should Contain     ROLE_Admin
+
+    Click Element    id=backtoAllAdminButton
     sleep   1s
     Close Browser
 
