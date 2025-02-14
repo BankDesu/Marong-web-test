@@ -5,7 +5,7 @@ Resource    resources.robot
 
 *** Test Cases ***
 
-Change Waiting Case To InProgress Case With Detail    #ผ่าน 
+Change Waiting Case To InProgress Case With Detail    
     [Documentation]     เปลี่ยนสถานะ Case เป็น "กำลังดำเนินการ" โดยใส่ข้อมูล
     Open And Login And Go To Case Page 
     Open Waiting Case            
@@ -15,10 +15,11 @@ Change Waiting Case To InProgress Case With Detail    #ผ่าน
     Input Text    ${DETAIL_INPROGRESS_BOX}     เปลี่ยนสถานะเป็นกำลังดำเนินการ
     Click Button    ${SUBMIT_INPROGRESS_BUTTON}
     Sleep    1s
+    #เช็ค id ว่า status เปลี่ยนแล้วจริงๆ
     Case Page Should Be Open
     Close Browser
 
-Change Waiting Case To InProgress Case Without Detail    #ผ่าน 
+Change Waiting Case To InProgress Case Without Detail    
     [Documentation]     เปลี่ยนสถานะ Case เป็น "กำลังดำเนินการ" โดยไม่ใส่ข้อมูล
     Open And Login And Go To Case Page 
     Open Waiting Case            
@@ -30,7 +31,7 @@ Change Waiting Case To InProgress Case Without Detail    #ผ่าน
     Page Should Contain    'Detail' are required when changing status to In progress!
     Close Browser
 
-Revoke Change Waiting Case To InProgress Case    #ผ่าน 
+Revoke Change Waiting Case To InProgress Case    
     [Documentation]     ยกเลิกการเปลี่ยนสถานะเป็น "กำลังดำเนินการ" ของ Waiting Case
     Open And Login And Go To Case Page 
     Open Waiting Case            
@@ -55,7 +56,7 @@ Cancel Waiting Case With Detail    #ผ่าน
     Case Page Should Be Open
     Close Browser
 
-Cancel Waiting Case Without Detail    #ผ่าน 
+Cancel Waiting Case Without Detail    
     [Documentation]    ยกเลิก Case สถานะเปลี่ยนเป็น "ยกเลิก" โดยไม่ใส่ข้อมูล
     Open And Login And Go To Case Page 
     Open Waiting Case            
@@ -67,7 +68,7 @@ Cancel Waiting Case Without Detail    #ผ่าน
     Page Should Contain    'Detail' is required when cancelling the case!
     Close Browser
 
-Revoke Cancel Waiting Case    #ผ่าน  
+Revoke Cancel Waiting Case     
     [Documentation]    ยกเลิกการเปลี่ยนสถานะเป็น "ยกเลิก" ของ Waiting Case
     Open And Login And Go To Case Page 
     Open Waiting Case            
@@ -79,7 +80,7 @@ Revoke Cancel Waiting Case    #ผ่าน
     Waiting Case Should Be Open
     Close Browser
 
-Change InProgress Case To Done Case With Detail And Picture    #ผ่าน 
+Change InProgress Case To Done Case With Detail And Picture    
     [Documentation]     เปลี่ยนสถานะ Case เป็น "เสร็จสิ้น" โดยใส่ข้อมูลและใส่รูป
     Open And Login And Go To Case Page 
     Open InProgress Case            
@@ -94,7 +95,7 @@ Change InProgress Case To Done Case With Detail And Picture    #ผ่าน
     Case Page Should Be Open
     Close Browser
 
-Change InProgress Case To Done Case Without Detail, With Picture    #ผ่าน 
+Change InProgress Case To Done Case Without Detail, With Picture    
     [Documentation]     เปลี่ยนสถานะ Case เป็น "เสร็จสิ้น" โดยไม่ใส่ข้อมูล แต่ใส่รูป
     Open And Login And Go To Case Page 
     Open InProgress Case            
@@ -107,7 +108,7 @@ Change InProgress Case To Done Case Without Detail, With Picture    #ผ่า�
     Page Should Contain    Both 'detail' and 'picture' are required when changing status to Done!
     Close Browser
 
-Change InProgress Case To Done Case With Detail, Without Picture    #ผ่าน 
+Change InProgress Case To Done Case With Detail, Without Picture    
     [Documentation]     เปลี่ยนสถานะ Case เป็น "เสร็จสิ้น" โดยใส่ข้อมูล แต่ไม่ใส่รูป
     Open And Login And Go To Case Page 
     Open InProgress Case            
@@ -120,7 +121,7 @@ Change InProgress Case To Done Case With Detail, Without Picture    #ผ่า�
     Page Should Contain    Both 'detail' and 'picture' are required when changing status to Done!
     Close Browser
 
-Change InProgress Case To Done Case Without Detail And Without Picture    #ผ่าน 
+Change InProgress Case To Done Case Without Detail And Without Picture    
     [Documentation]     เปลี่ยนสถานะ Case เป็น "เสร็จสิ้น" โดยไม่ใส่ข้อมูลและไม่ใส่รูป
     Open And Login And Go To Case Page 
     Open InProgress Case            
@@ -132,7 +133,7 @@ Change InProgress Case To Done Case Without Detail And Without Picture    #ผ�
     Page Should Contain    Both 'detail' and 'picture' are required when changing status to Done!
     Close Browser
 
-Revoke Change InProgress Case To Done Case    #ผ่าน 
+Revoke Change InProgress Case To Done Case    
     [Documentation]     ยกเลิกการเปลี่ยนสถานะเป็น "เสร็จสิ้น" ของ InProgress Case
     Open And Login And Go To Case Page 
     Open InProgress Case            
@@ -157,7 +158,7 @@ Cancel InProgress Case With Detail    #ผ่าน
     Case Page Should Be Open
     Close Browser
 
-Cancel InProgress Case Without Detail    #ผ่าน 
+Cancel InProgress Case Without Detail    
     [Documentation]    ยกเลิก Case สถานะเปลี่ยนเป็น "ยกเลิก" โดยไม่ใส่ข้อมูล
     Open And Login And Go To Case Page 
     Open InProgress Case            
@@ -169,7 +170,7 @@ Cancel InProgress Case Without Detail    #ผ่าน
     Page Should Contain    'Detail' is required when cancelling the case!
     Close Browser
 
-Revoke Cancel InProgress Case    #ผ่าน  
+Revoke Cancel InProgress Case     
     [Documentation]    ยกเลิกการเปลี่ยนสถานะเป็น "ยกเลิก" ขแง InProgress Case
     Open And Login And Go To Case Page 
     Open InProgress Case            
@@ -197,7 +198,7 @@ Cannot Cancel Done Case    #ผ่าน
     Page Should Not Contain Element   ${CANCEL_BUTTON}
     Close Browser
 
-# Search    #Input    #ผ่าน    
+# Search    #Input       
 #     [Documentation]    หา Case ID โดยใส่อินพุตหา ID / Category / Status
 #     Log To Console    Input keyword : 
 #     ${key_word}    Evaluate    input("")

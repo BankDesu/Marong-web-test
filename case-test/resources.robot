@@ -71,9 +71,10 @@ ${PICTURE_DONE_BOX}        id=DonePictureBox
 
 *** Keywords ***
 Open Browser To Login Page
-    ${options}=    Evaluate    selenium.webdriver.ChromeOptions()
-    Call Method    ${options}    add_argument    --headless
-    Open Browser    ${LOGIN_URL}    ${BROWSER}    options=${options}
+    # ${options}=    Evaluate    selenium.webdriver.ChromeOptions()
+    # Call Method    ${options}    add_argument    --headless
+    # Open Browser    ${LOGIN_URL}    ${BROWSER}    options=${options}
+    Open Browser    ${LOGIN_URL}    ${BROWSER}    
     Maximize Browser Window
     Set Selenium Speed    ${DELAY}
     Login Page Should Be Open
@@ -110,6 +111,8 @@ Open And Login And Go To Case Page
 
 Open Case By Status    #loop เข้าตัวแรก
     [Arguments]    ${case_status}
+    Sleep    2s
+    Wait Until Element Is Visible    ${STATUS}    timeout=5s
     ${elements} =    Get WebElements    ${STATUS}
     FOR    ${element}    IN    @{elements}
         ${status_text} =    Get Text    ${element}
