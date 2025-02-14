@@ -15,11 +15,10 @@ Change Waiting Case To InProgress Case With Detail    #ID:3
     Input Text    ${DETAIL_INPROGRESS_BOX}     เปลี่ยนสถานะเป็นกำลังดำเนินการ
     Click Button    ${SUBMIT_INPROGRESS_BUTTON}
     Sleep    1s
-    #เช็ค id ว่า status เปลี่ยนแล้วจริงๆ
     Case Page Should Be Open
     Close Browser
 
-Cancel InProgress Case With Detail    #ID:5
+Cancel InProgress Case With Detail    #ID:4
     [Documentation]    ยกเลิก Case สถานะเปลี่ยนเป็น "ยกเลิก" โดยใส่ข้อมูล
     Open And Login And Go To Case Page 
     Open InProgress Case            

@@ -12,7 +12,7 @@ ${CONTENT}     content1
 ${LOCATION}    seacon
 
 *** Test Cases ***
-Test Add News Page     #ID:4
+Test Add News Page     #ID:5
     [Documentation]  This test case will login, navigate to news page, click on the add news button, upload an image, fill form fields, and save the news.
     Click Add News Button
     Upload Image

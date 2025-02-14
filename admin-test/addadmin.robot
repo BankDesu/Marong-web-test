@@ -41,13 +41,14 @@ Add Admin Successfully    #ID:2
 
     # กดปุ่มเพิ่มแอดมิน
     Click Element    id=confirmaddAdminButton
-    sleep   1s
+    sleep   2s
 
     Page Should Contain     Account added successfully!
     Click Element    id=okButton
 
     # กลับไปหน้าแอดมินและตรวจสอบว่าเพิ่มข้อมูลสำเร็จ
     Location Should Be    ${ALL_ADDMIN_URL}
+    Sleep    2s
     Page Should Contain Element    id=admincard-id-4    
     Element Should Contain    id=admincard-id-4    ${FIRST_NAME} ${LAST_NAME}
     Element Should Contain    id=admincard-id-4    ${ROLE}
