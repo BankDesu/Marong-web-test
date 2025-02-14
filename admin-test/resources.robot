@@ -19,7 +19,7 @@ ${LOGIN_PASSWORD}    id=login_passwordBox
 ${LOGIN_BUTTON}      id=loginButton
 
 # Admin Locators
-${ADMIN_PAGE_BUTTON}    id=goto_adminpageButton
+${ADMIN_PAGE_BUTTON}    id=Admin management
 ${ADD_ADMIN_BUTTON}     id=add_adminButton
 ${OK_BUTTON}     id=okButton
 ${CONFIRM_DELETE_BUTTON}     id=confirmDeleteButton
