@@ -2,7 +2,7 @@
 Resource    resources.robot
 
 *** Test Cases ***
-Login Successfully
+Login Successfully    #ID:1
     [Documentation]    ทดสอบการ Login ด้วยข้อมูลที่ถูกต้อง
     Open Browser To Login Page
     Login     msaidmin@gmail.com      hashed_password_2
@@ -50,7 +50,7 @@ Login Without Inputting Gmail Without Password
 Login Without Inputting Password Without Gmail
     [Documentation]    ทดสอบ Login โดยกรอกแค่ password
     Open Browser    ${LOGIN_URL}    ${BROWSER}
-    Input Password     hashed_password_2
+    Input Password.     hashed_password_2
     Click Button    ${LOGIN_BUTTON}
     Sleep    3s
     Page Should Contain    Please enter gmail

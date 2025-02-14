@@ -25,8 +25,8 @@ ${ADMIN_EDIT_URL}        http://${SERVER}/admin/edit/
 ${ADMIN_ADD_URL}         http://${SERVER}/admin/add
 
 # Login Locators
-${LOGIN_GMAIL}       id=gmail
-${LOGIN_PASSWORD}    id=password
+${LOGIN_GMAIL}       id=login_gmailBox
+${LOGIN_PASSWORD}    id=login_passwordBox
 ${LOGIN_BUTTON}      id=login_button
 
 

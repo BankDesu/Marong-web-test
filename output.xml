@@ -1,135 +1,263 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.13.1 on win32)" generated="2025-02-14T09:52:36.942165" rpa="false" schemaversion="5">
+<robot generator="Robot 7.2.2 (Python 3.13.1 on win32)" generated="2025-02-14T10:23:27.429042" rpa="false" schemaversion="5">
 <suite id="s1" name="Casetest" source="c:\Users\Guy\Documents\code\SE\Marong-web-test\case-test\casetest.robot">
-<test id="s1-t1" name="Change Waiting Case To InProgress Case Without Detail" line="22">
+<test id="s1-t1" name="Cancel InProgress Case With Detail" line="22">
 <kw name="Open And Login And Go To Case Page" owner="resources">
 <kw name="Open Browser To Login Page" owner="resources">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-02-14T09:52:37.135521" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/'.</msg>
+<msg time="2025-02-14T10:23:27.622719" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/'.</msg>
 <arg>${LOGIN_URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-02-14T09:52:37.135301" elapsed="1.623564"/>
+<status status="PASS" start="2025-02-14T10:23:27.622491" elapsed="1.660680"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-02-14T09:52:38.759176" elapsed="0.060728"/>
+<status status="PASS" start="2025-02-14T10:23:29.283517" elapsed="0.056403"/>
 </kw>
 <kw name="Set Selenium Speed" owner="SeleniumLibrary">
 <arg>${DELAY}</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" start="2025-02-14T09:52:38.820232" elapsed="0.000387"/>
+<status status="PASS" start="2025-02-14T10:23:29.340167" elapsed="0.000277"/>
 </kw>
 <kw name="Login Page Should Be Open" owner="resources">
 <kw name="Location Should Be" owner="SeleniumLibrary">
-<msg time="2025-02-14T09:52:38.829078" level="INFO">Current location is 'http://localhost:3000/'.</msg>
+<msg time="2025-02-14T10:23:29.351573" level="INFO">Current location is 'http://localhost:3000/'.</msg>
 <arg>${LOGIN_URL}</arg>
 <doc>Verifies that the current URL is exactly ``url``.</doc>
-<status status="PASS" start="2025-02-14T09:52:38.821022" elapsed="0.008307"/>
+<status status="PASS" start="2025-02-14T10:23:29.340819" elapsed="0.011196"/>
 </kw>
-<status status="PASS" start="2025-02-14T09:52:38.820798" elapsed="0.008681"/>
+<status status="PASS" start="2025-02-14T10:23:29.340605" elapsed="0.011793"/>
 </kw>
-<status status="PASS" start="2025-02-14T09:52:37.134800" elapsed="1.694766"/>
+<status status="PASS" start="2025-02-14T10:23:27.622002" elapsed="1.730557"/>
 </kw>
 <kw name="Login" owner="resources">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-02-14T09:52:38.830687" level="INFO">Typing text 'msaidmin@gmail.com' into text field 'id=login_gmailBox'.</msg>
+<msg time="2025-02-14T10:23:29.353679" level="INFO">Typing text 'msaidmin@gmail.com' into text field 'id=login_gmailBox'.</msg>
 <arg>${LOGIN_GMAIL}</arg>
 <arg>${gmail}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-14T09:52:38.830342" elapsed="0.104000"/>
+<status status="PASS" start="2025-02-14T10:23:29.353321" elapsed="0.113567"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-02-14T09:52:38.934864" level="INFO">Typing text 'hashed_password_2' into text field 'id=login_passwordBox'.</msg>
+<msg time="2025-02-14T10:23:29.467373" level="INFO">Typing text 'hashed_password_2' into text field 'id=login_passwordBox'.</msg>
 <arg>${LOGIN_PASSWORD}</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-14T09:52:38.934594" elapsed="0.086962"/>
+<status status="PASS" start="2025-02-14T10:23:29.467115" elapsed="0.096203"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-02-14T09:52:39.022438" level="INFO">Clicking button 'id=loginButton'.</msg>
+<msg time="2025-02-14T10:23:29.563819" level="INFO">Clicking button 'id=login_button'.</msg>
 <arg>${LOGIN_BUTTON}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-14T09:52:39.021798" elapsed="0.076027"/>
+<status status="PASS" start="2025-02-14T10:23:29.563557" elapsed="0.071575"/>
 </kw>
 <arg>msaidmin@gmail.com</arg>
 <arg>hashed_password_2</arg>
-<status status="PASS" start="2025-02-14T09:52:38.829870" elapsed="0.268149"/>
+<status status="PASS" start="2025-02-14T10:23:29.352818" elapsed="0.282489"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-02-14T09:52:40.098586" level="INFO">Slept 1 second.</msg>
+<msg time="2025-02-14T10:23:30.636218" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-02-14T09:52:39.098161" elapsed="1.000653"/>
+<status status="PASS" start="2025-02-14T10:23:29.635456" elapsed="1.000976"/>
 </kw>
 <kw name="Overview Page Should Be Open" owner="resources">
 <kw name="Location Should Be" owner="SeleniumLibrary">
-<msg time="2025-02-14T09:52:40.180181" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-10.png"&gt;&lt;img src="selenium-screenshot-10.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2025-02-14T09:52:40.180476" level="FAIL">Location should have been 'http://localhost:3000/overview' but was 'http://localhost:3000/'.</msg>
+<msg time="2025-02-14T10:23:30.647929" level="INFO">Current location is 'http://localhost:3000/overview'.</msg>
 <arg>${OVERVIEW_URL}</arg>
 <doc>Verifies that the current URL is exactly ``url``.</doc>
-<status status="FAIL" start="2025-02-14T09:52:40.099276" elapsed="0.083654">Location should have been 'http://localhost:3000/overview' but was 'http://localhost:3000/'.</status>
+<status status="PASS" start="2025-02-14T10:23:30.636882" elapsed="0.011280"/>
 </kw>
-<status status="FAIL" start="2025-02-14T09:52:40.099022" elapsed="0.084151">Location should have been 'http://localhost:3000/overview' but was 'http://localhost:3000/'.</status>
+<status status="PASS" start="2025-02-14T10:23:30.636627" elapsed="0.011659"/>
 </kw>
 <kw name="Go To Case Page" owner="resources">
-<status status="NOT RUN" start="2025-02-14T09:52:40.183362" elapsed="0.000083"/>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-02-14T10:23:30.648928" level="INFO">Opening url 'http://localhost:3000/case'</msg>
+<arg>${CASE_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-02-14T10:23:30.648749" elapsed="0.187922"/>
+</kw>
+<status status="PASS" start="2025-02-14T10:23:30.648470" elapsed="0.188446"/>
 </kw>
 <kw name="Case Page Should Be Open" owner="resources">
-<status status="NOT RUN" start="2025-02-14T09:52:40.183561" elapsed="0.000056"/>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2025-02-14T10:23:30.856872" level="INFO">Current location is 'http://localhost:3000/case'.</msg>
+<arg>${CASE_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2025-02-14T10:23:30.837409" elapsed="0.019794"/>
 </kw>
-<status status="FAIL" start="2025-02-14T09:52:37.134410" elapsed="3.049474">Location should have been 'http://localhost:3000/overview' but was 'http://localhost:3000/'.</status>
+<status status="PASS" start="2025-02-14T10:23:30.837111" elapsed="0.020277"/>
 </kw>
-<kw name="Open Waiting Case" owner="resources">
-<status status="NOT RUN" start="2025-02-14T09:52:40.185427" elapsed="0.000239"/>
+<status status="PASS" start="2025-02-14T10:23:27.621624" elapsed="3.235897"/>
+</kw>
+<kw name="Open InProgress Case" owner="resources">
+<kw name="Open Case By Status" owner="resources">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-14T10:23:32.859279" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-14T10:23:30.858727" elapsed="2.001005"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${STATUS}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-14T10:23:32.860106" elapsed="0.021098"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2025-02-14T10:23:32.892661" level="INFO">${elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="2181f3b9f2491f991bf29b8eadaa8824", element="f.F0DAE95F0DB837AE56AB493DECB768D4.d.2C2B4F991E6C6FD921BBCC5E9695DE07.e.78")&gt;, &lt;selenium.webdriv...</msg>
+<var>${elements}</var>
+<arg>${STATUS}</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2025-02-14T10:23:32.881780" elapsed="0.011133"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-02-14T10:23:32.909903" level="INFO">${status_text} = InProgress</msg>
+<var>${status_text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T10:23:32.895093" elapsed="0.015044"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${status_text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-02-14T10:23:32.910402" elapsed="0.000808"/>
+</kw>
+<if>
+<branch type="IF" condition="'${status_text}' == '${case_status}'">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-14T10:23:32.912698" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="2181f3b9f2491f991bf29b8eadaa8824", element="f.F0DAE95F0DB837AE56AB493DECB768D4.d.2C2B4F991E6C6FD921BBCC5E9695DE07.e.78")&gt;'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T10:23:32.912068" elapsed="0.055714"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-14T10:23:34.968563" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-14T10:23:32.968014" elapsed="2.001078"/>
+</kw>
+<kw name="Exit For Loop" owner="BuiltIn">
+<msg time="2025-02-14T10:23:34.969795" level="INFO">Exiting for loop altogether.</msg>
+<doc>Stops executing the enclosing FOR loop.</doc>
+<status status="PASS" start="2025-02-14T10:23:34.969482" elapsed="0.000567"/>
+</kw>
+<status status="PASS" start="2025-02-14T10:23:32.911554" elapsed="2.058677"/>
+</branch>
+<status status="PASS" start="2025-02-14T10:23:32.911482" elapsed="2.058922"/>
+</if>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="2181f3b9f2491f991bf29b8eadaa8824", element="f.F0DAE95F0DB837AE56AB493DECB768D4.d.2C2B4F991E6C6FD921BBCC5E9695DE07.e.78")&gt;</var>
+<status status="PASS" start="2025-02-14T10:23:32.894517" elapsed="2.075954"/>
+</iter>
+<var>${element}</var>
+<value>@{elements}</value>
+<status status="PASS" start="2025-02-14T10:23:32.893081" elapsed="2.078040"/>
+</for>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-14T10:23:35.972185" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-14T10:23:34.971335" elapsed="1.001287"/>
+</kw>
+<arg>InProgress</arg>
+<status status="PASS" start="2025-02-14T10:23:30.858480" elapsed="5.114389"/>
+</kw>
+<kw name="InProgress Case Should Be Open" owner="resources">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-14T10:23:36.974385" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-14T10:23:35.973801" elapsed="1.000893"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//span[@id='caseStatusLabel']</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-14T10:23:36.975012" elapsed="0.040976"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-02-14T10:23:37.036701" level="INFO">${status} = InProgress</msg>
+<var>${status}</var>
+<arg>xpath=//span[@id='caseStatusLabel']</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T10:23:37.016290" elapsed="0.020555"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${status}</arg>
+<arg>InProgress</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-02-14T10:23:37.037003" elapsed="0.000228"/>
+</kw>
+<status status="PASS" start="2025-02-14T10:23:35.973292" elapsed="1.064031"/>
+</kw>
+<status status="PASS" start="2025-02-14T10:23:30.858083" elapsed="6.179301"/>
 </kw>
 <kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<arg>${INPROGRESS_BUTTON}</arg>
+<msg time="2025-02-14T10:23:37.053206" level="INFO">Current page contains element 'id=Cancel btn'.</msg>
+<arg>${CANCEL_BUTTON}</arg>
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="NOT RUN" start="2025-02-14T09:52:40.186569" elapsed="0.000151"/>
+<status status="PASS" start="2025-02-14T10:23:37.038140" elapsed="0.016266"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<arg>${INPROGRESS_BUTTON}</arg>
+<msg time="2025-02-14T10:23:37.055232" level="INFO">Clicking button 'id=Cancel btn'.</msg>
+<arg>${CANCEL_BUTTON}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="NOT RUN" start="2025-02-14T09:52:40.187081" elapsed="0.000115"/>
+<status status="PASS" start="2025-02-14T10:23:37.055011" elapsed="0.112565"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-14T10:23:38.168989" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2025-02-14T09:52:40.188295" elapsed="0.000118"/>
+<status status="PASS" start="2025-02-14T10:23:37.168298" elapsed="1.001197"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-14T10:23:38.171723" level="INFO">Typing text 'ยกเลิก' into text field 'id=CancelDetailBox'.</msg>
+<arg>${DETAIL_CANCEL_BOX}</arg>
+<arg>ยกเลิก</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T10:23:38.171028" elapsed="0.174795"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<arg>${SUBMIT_INPROGRESS_BUTTON}</arg>
+<msg time="2025-02-14T10:23:38.348903" level="INFO">Clicking button 'id=SubmitCancel btn'.</msg>
+<arg>${SUBMIT_CANCEL_BUTTON}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="NOT RUN" start="2025-02-14T09:52:40.188779" elapsed="0.000088"/>
+<status status="PASS" start="2025-02-14T10:23:38.348633" elapsed="0.103006"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-14T10:23:39.453338" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2025-02-14T09:52:40.189209" elapsed="0.000081"/>
+<status status="PASS" start="2025-02-14T10:23:38.452744" elapsed="1.001111"/>
 </kw>
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<arg>'Detail' are required when changing status to In progress!</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="NOT RUN" start="2025-02-14T09:52:40.189623" elapsed="0.000092"/>
+<kw name="Case Page Should Be Open" owner="resources">
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2025-02-14T10:23:39.466856" level="INFO">Current location is 'http://localhost:3000/case'.</msg>
+<arg>${CASE_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2025-02-14T10:23:39.458261" elapsed="0.008823"/>
+</kw>
+<status status="PASS" start="2025-02-14T10:23:39.457900" elapsed="0.009328"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="NOT RUN" start="2025-02-14T09:52:40.190192" elapsed="0.000079"/>
+<status status="PASS" start="2025-02-14T10:23:39.469192" elapsed="3.745412"/>
 </kw>
-<doc>เปลี่ยนสถานะ Case เป็น "กำลังดำเนินการ" โดยไม่ใส่ข้อมูล</doc>
-<status status="FAIL" start="2025-02-14T09:52:37.132868" elapsed="3.058028">Location should have been 'http://localhost:3000/overview' but was 'http://localhost:3000/'.</status>
+<doc>ยกเลิก Case สถานะเปลี่ยนเป็น "ยกเลิก" โดยใส่ข้อมูล</doc>
+<status status="PASS" start="2025-02-14T10:23:27.620144" elapsed="15.597246"/>
 </test>
-<status status="FAIL" start="2025-02-14T09:52:36.945193" elapsed="3.247292"/>
+<status status="PASS" start="2025-02-14T10:23:27.432134" elapsed="15.789846"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Casetest" id="s1" pass="0" fail="1" skip="0">Casetest</stat>
+<stat name="Casetest" id="s1" pass="1" fail="0" skip="0">Casetest</stat>
 </suite>
 </statistics>
 <errors>

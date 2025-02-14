@@ -11,7 +11,7 @@ ${OVERVIEW_URL}          http://${SERVER}/overview
 # Login Locators
 ${LOGIN_GMAIL}       id=login_gmailBox
 ${LOGIN_PASSWORD}    id=login_passwordBox
-${LOGIN_BUTTON}      id=loginButton
+${LOGIN_BUTTON}      id=login_button
 
 
 *** Keywords ***
@@ -34,12 +34,12 @@ Input Gmail
     [Arguments]    ${gmail}
     Input Text    ${LOGIN_GMAIL}    ${gmail}
 
-Input Password
+Input Password.
     [Arguments]    ${password}
     Input Text    ${LOGIN_PASSWORD}    ${password}
 
 Overview Page Should Be Open
     Location Should Be    ${OVERVIEW_URL} 
 
-Can't Login
-    Location Should Be    ${LOGIN_ERROR_URL}
+# Can't Login
+#     Location Should Be    ${LOGIN_ERROR_URL}

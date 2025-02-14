@@ -13,7 +13,7 @@ ${ROLE}            Admin
 ${GENDER}          Male
 
 *** Test Cases ***
-Add Admin Successfully
+Add Admin Successfully    #ID:2
     [Documentation]    ทดสอบการเพิ่มแอดมินสำเร็จ
     Open Browser To Login Page
     Login as masteradmin
@@ -37,7 +37,7 @@ Add Admin Successfully
 
     # อัปโหลดรูป (ต้องคลิกปุ่มก่อน)
     Click Element    id=addProfileImageButton
-    Choose File    name=picture    C:\\Users\\DarkK\\Downloads\\admin.png
+    Choose File    name=picture    C:\\Users\\Guy\\Documents\\code\\SE\\testpic.webp
 
     # กดปุ่มเพิ่มแอดมิน
     Click Element    id=confirmaddAdminButton

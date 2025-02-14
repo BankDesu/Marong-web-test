@@ -16,7 +16,7 @@ ${ADMIN_ADD_URL}         http://${SERVER}/admin/add
 # Login Locators
 ${LOGIN_GMAIL}       id=login_gmailBox
 ${LOGIN_PASSWORD}    id=login_passwordBox
-${LOGIN_BUTTON}      id=loginButton
+${LOGIN_BUTTON}      id=login_button
 
 # Admin Locators
 ${ADMIN_PAGE_BUTTON}    id=Admin management

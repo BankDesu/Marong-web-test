@@ -12,7 +12,7 @@ ${CONTENT}     content1
 ${LOCATION}    seacon
 
 *** Test Cases ***
-Test Add News Page
+Test Add News Page     #ID:4
     [Documentation]  This test case will login, navigate to news page, click on the add news button, upload an image, fill form fields, and save the news.
     Click Add News Button
     Upload Image
@@ -96,7 +96,7 @@ Upload Image
     Wait Until Element Is Enabled    id=uploadnews_button    10s  # Ensure the button is clickable
     Click Element    id=uploadnews_button
     Wait Until Element Is Visible    id=choosefile_button    10s
-    Choose File    id=choosefile_button    C:\\Users\\acer\\Downloads\\green overpass marker.png
+    Choose File    id=choosefile_button    C:\\Users\\Guy\\Documents\\code\\SE\\testpic.webp
     Click Element    id=closeaddfile_button    # Close the file upload modal
     Wait Until Element Is not Visible    id=closeaddfile_button    10s  # Wait until the "close" button is visible
 
