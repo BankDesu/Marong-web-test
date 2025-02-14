@@ -8,3 +8,4 @@
 *.html
 *.png
 /login-test/results
+/.vscode
