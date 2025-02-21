@@ -2,7 +2,7 @@
 Resource    resources.robot
 
 *** Test Cases ***
-Login Successfully    #ID:1
+Login Successfully   
     [Documentation]    ทดสอบการ Login ด้วยข้อมูลที่ถูกต้อง
     Open Browser To Login Page
     Login     msaidmin@gmail.com      hashed_password_2

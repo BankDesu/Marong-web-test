@@ -7,7 +7,7 @@ ${ADMIN_ID_3}     3
 
 
 *** Test Cases ***
-delete other admin
+delete other admin    #ID : 1
     [Documentation]    ทดสอบลบ admin อื่น
     Open Browser To Login Page
     Login as masteradmin
