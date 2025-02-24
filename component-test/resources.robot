@@ -116,3 +116,23 @@ Admin Page Should Be Open
     Log To Console  Background color: ${color}
     Should Contain  ${color}  rgb(191, 219, 254)
 
+Open Overview Page   
+    Open And Login
+    Go To Overview Page
+    Overview Page Should Be Open
+
+Open Case Page    
+    Open And Login
+    Go To Case Page
+    Case Page Should Be Open
+
+Open News Page    
+    Open And Login
+    Go To News Page
+    News Page Should Be Open
+
+
+Open Admin Page   
+    Open And Login
+    Go To Admin Page
+    Admin Page Should Be Open

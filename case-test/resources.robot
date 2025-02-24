@@ -28,7 +28,7 @@ ${ADMIN_ADD_URL}         http://${SERVER}/admin/add
 # Login Locators
 ${LOGIN_GMAIL}       id=login_gmailBox
 ${LOGIN_PASSWORD}    id=login_passwordBox
-${LOGIN_BUTTON}      id=loginButton
+${LOGIN_BUTTON}      id=login_button
 
 # Case Locators
 ${ID}                id=caseId
@@ -47,6 +47,7 @@ ${SELECT_OVERPASS}        id=Overpass Damage
 ${SELECT_WIRE}        id=Wire Damage
 
 # Case ID Locators
+# ${CASE_ID}            id=caseID
 ${STATUS_LABEL}        id=caseStatusLabel
 ${INPROGRESS_BUTTON}    id=InProgress btn
 ${DONE_BUTTON}          id=Done btn
@@ -104,10 +105,6 @@ Open And Login And Go To Case Page
     Overview Page Should Be Open
     Go To Case Page
     Case Page Should Be Open
-
-# Log Current URL
-#     ${CURRENT_URL}    Get Location
-#     Log    ${CURRENT_URL}
 
 Open Case By Status    #loop เข้าตัวแรก
     [Arguments]    ${case_status}
@@ -275,3 +272,7 @@ Filter Wire
         ...    Log To Console    ✅ พบ Wire Damage!
     END
     Sleep    1s
+
+Go Back To Case Page
+    Go To Case Page
+    Case Page Should Be Open
