@@ -1,327 +1,271 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.13.1 on win32)" generated="2025-02-22T01:02:17.682199" rpa="false" schemaversion="5">
-<suite id="s1" name="Casetest" source="c:\Users\Guy\Documents\code\SE\Marong-web-test\case-test\casetest.robot">
-<test id="s1-t1" name="Cancel InProgress Case With Detail" line="263">
-<kw name="Open And Login And Go To Case Page" owner="resources">
+<robot generator="Robot 7.2.2 (Python 3.13.1 on win32)" generated="2025-03-03T05:46:30.563319" rpa="false" schemaversion="5">
+<suite id="s1" name="Componenttest" source="c:\Users\Guy\Documents\code\SE\Marong-web-test\component-test\componenttest.robot">
+<test id="s1-t1" name="Test Responsive Case Page at 1280x800" line="23">
+<kw name="Open And Login" owner="resources">
 <kw name="Open Browser To Login Page" owner="resources">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-02-22T01:02:17.970516" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/'.</msg>
+<msg time="2025-03-03T05:46:30.810444" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/'.</msg>
 <arg>${LOGIN_URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-02-22T01:02:17.970286" elapsed="1.870706"/>
+<status status="PASS" start="2025-03-03T05:46:30.809935" elapsed="1.986452"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-02-22T01:02:19.841352" elapsed="0.049829"/>
+<status status="PASS" start="2025-03-03T05:46:32.797494" elapsed="0.030423"/>
 </kw>
 <kw name="Set Selenium Speed" owner="SeleniumLibrary">
 <arg>${DELAY}</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" start="2025-02-22T01:02:19.891467" elapsed="0.000564"/>
+<status status="PASS" start="2025-03-03T05:46:32.828321" elapsed="0.000361"/>
 </kw>
 <kw name="Login Page Should Be Open" owner="resources">
 <kw name="Location Should Be" owner="SeleniumLibrary">
-<msg time="2025-02-22T01:02:19.903387" level="INFO">Current location is 'http://localhost:3000/'.</msg>
+<msg time="2025-03-03T05:46:32.842645" level="INFO">Current location is 'http://localhost:3000/'.</msg>
 <arg>${LOGIN_URL}</arg>
 <doc>Verifies that the current URL is exactly ``url``.</doc>
-<status status="PASS" start="2025-02-22T01:02:19.892503" elapsed="0.011379"/>
+<status status="PASS" start="2025-03-03T05:46:32.829141" elapsed="0.013940"/>
 </kw>
-<status status="PASS" start="2025-02-22T01:02:19.892250" elapsed="0.011890"/>
+<status status="PASS" start="2025-03-03T05:46:32.828904" elapsed="0.014402"/>
 </kw>
-<status status="PASS" start="2025-02-22T01:02:17.969816" elapsed="1.934509"/>
+<status status="PASS" start="2025-03-03T05:46:30.808516" elapsed="2.034955"/>
 </kw>
 <kw name="Login" owner="resources">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-02-22T01:02:19.905896" level="INFO">Typing text 'msaidmin@gmail.com' into text field 'id=login_gmailBox'.</msg>
+<msg time="2025-03-03T05:46:32.844812" level="INFO">Typing text 'msaidmin@gmail.com' into text field 'id=login_gmailBox'.</msg>
 <arg>${LOGIN_GMAIL}</arg>
 <arg>${gmail}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-22T01:02:19.905529" elapsed="0.142278"/>
+<status status="PASS" start="2025-03-03T05:46:32.844216" elapsed="0.127665"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-02-22T01:02:20.048491" level="INFO">Typing text 'hashed_password_2' into text field 'id=login_passwordBox'.</msg>
+<msg time="2025-03-03T05:46:32.972405" level="INFO">Typing text 'hashed_password_2' into text field 'id=login_passwordBox'.</msg>
 <arg>${LOGIN_PASSWORD}</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-22T01:02:20.048179" elapsed="0.109193"/>
+<status status="PASS" start="2025-03-03T05:46:32.972107" elapsed="0.092983"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-02-22T01:02:20.157839" level="INFO">Clicking button 'id=login_button'.</msg>
+<msg time="2025-03-03T05:46:33.066000" level="INFO">Clicking button 'id=login_button'.</msg>
 <arg>${LOGIN_BUTTON}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-22T01:02:20.157597" elapsed="0.083592"/>
+<status status="PASS" start="2025-03-03T05:46:33.065521" elapsed="0.069953"/>
 </kw>
 <arg>msaidmin@gmail.com</arg>
 <arg>hashed_password_2</arg>
-<status status="PASS" start="2025-02-22T01:02:19.904887" elapsed="0.336513"/>
+<status status="PASS" start="2025-03-03T05:46:32.843722" elapsed="0.291916"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-02-22T01:02:21.242325" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
+<msg time="2025-03-03T05:46:35.136534" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-02-22T01:02:20.241558" elapsed="1.001112"/>
+<status status="PASS" start="2025-03-03T05:46:33.135779" elapsed="2.001250"/>
 </kw>
 <kw name="Overview Page Should Be Open" owner="resources">
 <kw name="Location Should Be" owner="SeleniumLibrary">
-<msg time="2025-02-22T01:02:21.260251" level="INFO">Current location is 'http://localhost:3000/overview'.</msg>
+<msg time="2025-03-03T05:46:35.148493" level="INFO">Current location is 'http://localhost:3000/overview'.</msg>
 <arg>${OVERVIEW_URL}</arg>
 <doc>Verifies that the current URL is exactly ``url``.</doc>
-<status status="PASS" start="2025-02-22T01:02:21.243420" elapsed="0.017063"/>
+<status status="PASS" start="2025-03-03T05:46:35.138222" elapsed="0.010469"/>
 </kw>
-<status status="PASS" start="2025-02-22T01:02:21.242911" elapsed="0.017683"/>
-</kw>
-<kw name="Go To Case Page" owner="resources">
-<kw name="Go To" owner="SeleniumLibrary">
-<msg time="2025-02-22T01:02:21.261159" level="INFO">Opening url 'http://localhost:3000/case'</msg>
-<arg>${CASE_URL}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2025-02-22T01:02:21.260999" elapsed="0.254045"/>
-</kw>
-<status status="PASS" start="2025-02-22T01:02:21.260753" elapsed="0.254593"/>
-</kw>
-<kw name="Case Page Should Be Open" owner="resources">
-<kw name="Location Should Be" owner="SeleniumLibrary">
-<msg time="2025-02-22T01:02:21.548289" level="INFO">Current location is 'http://localhost:3000/case'.</msg>
-<arg>${CASE_URL}</arg>
-<doc>Verifies that the current URL is exactly ``url``.</doc>
-<status status="PASS" start="2025-02-22T01:02:21.516055" elapsed="0.032736"/>
-</kw>
-<status status="PASS" start="2025-02-22T01:02:21.515627" elapsed="0.033423"/>
-</kw>
-<status status="PASS" start="2025-02-22T01:02:17.969480" elapsed="3.579717"/>
-</kw>
-<kw name="Open InProgress Case" owner="resources">
-<kw name="Open Case By Status" owner="resources">
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-02-22T01:02:23.551766" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
+<msg time="2025-03-03T05:46:36.149487" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-02-22T01:02:21.550984" elapsed="2.001323"/>
+<status status="PASS" start="2025-03-03T05:46:35.149016" elapsed="1.000866"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${STATUS}</arg>
+<arg>${OVERVIEW_LINK}</arg>
 <arg>timeout=5s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-22T01:02:23.552635" elapsed="0.027503"/>
+<status status="PASS" start="2025-03-03T05:46:36.150194" elapsed="0.027865"/>
 </kw>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2025-02-22T01:02:23.588128" level="INFO">${elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="b06579966ef40c9f8c8cb4deae7f29fd", element="f.09796B11C50C65F73CDB280C1E9D0A4B.d.4735E8C378D297676D811B9650E4F4CB.e.70")&gt;, &lt;selenium.webdriv...</msg>
-<var>${elements}</var>
-<arg>${STATUS}</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2025-02-22T01:02:23.580508" elapsed="0.007839"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2025-02-22T01:02:23.603362" level="INFO">${status_text} = Done</msg>
-<var>${status_text}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-22T01:02:23.589239" elapsed="0.014681"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${status_text}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-02-22T01:02:23.604265" elapsed="0.000654"/>
-</kw>
-<if>
-<branch type="IF" condition="'${status_text}' == '${case_status}'">
-<kw name="Click Element" owner="SeleniumLibrary">
-<arg>${element}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2025-02-22T01:02:23.605650" elapsed="0.000161"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2025-02-22T01:02:23.606027" elapsed="0.000081"/>
-</kw>
-<kw name="Exit For Loop" owner="BuiltIn">
-<doc>Stops executing the enclosing FOR loop.</doc>
-<status status="NOT RUN" start="2025-02-22T01:02:23.606216" elapsed="0.000056"/>
-</kw>
-<status status="NOT RUN" start="2025-02-22T01:02:23.605248" elapsed="0.001075"/>
-</branch>
-<status status="PASS" start="2025-02-22T01:02:23.605200" elapsed="0.001188"/>
-</if>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b06579966ef40c9f8c8cb4deae7f29fd", element="f.09796B11C50C65F73CDB280C1E9D0A4B.d.4735E8C378D297676D811B9650E4F4CB.e.70")&gt;</var>
-<status status="PASS" start="2025-02-22T01:02:23.588982" elapsed="0.017426"/>
-</iter>
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2025-02-22T01:02:23.626544" level="INFO">${status_text} = InProgress</msg>
-<var>${status_text}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-22T01:02:23.606670" elapsed="0.020270"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${status_text}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-02-22T01:02:23.627644" elapsed="0.001179"/>
-</kw>
-<if>
-<branch type="IF" condition="'${status_text}' == '${case_status}'">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-02-22T01:02:23.630092" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="b06579966ef40c9f8c8cb4deae7f29fd", element="f.09796B11C50C65F73CDB280C1E9D0A4B.d.4735E8C378D297676D811B9650E4F4CB.e.76")&gt;'.</msg>
-<arg>${element}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-22T01:02:23.629489" elapsed="0.106003"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-02-22T01:02:25.736951" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-02-22T01:02:23.735957" elapsed="2.001420"/>
-</kw>
-<kw name="Exit For Loop" owner="BuiltIn">
-<msg time="2025-02-22T01:02:25.737855" level="INFO">Exiting for loop altogether.</msg>
-<doc>Stops executing the enclosing FOR loop.</doc>
-<status status="PASS" start="2025-02-22T01:02:25.737651" elapsed="0.000376"/>
-</kw>
-<status status="PASS" start="2025-02-22T01:02:23.629065" elapsed="2.109070"/>
-</branch>
-<status status="PASS" start="2025-02-22T01:02:23.629026" elapsed="2.109217"/>
-</if>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="b06579966ef40c9f8c8cb4deae7f29fd", element="f.09796B11C50C65F73CDB280C1E9D0A4B.d.4735E8C378D297676D811B9650E4F4CB.e.76")&gt;</var>
-<status status="PASS" start="2025-02-22T01:02:23.606563" elapsed="2.131719"/>
-</iter>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2025-03-03T05:46:36.182608" level="INFO">${element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="f6f4f4ad820d08a1a9a8672a64211795", element="f.8E05441F262E8345AA67723A02FE4585.d.FDC38F983D9C9345D2A4221956B6A0DB.e.40")&gt;</msg>
 <var>${element}</var>
-<value>@{elements}</value>
-<status status="PASS" start="2025-02-22T01:02:23.588529" elapsed="2.149873"/>
-</for>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-02-22T01:02:26.739404" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-02-22T01:02:25.738702" elapsed="1.001122"/>
+<arg>${OVERVIEW_LINK}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2025-03-03T05:46:36.178307" elapsed="0.004428"/>
 </kw>
-<arg>InProgress</arg>
-<status status="PASS" start="2025-02-22T01:02:21.550495" elapsed="5.189510"/>
-</kw>
-<kw name="InProgress Case Should Be Open" owner="resources">
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-02-22T01:02:27.740921" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-02-22T01:02:26.740557" elapsed="1.000625"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>xpath=//span[@id='caseStatusLabel']</arg>
-<arg>timeout=15s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-22T01:02:27.741402" elapsed="0.020481"/>
-</kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2025-02-22T01:02:27.815256" level="INFO">${status} = InProgress</msg>
-<var>${status}</var>
-<arg>xpath=//span[@id='caseStatusLabel']</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-22T01:02:27.762269" elapsed="0.053236"/>
-</kw>
-<kw name="Should Be Equal As Strings" owner="BuiltIn">
-<arg>${status}</arg>
-<arg>InProgress</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2025-02-22T01:02:27.815766" elapsed="0.000342"/>
-</kw>
-<status status="PASS" start="2025-02-22T01:02:26.740246" elapsed="1.076021"/>
-</kw>
-<status status="PASS" start="2025-02-22T01:02:21.549841" elapsed="6.266546"/>
-</kw>
-<kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2025-02-22T01:02:27.826512" level="INFO">Current page contains element 'id=Cancel btn'.</msg>
-<arg>${CANCEL_BUTTON}</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2025-02-22T01:02:27.817087" elapsed="0.010313"/>
-</kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2025-02-22T01:02:27.841544" level="INFO">${CASE_ID} = 2</msg>
-<var>${CASE_ID}</var>
-<arg>id=caseID</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-22T01:02:27.828029" elapsed="0.013665"/>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-03-03T05:46:36.183233" level="INFO">Executing JavaScript:
+return window.getComputedStyle(arguments[0]).backgroundColor;
+By using argument:
+'&lt;selenium.webdriver.remote.webelement.WebElement (session="f6f4f4ad820d08a1a9a8672a64211795", element="f.8E05441F262E8345AA67723A02FE4585.d.FDC38F983D9C9345D2A4221956B6A0DB.e.40")&gt;'</msg>
+<msg time="2025-03-03T05:46:36.187433" level="INFO">${color} = rgb(191, 219, 254)</msg>
+<var>${color}</var>
+<arg>return window.getComputedStyle(arguments[0]).backgroundColor;</arg>
+<arg>ARGUMENTS</arg>
+<arg>${element}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-03-03T05:46:36.182876" elapsed="0.004679"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
-<arg>ID = ${CASE_ID}</arg>
+<arg>Background color: ${color}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-02-22T01:02:27.842283" elapsed="0.000555"/>
+<status status="PASS" start="2025-03-03T05:46:36.187697" elapsed="0.000432"/>
 </kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-02-22T01:02:27.843799" level="INFO">Clicking button 'id=Cancel btn'.</msg>
-<arg>${CANCEL_BUTTON}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-22T01:02:27.843411" elapsed="0.084087"/>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${color}</arg>
+<arg>rgb(191, 219, 254)</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-03-03T05:46:36.188298" elapsed="0.000181"/>
+</kw>
+<status status="PASS" start="2025-03-03T05:46:35.137594" elapsed="1.050963"/>
+</kw>
+<status status="PASS" start="2025-03-03T05:46:30.807874" elapsed="5.380742"/>
+</kw>
+<kw name="Set Window Size" owner="SeleniumLibrary">
+<arg>1280</arg>
+<arg>800</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" start="2025-03-03T05:46:36.189118" elapsed="0.387786"/>
+</kw>
+<kw name="Go To Case Page" owner="resources">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CASE_LINK}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-03T05:46:36.577862" elapsed="0.031493"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-03T05:46:36.610170" level="INFO">Clicking element 'id=Case'.</msg>
+<arg>${CASE_LINK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-03T05:46:36.609804" elapsed="0.077176"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-02-22T01:02:28.929133" level="INFO">Slept 1 second.</msg>
+<msg time="2025-03-03T05:46:37.688226" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-02-22T01:02:27.928287" elapsed="1.001051"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-02-22T01:02:28.940307" level="INFO">Typing text 'ยกเลิก' into text field 'id=CancelDetailBox'.</msg>
-<arg>${DETAIL_CANCEL_BOX}</arg>
-<arg>ยกเลิก</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-22T01:02:28.939982" elapsed="0.074971"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-02-22T01:02:29.021135" level="INFO">Clicking button 'id=SubmitCancel btn'.</msg>
-<arg>${SUBMIT_CANCEL_BUTTON}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-22T01:02:29.020589" elapsed="0.050602"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-02-22T01:02:30.076427" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-02-22T01:02:29.075387" elapsed="1.001257"/>
+<status status="PASS" start="2025-03-03T05:46:36.687238" elapsed="1.001518"/>
 </kw>
 <kw name="Case Page Should Be Open" owner="resources">
 <kw name="Location Should Be" owner="SeleniumLibrary">
-<msg time="2025-02-22T01:02:30.080794" level="INFO">Current location is 'http://localhost:3000/case'.</msg>
+<msg time="2025-03-03T05:46:37.698188" level="INFO">Current location is 'http://localhost:3000/case'.</msg>
 <arg>${CASE_URL}</arg>
 <doc>Verifies that the current URL is exactly ``url``.</doc>
-<status status="PASS" start="2025-02-22T01:02:30.077364" elapsed="0.003628"/>
+<status status="PASS" start="2025-03-03T05:46:37.690136" elapsed="0.008345"/>
 </kw>
-<status status="PASS" start="2025-02-22T01:02:30.077091" elapsed="0.004007"/>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-03T05:46:38.699539" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-03T05:46:37.698686" elapsed="1.001271"/>
 </kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-02-22T01:02:30.081683" level="INFO">${STATUS_XPATH} = //*[text()='2']/following-sibling::*[@id='caseStatus']</msg>
-<var>${STATUS_XPATH}</var>
-<arg>//*[text()='${CASE_ID}']/following-sibling::*[@id='caseStatus']</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-02-22T01:02:30.081406" elapsed="0.000367"/>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CASE_LINK}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-03T05:46:38.700295" elapsed="0.015792"/>
 </kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2025-02-22T01:02:30.102522" level="INFO">${NEW_STATUS} = Cancel</msg>
-<var>${NEW_STATUS}</var>
-<arg>xpath=${STATUS_XPATH}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-22T01:02:30.082077" elapsed="0.020627"/>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2025-03-03T05:46:38.721109" level="INFO">${element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="f6f4f4ad820d08a1a9a8672a64211795", element="f.8E05441F262E8345AA67723A02FE4585.d.FDC38F983D9C9345D2A4221956B6A0DB.e.98")&gt;</msg>
+<var>${element}</var>
+<arg>${CASE_LINK}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2025-03-03T05:46:38.716458" elapsed="0.004786"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-03-03T05:46:38.721712" level="INFO">Executing JavaScript:
+return window.getComputedStyle(arguments[0]).backgroundColor;
+By using argument:
+'&lt;selenium.webdriver.remote.webelement.WebElement (session="f6f4f4ad820d08a1a9a8672a64211795", element="f.8E05441F262E8345AA67723A02FE4585.d.FDC38F983D9C9345D2A4221956B6A0DB.e.98")&gt;'</msg>
+<msg time="2025-03-03T05:46:38.725206" level="INFO">${color} = rgb(191, 219, 254)</msg>
+<var>${color}</var>
+<arg>return window.getComputedStyle(arguments[0]).backgroundColor;</arg>
+<arg>ARGUMENTS</arg>
+<arg>${element}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-03-03T05:46:38.721386" elapsed="0.003936"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
-<arg>สถานะใหม่ของ ${CASE_ID} = ${NEW_STATUS}</arg>
+<arg>Background color: ${color}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-02-22T01:02:30.103331" elapsed="0.000751"/>
+<status status="PASS" start="2025-03-03T05:46:38.725464" elapsed="0.000390"/>
 </kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${NEW_STATUS}</arg>
-<arg>Cancel</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2025-02-22T01:02:30.104486" elapsed="0.000293"/>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${color}</arg>
+<arg>rgb(191, 219, 254)</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-03-03T05:46:38.726028" elapsed="0.000178"/>
+</kw>
+<status status="PASS" start="2025-03-03T05:46:37.689387" elapsed="1.036901"/>
+</kw>
+<status status="PASS" start="2025-03-03T05:46:36.577548" elapsed="2.148805"/>
+</kw>
+<kw name="Case Page Should Be Open" owner="resources">
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2025-03-03T05:46:38.729301" level="INFO">Current location is 'http://localhost:3000/case'.</msg>
+<arg>${CASE_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2025-03-03T05:46:38.726902" elapsed="0.002519"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-03T05:46:39.730472" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-03T05:46:38.729535" elapsed="1.001171"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CASE_LINK}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-03T05:46:39.730869" elapsed="0.010429"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2025-03-03T05:46:39.746041" level="INFO">${element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="f6f4f4ad820d08a1a9a8672a64211795", element="f.8E05441F262E8345AA67723A02FE4585.d.FDC38F983D9C9345D2A4221956B6A0DB.e.98")&gt;</msg>
+<var>${element}</var>
+<arg>${CASE_LINK}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2025-03-03T05:46:39.741508" elapsed="0.004663"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-03-03T05:46:39.746666" level="INFO">Executing JavaScript:
+return window.getComputedStyle(arguments[0]).backgroundColor;
+By using argument:
+'&lt;selenium.webdriver.remote.webelement.WebElement (session="f6f4f4ad820d08a1a9a8672a64211795", element="f.8E05441F262E8345AA67723A02FE4585.d.FDC38F983D9C9345D2A4221956B6A0DB.e.98")&gt;'</msg>
+<msg time="2025-03-03T05:46:39.749989" level="INFO">${color} = rgb(191, 219, 254)</msg>
+<var>${color}</var>
+<arg>return window.getComputedStyle(arguments[0]).backgroundColor;</arg>
+<arg>ARGUMENTS</arg>
+<arg>${element}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-03-03T05:46:39.746327" elapsed="0.003783"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Background color: ${color}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-03T05:46:39.750259" elapsed="0.000590"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${color}</arg>
+<arg>rgb(191, 219, 254)</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-03-03T05:46:39.751038" elapsed="0.000184"/>
+</kw>
+<status status="PASS" start="2025-03-03T05:46:38.726691" elapsed="1.024615"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-03T05:46:41.751817" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-03T05:46:39.751587" elapsed="2.000753"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-03-03T05:46:41.820957" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-03-03T05:46:41.752843" elapsed="0.068437"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-02-22T01:02:30.105588" elapsed="3.099981"/>
+<status status="PASS" start="2025-03-03T05:46:41.821766" elapsed="2.189273"/>
 </kw>
-<doc>ยกเลิก Case สถานะเปลี่ยนเป็น "ยกเลิก" โดยใส่ข้อมูล</doc>
-<status status="PASS" start="2025-02-22T01:02:17.968465" elapsed="15.237597"/>
+<doc>ตรวจสอบ Responsive ของ Case Page ที่ 1280x800</doc>
+<status status="PASS" start="2025-03-03T05:46:30.806966" elapsed="13.204868"/>
 </test>
-<status status="PASS" start="2025-02-22T01:02:17.685654" elapsed="15.521470"/>
+<status status="PASS" start="2025-03-03T05:46:30.566440" elapsed="13.446486"/>
 </suite>
 <statistics>
 <total>
@@ -330,7 +274,7 @@
 <tag>
 </tag>
 <suite>
-<stat name="Casetest" id="s1" pass="1" fail="0" skip="0">Casetest</stat>
+<stat name="Componenttest" id="s1" pass="1" fail="0" skip="0">Componenttest</stat>
 </suite>
 </statistics>
 <errors>

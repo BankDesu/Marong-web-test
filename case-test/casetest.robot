@@ -22,7 +22,7 @@ Change Waiting Case To InProgress Case With Detail    #pass
     Sleep    1s
     Case Page Should Be Open
 
-    ${STATUS_XPATH}    Set Variable    //*[text()='${CASE_ID}']/following-sibling::*[@id='caseStatus']
+    ${STATUS_XPATH}    Set Variable    //*[@id='caseId'][text()='${CASE_ID}']/following-sibling::*[@id='caseStatus']
     ${NEW_STATUS}    Get Text    xpath=${STATUS_XPATH}
     Log To Console    สถานะใหม่ของ ${CASE_ID} = ${NEW_STATUS}
     Should Be Equal    ${NEW_STATUS}    InProgress  
@@ -46,7 +46,7 @@ Change Waiting Case To InProgress Case Without Detail    #pass
     Wait Until Element Is Visible    ${REVOKE_INPROGRESS_BUTTON}    3s
     Click Button    ${REVOKE_INPROGRESS_BUTTON}
     Go Back To Case Page
-    ${STATUS_XPATH}    Set Variable    //*[text()='${CASE_ID}']/following-sibling::*[@id='caseStatus']
+    ${STATUS_XPATH}    Set Variable    //*[@id='caseId'][text()='${CASE_ID}']/following-sibling::*[@id='caseStatus']
     ${NEW_STATUS}    Get Text    xpath=${STATUS_XPATH}
     Log To Console    สถานะใหม่ของ ${CASE_ID} = ${NEW_STATUS}
     Should Be Equal    ${NEW_STATUS}    Waiting 
@@ -66,7 +66,7 @@ Revoke Change Waiting Case To InProgress Case    #pass
     Sleep    1s
 
     Go Back To Case Page
-    ${STATUS_XPATH}    Set Variable    //*[text()='${CASE_ID}']/following-sibling::*[@id='caseStatus']
+    ${STATUS_XPATH}    Set Variable    //*[@id='caseId'][text()='${CASE_ID}']/following-sibling::*[@id='caseStatus']
     ${NEW_STATUS}    Get Text    xpath=${STATUS_XPATH}
     Log To Console    สถานะใหม่ของ ${CASE_ID} = ${NEW_STATUS}
     Should Be Equal    ${NEW_STATUS}    Waiting 
@@ -89,7 +89,7 @@ Cancel Waiting Case With Detail    #pass
     Sleep    1s
     Case Page Should Be Open
 
-    ${STATUS_XPATH}    Set Variable    //*[text()='${CASE_ID}']/following-sibling::*[@id='caseStatus']
+    ${STATUS_XPATH}    Set Variable    //*[@id='caseId'][text()='${CASE_ID}']/following-sibling::*[@id='caseStatus']
     ${NEW_STATUS}    Get Text    xpath=${STATUS_XPATH}
     Log To Console    สถานะใหม่ของ ${CASE_ID} = ${NEW_STATUS}
     Should Be Equal    ${NEW_STATUS}    Cancel 
@@ -113,7 +113,7 @@ Cancel Waiting Case Without Detail    #pass
     Wait Until Element Is Visible    ${REVOKE_CANCEL_BUTTON}   3s
     Click Button    ${REVOKE_CANCEL_BUTTON}
     Go Back To Case Page
-    ${STATUS_XPATH}    Set Variable    //*[text()='${CASE_ID}']/following-sibling::*[@id='caseStatus']
+    ${STATUS_XPATH}    Set Variable    //*[@id='caseId'][text()='${CASE_ID}']/following-sibling::*[@id='caseStatus']
     ${NEW_STATUS}    Get Text    xpath=${STATUS_XPATH}
     Log To Console    สถานะใหม่ของ ${CASE_ID} = ${NEW_STATUS}
     Should Be Equal    ${NEW_STATUS}    Waiting 
@@ -134,7 +134,7 @@ Revoke Cancel Waiting Case     #pass
     Waiting Case Should Be Open
 
     Go Back To Case Page
-    ${STATUS_XPATH}    Set Variable    //*[text()='${CASE_ID}']/following-sibling::*[@id='caseStatus']
+    ${STATUS_XPATH}    Set Variable    //*[@id='caseId'][text()='${CASE_ID}']/following-sibling::*[@id='caseStatus']
     ${NEW_STATUS}    Get Text    xpath=${STATUS_XPATH}
     Log To Console    สถานะใหม่ของ ${CASE_ID} = ${NEW_STATUS}
     Should Be Equal    ${NEW_STATUS}    Waiting 
@@ -159,7 +159,7 @@ Change InProgress Case To Done Case With Detail And Picture    #pass
     Sleep    1s
     Case Page Should Be Open
 
-    ${STATUS_XPATH}    Set Variable    //*[text()='${CASE_ID}']/following-sibling::*[@id='caseStatus']
+    ${STATUS_XPATH}    Set Variable    //*[@id='caseId'][text()='${CASE_ID}']/following-sibling::*[@id='caseStatus']
     ${NEW_STATUS}    Get Text    xpath=${STATUS_XPATH}
     Log To Console    สถานะใหม่ของ ${CASE_ID} = ${NEW_STATUS}
     Should Be Equal    ${NEW_STATUS}    Done 
@@ -184,7 +184,7 @@ Change InProgress Case To Done Case Without Detail, With Picture    #pass
     Wait Until Element Is Visible    ${REVOKE_DONE_BUTTON}    3s
     Click Button    ${REVOKE_DONE_BUTTON}
     Go Back To Case Page
-    ${STATUS_XPATH}    Set Variable    //*[text()='${CASE_ID}']/following-sibling::*[@id='caseStatus']
+    ${STATUS_XPATH}    Set Variable    //*[@id='caseId'][text()='${CASE_ID}']/following-sibling::*[@id='caseStatus']
     ${NEW_STATUS}    Get Text    xpath=${STATUS_XPATH}
     Log To Console    สถานะใหม่ของ ${CASE_ID} = ${NEW_STATUS}
     Should Be Equal    ${NEW_STATUS}    InProgress
@@ -209,7 +209,7 @@ Change InProgress Case To Done Case With Detail, Without Picture    #pass
     Wait Until Element Is Visible    ${REVOKE_DONE_BUTTON}    3s
     Click Button    ${REVOKE_DONE_BUTTON}
     Go Back To Case Page
-    ${STATUS_XPATH}    Set Variable    //*[text()='${CASE_ID}']/following-sibling::*[@id='caseStatus']
+    ${STATUS_XPATH}    Set Variable    //*[@id='caseId'][text()='${CASE_ID}']/following-sibling::*[@id='caseStatus']
     ${NEW_STATUS}    Get Text    xpath=${STATUS_XPATH}
     Log To Console    สถานะใหม่ของ ${CASE_ID} = ${NEW_STATUS}
     Should Be Equal    ${NEW_STATUS}    InProgress
@@ -233,7 +233,7 @@ Change InProgress Case To Done Case Without Detail And Without Picture    #pass
     Wait Until Element Is Visible    ${REVOKE_DONE_BUTTON}    3s
     Click Button    ${REVOKE_DONE_BUTTON}
     Go Back To Case Page
-    ${STATUS_XPATH}    Set Variable    //*[text()='${CASE_ID}']/following-sibling::*[@id='caseStatus']
+    ${STATUS_XPATH}    Set Variable    //*[@id='caseId'][text()='${CASE_ID}']/following-sibling::*[@id='caseStatus']
     ${NEW_STATUS}    Get Text    xpath=${STATUS_XPATH}
     Log To Console    สถานะใหม่ของ ${CASE_ID} = ${NEW_STATUS}
     Should Be Equal    ${NEW_STATUS}    InProgress
@@ -254,7 +254,7 @@ Revoke Change InProgress Case To Done Case    #pass
     InProgress Case Should Be Open
 
     Go Back To Case Page
-    ${STATUS_XPATH}    Set Variable    //*[text()='${CASE_ID}']/following-sibling::*[@id='caseStatus']
+    ${STATUS_XPATH}    Set Variable    //*[@id='caseId'][text()='${CASE_ID}']/following-sibling::*[@id='caseStatus']
     ${NEW_STATUS}    Get Text    xpath=${STATUS_XPATH}
     Log To Console    สถานะใหม่ของ ${CASE_ID} = ${NEW_STATUS}
     Should Be Equal    ${NEW_STATUS}    InProgress
@@ -277,7 +277,7 @@ Cancel InProgress Case With Detail    #pass
     Sleep    1s
     Case Page Should Be Open
 
-    ${STATUS_XPATH}    Set Variable    //*[text()='${CASE_ID}']/following-sibling::*[@id='caseStatus']
+    ${STATUS_XPATH}    Set Variable    //*[@id='caseId'][text()='${CASE_ID}']/following-sibling::*[@id='caseStatus']
     ${NEW_STATUS}    Get Text    xpath=${STATUS_XPATH}
     Log To Console    สถานะใหม่ของ ${CASE_ID} = ${NEW_STATUS}
     Should Be Equal    ${NEW_STATUS}    Cancel
@@ -301,7 +301,7 @@ Cancel InProgress Case Without Detail    #pass
     Wait Until Element Is Visible    ${REVOKE_CANCEL_BUTTON}    3s
     Click Button    ${REVOKE_CANCEL_BUTTON}
     Go Back To Case Page
-    ${STATUS_XPATH}    Set Variable    //*[text()='${CASE_ID}']/following-sibling::*[@id='caseStatus']
+    ${STATUS_XPATH}    Set Variable    //*[@id='caseId'][text()='${CASE_ID}']/following-sibling::*[@id='caseStatus']
     ${NEW_STATUS}    Get Text    xpath=${STATUS_XPATH}
     Log To Console    สถานะใหม่ของ ${CASE_ID} = ${NEW_STATUS}
     Should Be Equal    ${NEW_STATUS}    InProgress
@@ -322,7 +322,7 @@ Revoke Cancel InProgress Case     #pass
     InProgress Case Should Be Open
 
     Go Back To Case Page
-    ${STATUS_XPATH}    Set Variable    //*[text()='${CASE_ID}']/following-sibling::*[@id='caseStatus']
+    ${STATUS_XPATH}    Set Variable    //*[@id='caseId'][text()='${CASE_ID}']/following-sibling::*[@id='caseStatus']
     ${NEW_STATUS}    Get Text    xpath=${STATUS_XPATH}
     Log To Console    สถานะใหม่ของ ${CASE_ID} = ${NEW_STATUS}
     Should Be Equal    ${NEW_STATUS}    InProgress
@@ -338,7 +338,7 @@ Cannot Done Cancel Case    #pass
     ${CASE_ID}    Get Text    id=caseID
     Log To Console    ID = ${CASE_ID}  
     Go Back To Case Page
-    ${STATUS_XPATH}    Set Variable    //*[text()='${CASE_ID}']/following-sibling::*[@id='caseStatus']
+    ${STATUS_XPATH}    Set Variable    //*[@id='caseId'][text()='${CASE_ID}']/following-sibling::*[@id='caseStatus']
     ${NEW_STATUS}    Get Text    xpath=${STATUS_XPATH}
     Log To Console    สถานะใหม่ของ ${CASE_ID} = ${NEW_STATUS}
     Should Be Equal    ${NEW_STATUS}    Cancel 
@@ -353,7 +353,7 @@ Cannot Cancel Done Case    #pass
     ${CASE_ID}    Get Text    id=caseID
     Log To Console    ID = ${CASE_ID}  
     Go Back To Case Page
-    ${STATUS_XPATH}    Set Variable    //*[text()='${CASE_ID}']/following-sibling::*[@id='caseStatus']
+    ${STATUS_XPATH}    Set Variable    //*[@id='caseId'][text()='${CASE_ID}']/following-sibling::*[@id='caseStatus']
     ${NEW_STATUS}    Get Text    xpath=${STATUS_XPATH}
     Log To Console    สถานะใหม่ของ ${CASE_ID} = ${NEW_STATUS}
     Should Be Equal    ${NEW_STATUS}    Done

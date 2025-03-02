@@ -122,6 +122,22 @@ Open Case By Status    #loop เข้าตัวแรก
     END
     Sleep    1s
 
+Open Case By ID    #loop เข้าตัวแรก
+    [Arguments]    ${case_ID}
+    Sleep    2s
+    Wait Until Element Is Visible    ${ID}    timeout=5s
+    ${elements} =    Get WebElements    ${ID}
+    FOR    ${element}    IN    @{elements}
+        ${ID_text} =    Get Text    ${element}
+        Log To Console    ${ID_text}
+        IF    '${ID_text}' == '${case_ID}'
+            Click Element    ${element}
+            Sleep    2s
+            Exit For Loop 
+        END
+    END
+    Sleep    1s
+
 Open Waiting Case
     Open Case By Status    Waiting
     Waiting Case Should Be Open

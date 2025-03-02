@@ -20,9 +20,10 @@ ${ADMIN_ADD_URL}         http://${SERVER}/admin/add
 # Login Locators
 ${LOGIN_GMAIL}       id=login_gmailBox
 ${LOGIN_PASSWORD}    id=login_passwordBox
-${LOGIN_BUTTON}      id=loginButton
+${LOGIN_BUTTON}      id=login_button
 
 # Case Locators
+${ID}                id=caseId
 ${STATUS}            id=caseStatus
 
 #Sidebar Locator
@@ -32,10 +33,16 @@ ${NEWS_LINK}      id=News
 ${ADMIN_LINK}      id=Admin management
 
 *** Keywords ***
+# Open Browser To Login Page
+#     ${options}=    Evaluate    selenium.webdriver.ChromeOptions()
+#     Call Method    ${options}    add_argument    --headless
+#     Open Browser    ${LOGIN_URL}    ${BROWSER}    options=${options}
+#     Maximize Browser Window
+#     Set Selenium Speed    ${DELAY}
+#     Login Page Should Be Open
+
 Open Browser To Login Page
-    ${options}=    Evaluate    selenium.webdriver.ChromeOptions()
-    Call Method    ${options}    add_argument    --headless
-    Open Browser    ${LOGIN_URL}    ${BROWSER}    options=${options}
+    Open Browser    ${LOGIN_URL}    ${BROWSER} 
     Maximize Browser Window
     Set Selenium Speed    ${DELAY}
     Login Page Should Be Open
@@ -61,7 +68,7 @@ Overview Page Should Be Open
 Open And Login
     Open Browser To Login Page
     Login    msaidmin@gmail.com    hashed_password_2
-    Sleep    1s
+    Sleep    2s
     Overview Page Should Be Open
 
 
@@ -116,23 +123,18 @@ Admin Page Should Be Open
     Log To Console  Background color: ${color}
     Should Contain  ${color}  rgb(191, 219, 254)
 
-Open Overview Page   
-    Open And Login
-    Go To Overview Page
-    Overview Page Should Be Open
-
-Open Case Page    
-    Open And Login
-    Go To Case Page
-    Case Page Should Be Open
-
-Open News Page    
-    Open And Login
-    Go To News Page
-    News Page Should Be Open
-
-
-Open Admin Page   
-    Open And Login
-    Go To Admin Page
-    Admin Page Should Be Open
+Open Case By ID    #loop เข้าตัวแรก
+    [Arguments]    ${case_ID}
+    Sleep    2s
+    Wait Until Element Is Visible    ${ID}    timeout=5s
+    ${elements} =    Get WebElements    ${ID}
+    FOR    ${element}    IN    @{elements}
+        ${ID_text} =    Get Text    ${element}
+        Log To Console    ${ID_text}
+        IF    '${ID_text}' == '${case_ID}'
+            Click Element    ${element}
+            Sleep    2s
+            Exit For Loop 
+        END
+    END
+    Sleep    1s
